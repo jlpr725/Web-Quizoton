@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía docente de QuizOton</title>
+  <meta name="description" content="Guía para preparar y dar tu primera clase con QuizOton: instalación, cursos, preguntas en Excel, los cuatro modos de juego, informes y solución de problemas.">
+  <meta name="theme-color" content="#3FDFA9">
+  <link rel="canonical" href="https://TU-DOMINIO.com/guia/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Guía docente de QuizOton">
+  <meta property="og:description" content="Todo lo que necesitas para tu primera clase con QuizOton, explicado sin tecnicismos.">
+  <meta property="og:url" content="https://TU-DOMINIO.com/guia/">
+  <meta property="og:image" content="https://TU-DOMINIO.com/img/og-quizoton.jpg">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/marca/favicon-32.png">
+  <link rel="apple-touch-icon" href="../img/marca/apple-touch-icon.png">
+  <link rel="preload" href="../fuentes/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/guia.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera guia-cabecera">
+    <div class="contenedor cabecera__fila">
+      <a class="marca" href="../index.html" aria-label="Volver a la página de QuizOton">
+        <img src="../img/marca/logotipo-color.webp" alt="QuizOton" width="719" height="404">
+      </a>
+      <div class="guia-cabecera__acciones">
+        <button class="boton boton--amarillo" type="button" data-imprimir>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar PDF
+        </button>
+        <a class="boton boton--menta boton--cta-cabecera" href="../index.html#descargar">Probar QuizOton</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="portada">
+      <div class="contenedor portada__rejilla">
+        <div>
+          <h1>Guía docente de QuizOton</h1>
+          <p>Todo lo que necesitas para preparar y dar tu primera clase, sin tecnicismos. Léela en orden la primera vez y vuelve a ella cuando la necesites.</p>
+          <ul class="portada__meta">
+            <li>Versión 1.0</li>
+            <li>Windows 10 y 11</li>
+            <li>Lectura de 15 minutos</li>
+          </ul>
+        </div>
+        <img class="portada__logo" src="../img/marca/logotipo-color.webp" alt="" width="719" height="404">
+      </div>
+    </section>
+
+    <div class="contenedor guia">
+      <nav class="indice" aria-label="Contenido de la guía">
+        <h2>En esta guía</h2>
+        <ol>
+          <li><a href="#antes">Antes de empezar</a></li>
+          <li><a href="#preparar">Prepara tu clase</a></li>
+          <li><a href="#preguntas">Preguntas y plantillas</a></li>
+          <li><a href="#en-clase">Durante la clase</a></li>
+          <li><a href="#modos">Los cuatro modos</a></li>
+          <li><a href="#informes">Informes y notas</a></li>
+          <li><a href="#problemas">Si algo no funciona</a></li>
+          <li><a href="#fundamentos">Fundamentos pedagógicos</a></li>
+        </ol>
+        <button class="boton boton--bloque indice__pdf" type="button" data-imprimir>Descargar PDF</button>
+      </nav>
+
+      <div class="contenido">
+
+        <!-- ═══ 1. ANTES DE EMPEZAR ═══════════════════════════════════════ -->
+        <section class="capitulo" id="antes" aria-labelledby="t-antes">
+          <header><h2 id="t-antes">Antes de empezar</h2></header>
+
+          <p class="intro">QuizOton convierte tu computador en el centro de la clase. Tus estudiantes se conectan con el celular a través del Wi-Fi del salón y responden desde el navegador. Nada pasa por internet.</p>
+
+          <h3>Cómo se conecta todo</h3>
+          <div class="diagrama">
+            <svg viewBox="0 0 720 360" role="img" aria-labelledby="diag-t diag-d">
+              <title id="diag-t">Esquema de conexión de QuizOton</title>
+              <desc id="diag-d">El computador del docente y los celulares de los estudiantes se conectan al mismo router Wi-Fi. El videobeam muestra la pantalla del computador. No hay conexión a internet.</desc>
+              <g stroke="#101413" stroke-width="3" stroke-dasharray="7 6" fill="none" stroke-linecap="round">
+                <path d="M360 190 L200 140"/>
+                <path d="M360 190 L560 90"/><path d="M360 190 L600 190"/><path d="M360 190 L560 290"/>
+              </g>
+              <path d="M120 120 L120 60" stroke="#101413" stroke-width="3" fill="none"/>
+              <!-- router -->
+              <rect x="305" y="165" width="110" height="52" rx="10" fill="#FFD91A" stroke="#101413" stroke-width="3"/>
+              <line x1="330" y1="165" x2="322" y2="140" stroke="#101413" stroke-width="3" stroke-linecap="round"/>
+              <line x1="390" y1="165" x2="398" y2="140" stroke="#101413" stroke-width="3" stroke-linecap="round"/>
+              <text x="360" y="197" text-anchor="middle" font-size="16" font-weight="700" fill="#101413">Router</text>
+              <text x="360" y="240" text-anchor="middle" font-size="13" fill="#3A4541">sin internet</text>
+              <!-- computador -->
+              <rect x="70" y="92" width="130" height="80" rx="8" fill="#3FDFA9" stroke="#101413" stroke-width="3"/>
+              <rect x="55" y="172" width="160" height="12" rx="4" fill="#101413"/>
+              <text x="135" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#101413">Tu computador</text>
+              <text x="135" y="208" text-anchor="middle" font-size="13" fill="#3A4541">aquí vive QuizOton</text>
+              <!-- videobeam -->
+              <rect x="40" y="20" width="160" height="40" rx="8" fill="#fff" stroke="#101413" stroke-width="3"/>
+              <text x="120" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#101413">Videobeam</text>
+              <!-- celulares -->
+              <g font-size="13" font-weight="700" fill="#101413">
+                <rect x="545" y="50" width="40" height="70" rx="8" fill="#fff" stroke="#101413" stroke-width="3"/>
+                <rect x="600" y="155" width="40" height="70" rx="8" fill="#fff" stroke="#101413" stroke-width="3"/>
+                <rect x="545" y="255" width="40" height="70" rx="8" fill="#fff" stroke="#101413" stroke-width="3"/>
+                <text x="660" y="90">Celular</text>
+                <text x="660" y="195">Celular</text>
+                <text x="660" y="295">Celular</text>
+              </g>
+              <!-- sin internet -->
+              <g transform="translate(470 25)">
+                <path d="M10 30 a14 14 0 0 1 8-26 a18 18 0 0 1 34 4 a12 12 0 0 1 2 24 z" fill="#F4F6F5" stroke="#5E6B66" stroke-width="2.5"/>
+                <line x1="2" y1="36" x2="62" y2="-4" stroke="#C2410C" stroke-width="3.5" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+
+          <h3>Lo que necesitas</h3>
+          <ul>
+            <li><strong>Un computador con Windows 10 u 11.</strong> Es el que usas para dar clase.</li>
+            <li><strong>Un router Wi-Fi.</strong> Cualquier router doméstico sirve. Solo debe estar encendido; no necesita internet.</li>
+            <li><strong>Los celulares o tabletas de tus estudiantes</strong>, con un navegador como Chrome, Safari, Edge o Firefox.</li>
+            <li><strong>Un videobeam o televisor</strong> para proyectar. En el modo Sin prisa es opcional.</li>
+          </ul>
+
+          <h3>Instala QuizOton</h3>
+          <ol class="pasos-guia">
+            <li><strong>Descarga el instalador</strong><p>Hazlo desde la página oficial de QuizOton o desde el enlace que te enviemos por WhatsApp.</p></li>
+            <li><strong>Ábrelo</strong><p>Haz doble clic sobre el archivo descargado y sigue las instrucciones. Al terminar tendrás un acceso directo de QuizOton en el escritorio.</p></li>
+            <li><strong>Si aparece «Windows protegió su PC»</strong><p>Haz clic en <strong>Más información</strong> y luego en <strong>Ejecutar de todas formas</strong>. Windows muestra este aviso con programas nuevos que todavía no reconoce.</p></li>
+          </ol>
+
+          <div class="caja caja--importante">
+            <span class="caja__titulo">Permite el acceso a la red</span>
+            <p>La primera vez que abras QuizOton, Windows puede preguntarte si permites que se comunique en la red. Marca <strong>redes privadas</strong> y acepta. Si lo rechazas, los celulares no podrán conectarse a tu computador.</p>
+          </div>
+
+          <h3>Activa la prueba o tu licencia</h3>
+          <figure class="figura">
+            <div class="captura">
+              <img src="../img/capturas/activacion-licencia-800.webp" alt="Pantalla de activación con el identificador del equipo, el campo para la clave y la opción de prueba gratuita." width="800" height="500" loading="lazy">
+            </div>
+            <figcaption class="pie-foto">La pantalla de activación aparece al abrir QuizOton por primera vez.</figcaption>
+          </figure>
+          <p><strong>Para probar:</strong> usa la clave de prueba gratuita que aparece en esa misma pantalla. Tendrás todas las funciones durante <span data-config="pruebaDias">15</span> días o <span data-config="pruebaPartidas">12</span> partidas, lo que ocurra primero.</p>
+          <p><strong>Para activar tu licencia:</strong> copia el identificador de tu equipo (empieza por <span class="dato">QZ-</span>) y envíalo por WhatsApp con tu comprobante de pago. Te responderemos con tu clave. Pégala en el campo de licencia y haz clic en <strong>Activar QuizOton en este equipo</strong>. No necesitas internet para activarlo.</p>
+        </section>
+
+        <!-- ═══ 2. PREPARA TU CLASE ════════════════════════════════════════ -->
+        <section class="capitulo" id="preparar" aria-labelledby="t-preparar">
+          <header><h2 id="t-preparar">Prepara tu clase</h2></header>
+          <p class="intro">Esto lo haces una vez, con calma, desde tu casa o la sala de profesores. No necesitas el router ni a tus estudiantes.</p>
+
+          <h3>Crea tu perfil</h3>
+          <p>La primera vez que entres al panel docente, registra tu nombre, un usuario, una contraseña y tu asignatura principal. Si dictas más materias, agrégalas desde tu perfil.</p>
+          <div class="caja caja--importante">
+            <span class="caja__titulo">Anota tu usuario y contraseña</span>
+            <p>QuizOton funciona sin internet, así que no hay un correo de recuperación. Guárdalos en un lugar seguro.</p>
+          </div>
+
+          <h3>Crea tus cursos</h3>
+          <ol class="pasos-guia">
+            <li><strong>Nuevo curso</strong><p>Entra a <strong>Cursos</strong> y haz clic en <strong>Nuevo curso</strong>.</p></li>
+            <li><strong>Datos del curso</strong><p>Escribe el nombre (por ejemplo, <em>8.º B</em>), el grado y elige la asignatura.</p></li>
+            <li><strong>Carga la lista</strong><p>En la ficha del curso, haz clic en <strong>Cargar lista</strong>. Puedes descargar la plantilla o subir el Excel que ya usa tu colegio, con columnas de apellidos y nombres. La lista se carga una vez y sirve todo el año.</p></li>
+          </ol>
+
+          <h3>Arma una sesión</h3>
+          <p>Una sesión es un grupo de preguntas listo para jugar con un curso. Queda guardada para usarla cuantas veces quieras.</p>
+          <figure class="figura">
+            <div class="captura">
+              <img src="../img/capturas/panel-docente-sesiones-800.webp" alt="Panel docente con la lista de sesiones guardadas y el botón Nueva sesión." width="800" height="500" loading="lazy">
+            </div>
+            <figcaption class="pie-foto">En <strong>Mis sesiones</strong> ves tus sesiones, su modo y cómo le fue al curso.</figcaption>
+          </figure>
+          <ol class="pasos-guia">
+            <li><strong>Nueva sesión</strong><p>Haz clic en <strong>Nueva sesión</strong> y elige el modo de juego.</p></li>
+            <li><strong>Elige el curso</strong><p>Selecciona el curso con el que vas a jugar.</p></li>
+            <li><strong>Selecciona las preguntas</strong><p>Las preguntas de tu banco aparecen agrupadas por tema. Al marcar un grupo se seleccionan todas sus preguntas. Usa el ícono del ojo si quieres revisarlas una por una.</p></li>
+            <li><strong>Guarda</strong><p>Ponle un nombre que reconozcas fácilmente y guárdala.</p></li>
+          </ol>
+        </section>
+
+        <!-- ═══ 3. PREGUNTAS Y PLANTILLAS ══════════════════════════════════ -->
+        <section class="capitulo" id="preguntas" aria-labelledby="t-preguntas">
+          <header><h2 id="t-preguntas">Preguntas y plantillas</h2></header>
+          <p class="intro">Puedes escribir tus preguntas una a una en el editor o cargarlas todas juntas desde Excel. QuizOton trae dos plantillas descargables.</p>
+
+          <h3>Plantilla estándar</h3>
+          <p>Sirve para los modos En vivo, Dominio y Sin prisa. La regla es una sola:</p>
+          <div class="caja caja--consejo">
+            <span class="caja__titulo">La respuesta correcta siempre va en la columna A</span>
+            <p>Las incorrectas van en B, C y D. No te preocupes: al jugar, QuizOton baraja las opciones para que la correcta no quede siempre en el mismo lugar.</p>
+          </div>
+          <div class="hoja">
+            <table>
+              <caption>Ejemplo de filas en la plantilla estándar. La columna de la respuesta correcta está resaltada.</caption>
+              <thead><tr><th scope="col">Pregunta</th><th scope="col">Correcta (opción A)</th><th scope="col">Opción B</th><th scope="col">Opción C</th><th scope="col">Opción D</th></tr></thead>
+              <tbody>
+                <tr><td>¿Qué orgánulo realiza la fotosíntesis?</td><td class="correcta">Cloroplasto</td><td>Mitocondria</td><td>Vacuola</td><td>Aparato de Golgi</td></tr>
+                <tr><td>El agua hierve a 100 °C a nivel del mar.</td><td class="correcta">Verdadero</td><td>Falso</td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Verdadero o falso:</strong> escribe la respuesta correcta en A y la incorrecta en B. Deja C y D vacías.</p>
+          <p><strong>Imágenes:</strong> puedes agregar una imagen de apoyo a cada pregunta. Se muestra en el tablero, no en los celulares, así la red del salón no se satura.</p>
+
+          <figure class="figura">
+            <div class="captura">
+              <img src="../img/capturas/editor-pregunta-800.webp" alt="Editor de preguntas con enunciado, opciones con la correcta marcada y una imagen de apoyo." width="800" height="472" loading="lazy">
+            </div>
+            <figcaption class="pie-foto">El editor de preguntas, con una imagen de apoyo para la proyección.</figcaption>
+          </figure>
+
+          <h3>Plantilla del Duelo de saberes</h3>
+          <p>Para preguntas abiertas con varias respuestas válidas. Escribe las respuestas separadas por punto y coma, y si quieres, el puntaje de cada una después de dos puntos:</p>
+          <p><span class="dato">Hierro:10;Cobre:9;Oro:8;Oxígeno:7</span></p>
+
+          <h3>Cómo escribir buenas preguntas</h3>
+          <ul>
+            <li><strong>Distractores creíbles.</strong> Las opciones incorrectas deben parecer razonables para quien no domina el tema. Si una es absurda, la pregunta pierde valor.</li>
+            <li><strong>Usa los errores comunes de tu curso.</strong> Si sabes que muchos confunden dos conceptos, pon esa confusión como opción. El diagnóstico te dirá si persiste.</li>
+            <li><strong>Enunciados cortos y claros.</strong> Evita dobles negaciones y preguntas con trampa de redacción.</li>
+            <li><strong>Una idea por pregunta.</strong> Así sabrás exactamente qué no quedó claro.</li>
+          </ul>
+        </section>
+
+        <!-- ═══ 4. DURANTE LA CLASE ════════════════════════════════════════ -->
+        <section class="capitulo" id="en-clase" aria-labelledby="t-clase">
+          <header><h2 id="t-clase">Durante la clase</h2></header>
+          <p class="intro">Llega unos minutos antes la primera vez. Después, montar todo te tomará lo mismo que proyectar una presentación.</p>
+
+          <ol class="pasos-guia">
+            <li><strong>Enciende el router</strong><p>Conéctalo a la corriente y espera a que aparezca su red Wi-Fi.</p></li>
+            <li><strong>Conecta tu computador</strong><p>Al router, por Wi-Fi o por cable. Conecta también el videobeam.</p></li>
+            <li><strong>Abre QuizOton y elige la sesión</strong><p>Desde <strong>Mis sesiones</strong>, haz clic en <strong>Jugar</strong> y proyecta la pantalla.</p></li>
+            <li><strong>Pide a tus estudiantes que se conecten</strong><p>Al mismo Wi-Fi del router. Luego escanean el código QR del tablero o escriben en el navegador la dirección que aparece.</p></li>
+            <li><strong>Ingresan con su nombre</strong><p>Escriben su usuario (primer nombre y primer apellido, en minúscula, sin tildes y con guion bajo, como <span class="dato">maria_rojas</span>) o tocan su nombre en la lista.</p></li>
+            <li><strong>Empieza</strong><p>Cuando veas al curso conectado, haz clic en <strong>Empezar</strong>. Puedes pausar o terminar cuando lo necesites.</p></li>
+          </ol>
+
+          <div class="figura-duo">
+            <figure class="captura">
+              <img src="../img/capturas/proyeccion-sala-espera-800.webp" alt="Sala de espera proyectada con código QR, dirección, código del curso y aviso de que no se necesita internet." width="800" height="450" loading="lazy">
+              <figcaption>Lo que ve el curso en el tablero.</figcaption>
+            </figure>
+            <figure class="captura captura--movil" style="justify-self: center;">
+              <img src="../img/capturas/estudiante-ingreso.webp" alt="Pantalla de ingreso en el celular del estudiante." width="620" height="1342" loading="lazy">
+            </figure>
+          </div>
+
+          <div class="caja caja--aula">
+            <span class="caja__titulo">Díselo al curso antes de empezar</span>
+            <p>«Su celular va a decir que no hay internet. Es normal: estamos conectados al computador del salón y no se gastan datos.» Así evitas que se desconecten para buscar otra red.</p>
+          </div>
+
+          <h3>Si un estudiante no tiene celular</h3>
+          <p>Pueden compartir un dispositivo por parejas, turnarse o usar el modo Duelo de saberes, que se juega por equipos y en voz alta.</p>
+        </section>
+
+        <!-- ═══ 5. MODOS ═══════════════════════════════════════════════════ -->
+        <section class="capitulo" id="modos" aria-labelledby="t-modos">
+          <header><h2 id="t-modos">Los cuatro modos</h2></header>
+          <p class="intro">Elige el modo según el momento de la clase y lo que quieres lograr.</p>
+
+          <div class="tabla-marco">
+            <table class="tabla">
+              <thead><tr><th scope="col">Modo</th><th scope="col">Cómo se juega</th><th scope="col">Qué se proyecta</th><th scope="col">Cuándo usarlo</th></tr></thead>
+              <tbody>
+                <tr><th scope="row"><span class="etiqueta etiqueta--vivo">En vivo</span></th><td>Todo el curso a la vez, con reloj.</td><td>Pregunta, opciones y tiempo en grande.</td><td>Abrir o cerrar la clase, recuperar la atención.</td></tr>
+                <tr><th scope="row"><span class="etiqueta etiqueta--dominio">Dominio</span></th><td>Individual, a ritmo propio, sin reloj.</td><td>Código de ingreso y avance del grupo.</td><td>Repasar antes de un examen.</td></tr>
+                <tr><th scope="row"><span class="etiqueta etiqueta--duelo">Duelo de saberes</span></th><td>Por equipos, con voceros y turnos.</td><td>Tablero de casillas y marcador.</td><td>Repaso oral y trabajo en equipo.</td></tr>
+                <tr><th scope="row"><span class="etiqueta etiqueta--sinprisa">Sin prisa</span></th><td>Individual, sin reloj ni podio.</td><td>Opcional.</td><td>Primaria, lectura, estudiantes que necesitan más tiempo.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>En vivo</h3>
+          <p>La pregunta aparece en el tablero y todos responden al mismo tiempo desde el celular, con tiempo límite. Tú controlas cuándo revelar la respuesta. Aprovecha ese momento para preguntar «¿por qué alguien eligió la B?» antes de explicar.</p>
+          <figure class="figura">
+            <div class="captura">
+              <img src="../img/capturas/proyeccion-pregunta-800.webp" alt="Pregunta del modo En vivo proyectada con cuatro opciones y el reloj." width="800" height="450" loading="lazy">
+            </div>
+          </figure>
+
+          <h3>Dominio</h3>
+          <p>Cada estudiante practica solo en su celular. Así funciona:</p>
+          <ol>
+            <li>Si acierta una pregunta, queda dominada y no vuelve a salir.</li>
+            <li>Si falla, no se le repite de inmediato. Primero ve otras preguntas y luego la fallada vuelve a aparecer.</li>
+            <li>Termina cuando domina todas las preguntas de la sesión.</li>
+          </ol>
+          <div class="caja caja--consejo">
+            <span class="caja__titulo">Mira el primer intento</span>
+            <p>En el informe de Dominio, el acierto del primer intento te dice qué sabía el curso antes de practicar. Los reintentos te dicen cuánto les costó llegar.</p>
+          </div>
+
+          <h3>Duelo de saberes</h3>
+          <p>Organiza el curso en equipos. En cada turno, el tablero muestra una pregunta abierta con casillas ocultas. El equipo conversa y su vocero responde en voz alta. Si la respuesta está en el tablero, se descubre la casilla y el equipo suma sus puntos. Tú moderas y validas cada respuesta.</p>
+
+          <h3>Sin prisa</h3>
+          <p>Sin reloj y sin comparaciones. Cada estudiante lee y responde con tranquilidad. Es ideal para primaria, para comprensión lectora y para aplicar los ajustes del DUA y el PIAR. No es obligatorio proyectar.</p>
+        </section>
+
+        <!-- ═══ 6. INFORMES ════════════════════════════════════════════════ -->
+        <section class="capitulo" id="informes" aria-labelledby="t-informes">
+          <header><h2 id="t-informes">Informes y notas</h2></header>
+          <p class="intro">Al terminar cada partida tienes un informe. Úsalo para decidir qué hacer en la siguiente clase.</p>
+
+          <h3>Resumen del curso</h3>
+          <p>Muestra el acierto inicial, cuántos participaron y cuántos estudiantes necesitan apoyo. En el modo Dominio indica también cuántos dominaron todas las preguntas.</p>
+
+          <h3>Qué no quedó claro</h3>
+          <p>QuizOton revisa cada pregunta y te sugiere una posible causa cuando muchos fallaron:</p>
+          <h4>Problema de concepto</h4>
+          <p>Buena parte del curso eligió la misma opción incorrecta. Es probable que exista una idea mal entendida. Vuelve a explicarla, idealmente con un ejemplo distinto.</p>
+          <h4>Revisa la pregunta</h4>
+          <p>Las respuestas se repartieron entre varias opciones. Puede que el enunciado no sea claro, pero también que el tema aún no se haya trabajado lo suficiente. Tú conoces el contexto: decide cuál es el caso.</p>
+
+          <div class="caja caja--importante">
+            <span class="caja__titulo">El diagnóstico es una pista, no un veredicto</span>
+            <p>Úsalo para orientar tu reflexión. Siempre compáralo con lo que observaste en clase.</p>
+          </div>
+
+          <h3>Tus estudiantes, por nivel</h3>
+          <p>La tabla de estudiantes tiene filtros para ver con un clic quién está en <strong>Necesita apoyo</strong>, <strong>En camino</strong> o <strong>Lo domina</strong>. Así puedes armar grupos de refuerzo o monitores.</p>
+
+          <h3>Exporta</h3>
+          <p>Descarga el informe en <strong>PDF</strong> para tu archivo o para coordinación, y la planilla de notas en <strong>Excel</strong> para pasarla al boletín con la escala de tu institución.</p>
+
+          <div class="caja caja--consejo">
+            <span class="caja__titulo">Nadie queda expuesto</span>
+            <p>El tablero nunca muestra la nota de un estudiante frente al curso. Los resultados individuales solo los ves tú en tu computador.</p>
+          </div>
+        </section>
+
+        <!-- ═══ 7. PROBLEMAS ═══════════════════════════════════════════════ -->
+        <section class="capitulo" id="problemas" aria-labelledby="t-problemas">
+          <header><h2 id="t-problemas">Si algo no funciona</h2></header>
+          <p class="intro">La mayoría de los problemas se resuelven revisando la conexión. Sigue estos pasos en orden.</p>
+
+          <article class="problema">
+            <h3>Los celulares no logran entrar</h3>
+            <div>
+              <ol>
+                <li>Verifica que los celulares estén conectados al Wi-Fi del router del salón, no a sus datos móviles ni a otra red.</li>
+                <li>Pídeles que escaneen el código QR o que escriban la dirección exactamente como aparece en el tablero, con puntos y sin espacios.</li>
+                <li>Si el celular pregunta si quiere seguir conectado a una red sin internet, deben responder que sí.</li>
+                <li>Revisa que Windows permita a QuizOton usar la red privada. Si al instalarlo lo rechazaste, escríbenos y te ayudamos.</li>
+                <li>Algunos routers traen activado el «aislamiento de clientes» o «AP isolation», que impide que los equipos se vean. Desactívalo en la configuración del router.</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="problema">
+            <h3>Aparece «Windows protegió su PC»</h3>
+            <div>
+              <p>Haz clic en <strong>Más información</strong>, verifica que el archivo sea el instalador de QuizOton que descargaste de la página oficial y haz clic en <strong>Ejecutar de todas formas</strong>.</p>
+            </div>
+          </article>
+
+          <article class="problema">
+            <h3>Un estudiante no encuentra su nombre</h3>
+            <div>
+              <p>Revisa la lista del curso en el panel docente. Si falta, agrégalo. Si su nombre tiene tildes o eñes, recuérdale que el usuario se escribe sin tildes.</p>
+            </div>
+          </article>
+
+          <article class="problema">
+            <h3>Un celular se desconectó</h3>
+            <div>
+              <p>Pide al estudiante que confirme que sigue conectado al Wi-Fi del salón y que vuelva a abrir la dirección. Muchos celulares cambian solos a datos móviles cuando detectan una red sin internet; desactivar los datos durante la clase evita que ocurra.</p>
+            </div>
+          </article>
+
+          <article class="problema">
+            <h3>La prueba gratuita terminó</h3>
+            <div>
+              <p>Tus sesiones y cursos siguen guardados en tu computador. Para seguir usando QuizOton, envía el identificador de tu equipo por WhatsApp con tu comprobante de pago y activa tu licencia.</p>
+            </div>
+          </article>
+
+          <div class="caja caja--aula no-imprimir">
+            <span class="caja__titulo">¿Necesitas ayuda?</span>
+            <p><a class="enlace-subrayado" data-whatsapp="general" href="#">Escríbenos por WhatsApp</a> y cuéntanos qué ves en pantalla. Una foto ayuda mucho.</p>
+          </div>
+        </section>
+
+        <!-- ═══ 8. FUNDAMENTOS ═════════════════════════════════════════════ -->
+        <section class="capitulo" id="fundamentos" aria-labelledby="t-fundamentos">
+          <header><h2 id="t-fundamentos">Fundamentos pedagógicos</h2></header>
+          <p class="intro">Estas son las ideas en las que se apoya el diseño de QuizOton, por si quieres profundizar o presentarlo a tu institución.</p>
+
+          <h3>Evaluación formativa</h3>
+          <p>Evaluar durante el proceso, y no solo al final, permite ajustar la enseñanza a tiempo. Los informes y el diagnóstico de QuizOton existen para eso.</p>
+
+          <h3>Práctica de recuperación</h3>
+          <p>Intentar recordar una respuesta fortalece el aprendizaje más que releer. Responder preguntas es, en sí mismo, una forma de estudiar. Los modos En vivo y Dominio se basan en esta idea.</p>
+
+          <h3>Aprendizaje para el dominio</h3>
+          <p>Con tiempo suficiente y apoyo en las dificultades, la mayoría de los estudiantes puede alcanzar los objetivos. El modo Dominio permite que cada uno avance hasta lograrlo.</p>
+
+          <h3>Diseño universal para el aprendizaje</h3>
+          <p>Ofrecer distintas formas de participar reduce barreras. El modo Sin prisa quita la presión del tiempo y la comparación.</p>
+
+          <h3>Referencias</h3>
+          <ul class="referencias">
+            <li>Black, P. y Wiliam, D. (1998). Assessment and classroom learning. <i>Assessment in Education: Principles, Policy &amp; Practice, 5</i>(1), 7–74.</li>
+            <li>Bloom, B. S. (1968). Learning for mastery. <i>Evaluation Comment, 1</i>(2), 1–12.</li>
+            <li>CAST (2018). <i>Universal Design for Learning Guidelines version 2.2</i>. CAST.</li>
+            <li>Roediger, H. L. y Karpicke, J. C. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <i>Psychological Science, 17</i>(3), 249–255.</li>
+          </ul>
+
+          <div class="guia-pie">
+            <button class="boton boton--amarillo" type="button" data-imprimir>Descargar esta guía en PDF</button>
+            <a class="boton" href="../index.html">Volver a QuizOton</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__base" style="border-top: 0; padding-top: 0;">
+      <span>© <span data-anio>2026</span> QuizOton. Guía docente, versión 1.0.</span>
+      <span style="display:flex;gap:18px;"><a href="../legal/privacidad.html">Privacidad</a><a href="../legal/terminos.html">Términos</a></span>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/guia.js"></script>
+</body>
+</html>
