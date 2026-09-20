@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuizOton: evaluación formativa y juego en el aula, sin internet</title>
+  <meta name="description" content="QuizOton convierte el computador del docente en el centro de la clase. Los estudiantes responden desde el celular por el Wi-Fi del salón, sin internet, sin datos móviles y sin crear cuentas. Prueba gratis.">
+  <meta name="theme-color" content="#101413">
+
+  <!-- DOMINIO: reemplaza https://TU-DOMINIO.com cuando tengas dominio -->
+  <link rel="canonical" href="https://TU-DOMINIO.com/">
+
+  <!-- Vista previa al compartir (WhatsApp, Facebook, LinkedIn, X) -->
+  <!-- IMAGEN PENDIENTE: img/og-quizoton.jpg · 1200×630 px · JPG · menos de 300 KB.
+       Logo de QuizOton sobre fondo pizarra, con la frase principal y una captura de la proyección. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="QuizOton">
+  <meta property="og:title" content="QuizOton: la clase que el curso quiere jugar y tú puedes evaluar">
+  <meta property="og:description" content="Evaluación formativa con los celulares de tus estudiantes, por el Wi-Fi del salón y sin internet.">
+  <meta property="og:url" content="https://TU-DOMINIO.com/">
+  <meta property="og:image" content="https://TU-DOMINIO.com/img/og-quizoton.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/marca/favicon-32.png">
+  <link rel="apple-touch-icon" href="img/marca/apple-touch-icon.png">
+
+  <link rel="preload" href="fuentes/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fuentes/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "QuizOton",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Windows 10, Windows 11",
+    "inLanguage": "es",
+    "description": "Plataforma de evaluación formativa que funciona en la red local del salón, sin internet.",
+    "url": "https://TU-DOMINIO.com/",
+    "offers": { "@type": "Offer", "priceCurrency": "COP", "price": "89000", "description": "Plan docente anual. Actualiza este valor si cambias el precio en js/config.js." }
+  }
+  </script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ═══ CABECERA ═════════════════════════════════════════════════════════ -->
+  <header class="cabecera">
+    <div class="contenedor cabecera__fila">
+      <a class="marca" href="#inicio" aria-label="QuizOton, ir al inicio">
+        <img src="img/marca/logotipo-color.webp" alt="QuizOton" width="719" height="404">
+      </a>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú">
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav-principal" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#plataforma">La plataforma</a></li>
+          <li><a href="#modos">Modos</a></li>
+          <li><a href="#pedagogia">Pedagogía</a></li>
+          <li><a href="guia/index.html">Guía docente</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+        </ul>
+        <a class="boton boton--menta boton--cta-cabecera" href="#descargar" data-abrir-descarga>Probar gratis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ═══ HERO ═══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="contenedor hero__rejilla">
+        <div>
+          <h1 id="titulo-hero">La clase que el curso quiere jugar y tú puedes evaluar.</h1>
+          <p class="hero__texto">
+            QuizOton convierte tu computador en el centro del salón. Tus estudiantes responden desde el celular por el Wi-Fi del aula, sin internet, sin gastar datos y sin crear cuentas. Tú te quedas con las notas y con lo que no quedó claro.
+          </p>
+          <div class="hero__acciones">
+            <a class="boton boton--menta boton--grande" href="#descargar" data-abrir-descarga>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Descargar prueba gratis
+            </a>
+            <a class="boton boton--grande" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+          <ul class="hero__nota">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span><span data-config="pruebaDias">15</span> días o <span data-config="pruebaPartidas">12</span> partidas gratis</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Para Windows 10 y 11
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              No instalas nada más
+            </li>
+          </ul>
+        </div>
+
+        <!-- Recreación de la pantalla de proyección real (sala de espera) -->
+        <div class="proyector">
+          <div class="pantalla" role="img" aria-label="Pantalla de QuizOton proyectada en el salón: los estudiantes escanean un código QR o escriben la dirección 192.168.40.103 y el código del curso YCWY. Un aviso indica que el celular dirá sin acceso a internet y que es normal.">
+            <div class="pantalla__top" aria-hidden="true">
+              <img src="img/marca/logotipo-color.webp" alt="" width="719" height="404">
+              <p class="pantalla__curso">Hardware y redes escolares<small>6.º A, Tecnología e Informática</small></p>
+            </div>
+            <div class="pantalla__centro" aria-hidden="true">
+              <div class="pantalla__qr"><svg viewBox="0 0 25 25" aria-hidden="true" shape-rendering="crispEdges"><path fill="#101413" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM9 0h1v1h-1zM11 0h1v1h-1zM12 0h1v1h-1zM14 0h1v1h-1zM16 0h1v1h-1zM18 0h1v1h-1zM19 0h1v1h-1zM20 0h1v1h-1zM21 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM9 1h1v1h-1zM10 1h1v1h-1zM11 1h1v1h-1zM12 1h1v1h-1zM13 1h1v1h-1zM14 1h1v1h-1zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM9 2h1v1h-1zM12 2h1v1h-1zM15 2h1v1h-1zM18 2h1v1h-1zM20 2h1v1h-1zM21 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM13 3h1v1h-1zM14 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM21 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM14 4h1v1h-1zM18 4h1v1h-1zM20 4h1v1h-1zM21 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM10 5h1v1h-1zM11 5h1v1h-1zM12 5h1v1h-1zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM19 6h1v1h-1zM20 6h1v1h-1zM21 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM10 7h1v1h-1zM14 7h1v1h-1zM16 7h1v1h-1zM0 8h1v1h-1zM6 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM11 8h1v1h-1zM13 8h1v1h-1zM15 8h1v1h-1zM16 8h1v1h-1zM17 8h1v1h-1zM18 8h1v1h-1zM21 8h1v1h-1zM22 8h1v1h-1zM23 8h1v1h-1zM1 9h1v1h-1zM3 9h1v1h-1zM4 9h1v1h-1zM9 9h1v1h-1zM11 9h1v1h-1zM15 9h1v1h-1zM16 9h1v1h-1zM17 9h1v1h-1zM20 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM23 9h1v1h-1zM0 10h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM4 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM9 10h1v1h-1zM11 10h1v1h-1zM12 10h1v1h-1zM15 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM24 10h1v1h-1zM0 11h1v1h-1zM2 11h1v1h-1zM5 11h1v1h-1zM7 11h1v1h-1zM8 11h1v1h-1zM15 11h1v1h-1zM16 11h1v1h-1zM20 11h1v1h-1zM21 11h1v1h-1zM24 11h1v1h-1zM6 12h1v1h-1zM9 12h1v1h-1zM10 12h1v1h-1zM12 12h1v1h-1zM14 12h1v1h-1zM16 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM24 12h1v1h-1zM0 13h1v1h-1zM1 13h1v1h-1zM3 13h1v1h-1zM7 13h1v1h-1zM8 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM23 13h1v1h-1zM0 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM11 14h1v1h-1zM12 14h1v1h-1zM13 14h1v1h-1zM15 14h1v1h-1zM17 14h1v1h-1zM19 14h1v1h-1zM21 14h1v1h-1zM23 14h1v1h-1zM24 14h1v1h-1zM0 15h1v1h-1zM2 15h1v1h-1zM3 15h1v1h-1zM4 15h1v1h-1zM7 15h1v1h-1zM8 15h1v1h-1zM11 15h1v1h-1zM16 15h1v1h-1zM20 15h1v1h-1zM22 15h1v1h-1zM24 15h1v1h-1zM0 16h1v1h-1zM2 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM8 16h1v1h-1zM11 16h1v1h-1zM13 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM22 16h1v1h-1zM8 17h1v1h-1zM10 17h1v1h-1zM12 17h1v1h-1zM13 17h1v1h-1zM15 17h1v1h-1zM16 17h1v1h-1zM20 17h1v1h-1zM22 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM5 18h1v1h-1zM6 18h1v1h-1zM11 18h1v1h-1zM16 18h1v1h-1zM18 18h1v1h-1zM20 18h1v1h-1zM21 18h1v1h-1zM24 18h1v1h-1zM0 19h1v1h-1zM6 19h1v1h-1zM9 19h1v1h-1zM12 19h1v1h-1zM14 19h1v1h-1zM16 19h1v1h-1zM20 19h1v1h-1zM0 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM4 20h1v1h-1zM6 20h1v1h-1zM9 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM15 20h1v1h-1zM16 20h1v1h-1zM17 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM0 21h1v1h-1zM2 21h1v1h-1zM3 21h1v1h-1zM4 21h1v1h-1zM6 21h1v1h-1zM9 21h1v1h-1zM14 21h1v1h-1zM18 21h1v1h-1zM19 21h1v1h-1zM21 21h1v1h-1zM23 21h1v1h-1zM24 21h1v1h-1zM0 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM6 22h1v1h-1zM9 22h1v1h-1zM11 22h1v1h-1zM12 22h1v1h-1zM17 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM10 23h1v1h-1zM11 23h1v1h-1zM15 23h1v1h-1zM16 23h1v1h-1zM18 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM24 23h1v1h-1zM0 24h1v1h-1zM1 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM14 24h1v1h-1zM15 24h1v1h-1zM16 24h1v1h-1zM18 24h1v1h-1zM21 24h1v1h-1zM24 24h1v1h-1z"/></svg></div>
+              <div class="pantalla__datos">
+                <p class="pantalla__instr">Abre el navegador y escribe</p>
+                <p class="pantalla__ip">192.168.40.103</p>
+                <div class="pantalla__codigo">
+                  <small>Código del curso</small>
+                  <b data-codigo>YCWY</b>
+                </div>
+              </div>
+            </div>
+            <div class="pantalla__aviso" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="2" x2="22" y2="22"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.8a15 15 0 0 1 4.2-2.7"/><path d="M10.7 5.1A15 15 0 0 1 22 8.8"/><path d="M5 12.9a10 10 0 0 1 5.2-2.7"/><path d="M16.8 11.1A10 10 0 0 1 19 12.9"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+              <span><strong>Tu celular va a decir «sin acceso a internet». Es normal.</strong> Estamos conectados al computador del salón.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HECHOS ═════════════════════════════════════════════════════════ -->
+    <section class="hechos" aria-label="Lo esencial">
+      <ul class="contenedor hechos__lista">
+        <li>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          <div><strong>Sin internet</strong><span>Basta un router encendido en el salón, aunque no tenga cable ni plan de datos.</span></div>
+        </li>
+        <li>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div><strong>Sin cuentas para estudiantes</strong><span>Entran con su nombre de la lista del curso. Sin correos ni contraseñas.</span></div>
+        </li>
+        <li>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <div><strong>Los datos se quedan en el salón</strong><span>Respuestas y notas se guardan en tu computador. No viajan a la nube.</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ═══ CÓMO FUNCIONA ══════════════════════════════════════════════════ -->
+    <section class="seccion" id="como-funciona" aria-labelledby="titulo-como">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2 id="titulo-como">De la sala de profesores a la clase en tres pasos</h2>
+          <p>No necesitas a la persona de sistemas ni configurar servidores. Si sabes proyectar una presentación, sabes usar QuizOton.</p>
+        </div>
+
+        <div class="pasos-rejilla">
+          <ol class="pasos">
+            <li class="paso">
+              <div>
+                <h3>Conecta tu computador al router del salón</h3>
+                <p>Por cable o por Wi-Fi. El router solo tiene que estar encendido; no importa si no tiene internet. Abre QuizOton y elige la sesión que preparaste.</p>
+              </div>
+            </li>
+            <li class="paso">
+              <div>
+                <h3>Tus estudiantes entran desde el celular</h3>
+                <p>Se conectan al mismo Wi-Fi y escanean el código QR del tablero o escriben la dirección que aparece, como <code>192.168.40.103</code>. Luego escriben su nombre y listo.</p>
+              </div>
+            </li>
+            <li class="paso">
+              <div>
+                <h3>Juegan, aprenden y tú evalúas</h3>
+                <p>Al terminar tienes el informe de la partida, el diagnóstico de lo que no quedó claro y las notas listas para exportar a Excel o PDF.</p>
+              </div>
+            </li>
+          </ol>
+
+          <figure>
+            <div class="foto-marco">
+              <img src="img/fotos/aula-conexion-router.webp"
+                   srcset="img/fotos/aula-conexion-router-800.webp 800w, img/fotos/aula-conexion-router.webp 928w"
+                   sizes="(max-width: 960px) 100vw, 45vw"
+                   alt="Computador portátil con QuizOton conectado por cable a un router sencillo, mientras el videobeam proyecta el código del curso en el tablero de un salón."
+                   width="928" height="1152" loading="lazy">
+            </div>
+            <figcaption class="pie-foto">Computador, router y videobeam. No hace falta nada más.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ QUÉ NECESITAS ══════════════════════════════════════════════════ -->
+    <section class="seccion seccion--blanca" id="requisitos" aria-labelledby="titulo-requisitos">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2 id="titulo-requisitos">Lo que necesitas ya está en tu colegio</h2>
+          <p>QuizOton se instala con un solo archivo. No tienes que instalar programas adicionales ni pedir permisos especiales.</p>
+        </div>
+
+        <ul class="requisitos">
+          <li class="requisito">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <h3>Un computador con Windows</h3>
+            <p>Windows 10 u 11. Es el que usas para dar clase; ahí se instala QuizOton y se guardan tus datos.</p>
+          </li>
+          <li class="requisito">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="14" width="20" height="7" rx="2"/><line x1="6" y1="17.5" x2="6.01" y2="17.5"/><line x1="10" y1="17.5" x2="10.01" y2="17.5"/><path d="M8 10a5.6 5.6 0 0 1 8 0"/><path d="M5 7a10 10 0 0 1 14 0"/></svg>
+            <h3>Un router Wi-Fi</h3>
+            <p>Cualquier router doméstico sirve. <em>No necesita internet</em>, solo corriente.</p>
+          </li>
+          <li class="requisito">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <h3>Celulares o tabletas</h3>
+            <p>Los de tus estudiantes, de cualquier marca, con un navegador como Chrome, Safari o Firefox. No se instala ninguna app.</p>
+          </li>
+          <li class="requisito">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="12" rx="2"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>
+            <h3>Un videobeam o televisor</h3>
+            <p>Para proyectar las preguntas. Funciona también en videobeams antiguos de formato 4:3. En el modo Sin prisa es opcional.</p>
+          </li>
+        </ul>
+
+        <div class="nota-caja">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <p><strong>La primera vez que abras QuizOton,</strong> Windows puede preguntarte si permites que se comunique en la red. Elige <strong>redes privadas</strong> y acepta. Así los celulares de tus estudiantes pueden conectarse a tu computador.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LA PLATAFORMA ══════════════════════════════════════════════════ -->
+    <section class="seccion" id="plataforma" aria-labelledby="titulo-plataforma">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2 id="titulo-plataforma">Tres pantallas, una misma clase</h2>
+          <p>Tú manejas la sesión desde tu computador, el curso sigue la partida en el tablero y cada estudiante responde en su celular.</p>
+        </div>
+
+        <!-- VIDEO PENDIENTE
+             Cuando tengas el video, reemplaza todo el <figure class="reservado"> por:
+             <video class="captura" controls preload="none" poster="img/fotos/video-portada.webp" width="1920" height="1080">
+               <source src="video/quizoton-demo.mp4" type="video/mp4">
+             </video>
+             Si lo subes a YouTube, usa un <iframe> con loading="lazy" en su lugar. -->
+        <figure class="reservado" style="--proporcion: 16 / 9; margin-bottom: 48px;" aria-label="Espacio reservado para el video de demostración">
+          <div class="reservado__info">
+            <span class="reservado__tipo">Video pendiente</span>
+            <strong>Video de demostración de una clase con QuizOton</strong>
+            <p>De 60 a 90 segundos. Docente abre QuizOton, proyecta la sala de espera, los estudiantes escanean el QR con el celular, responden una pregunta en modo En vivo y al final se ve el informe con el diagnóstico. Con subtítulos, porque muchos lo verán sin sonido.</p>
+            <dl>
+              <dt>Archivo</dt><dd>video/quizoton-demo.mp4</dd>
+              <dt>Tamaño</dt><dd>1920 × 1080 px (16:9)</dd>
+              <dt>Formato</dt><dd>MP4 H.264, menos de 25 MB, o enlace de YouTube</dd>
+              <dt>Portada</dt><dd>img/fotos/video-portada.webp, 1600 × 900 px, menos de 150 KB</dd>
+            </dl>
+          </div>
+        </figure>
+
+        <div class="pestanas">
+          <div class="pestanas__lista" role="tablist" aria-label="Pantallas de QuizOton">
+            <button class="pestana" type="button" role="tab" id="tab-docente" aria-controls="panel-docente" aria-selected="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              Docente
+            </button>
+            <button class="pestana" type="button" role="tab" id="tab-proyeccion" aria-controls="panel-proyeccion" aria-selected="false" tabindex="-1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="2" y="4" width="20" height="12" rx="2"/><path d="M12 16v4"/><path d="M8 20h8"/></svg>
+              Proyección
+            </button>
+            <button class="pestana" type="button" role="tab" id="tab-estudiante" aria-controls="panel-estudiante" aria-selected="false" tabindex="-1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              Estudiante
+            </button>
+          </div>
+
+          <!-- Panel docente -->
+          <div class="panel" role="tabpanel" id="panel-docente" aria-labelledby="tab-docente" tabindex="0">
+            <div class="capturas-pila">
+              <figure class="captura">
+                <img src="img/capturas/panel-docente-sesiones.webp"
+                     srcset="img/capturas/panel-docente-sesiones-800.webp 800w, img/capturas/panel-docente-sesiones.webp 1440w"
+                     sizes="(max-width: 960px) 100vw, 60vw"
+                     alt="Panel docente de QuizOton con la lista de sesiones guardadas, su modo de juego, el porcentaje de acierto y los botones para jugar." width="1440" height="900" loading="lazy">
+                <figcaption>Tus sesiones quedan guardadas para jugarlas cuantas veces quieras.</figcaption>
+              </figure>
+              <figure class="captura">
+                <img src="img/capturas/editor-pregunta.webp"
+                     srcset="img/capturas/editor-pregunta-800.webp 800w, img/capturas/editor-pregunta.webp 1440w"
+                     sizes="(max-width: 960px) 100vw, 60vw"
+                     alt="Editor de preguntas de QuizOton: enunciado, cuatro opciones con la correcta marcada y una imagen de apoyo que solo se muestra en la proyección." width="1440" height="850" loading="lazy">
+                <figcaption>Escribe o importa tus preguntas y agrega imágenes para el tablero.</figcaption>
+              </figure>
+            </div>
+            <div class="panel__texto">
+              <h3>Tu clase, organizada</h3>
+              <p>Registra tus asignaturas y cursos, carga la lista de estudiantes una sola vez y arma sesiones con las preguntas de tu banco.</p>
+              <ul class="lista-check">
+                <li>Carga la lista del curso desde el Excel que ya usa tu colegio.</li>
+                <li>Importa preguntas con la plantilla de Excel: la correcta siempre va en la columna A y QuizOton baraja las opciones.</li>
+                <li>Agrega imágenes que se ven en el tablero sin cargar los celulares.</li>
+                <li>Guarda sesiones y vuelve a jugarlas con otro curso.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Panel proyección -->
+          <div class="panel" role="tabpanel" id="panel-proyeccion" aria-labelledby="tab-proyeccion" tabindex="0" hidden>
+            <div class="capturas-pila">
+              <figure class="captura">
+                <img src="img/capturas/proyeccion-pregunta.webp"
+                     srcset="img/capturas/proyeccion-pregunta-800.webp 800w, img/capturas/proyeccion-pregunta.webp 1600w"
+                     sizes="(max-width: 960px) 100vw, 60vw"
+                     alt="Pantalla de proyección con una pregunta sobre la memoria RAM, cuatro opciones marcadas de la A a la D y el reloj en 28 segundos." width="1600" height="900" loading="lazy">
+                <figcaption>Letra grande, pensada para leerse desde el fondo del salón.</figcaption>
+              </figure>
+              <figure class="captura">
+                <img src="img/capturas/proyeccion-pregunta-imagen.webp"
+                     srcset="img/capturas/proyeccion-pregunta-imagen-800.webp 800w, img/capturas/proyeccion-pregunta-imagen.webp 1600w"
+                     sizes="(max-width: 960px) 100vw, 60vw"
+                     alt="Pantalla de proyección con una pregunta de biología acompañada del diagrama de una célula vegetal y el conteo de estudiantes que ya respondieron." width="1600" height="900" loading="lazy">
+                <figcaption>Las imágenes de apoyo se ven en el tablero.</figcaption>
+              </figure>
+            </div>
+            <div class="panel__texto">
+              <h3>El tablero guía la clase</h3>
+              <p>La proyección muestra lo que el curso necesita ver y nada más: la pregunta, el tiempo y el avance del grupo.</p>
+              <ul class="lista-check">
+                <li>Código QR, dirección y código del curso para entrar en segundos.</li>
+                <li>Tú controlas cuándo empezar, pausar, revelar y pasar a la siguiente.</li>
+                <li>Se adapta a videobeams antiguos 4:3 y a pantallas panorámicas.</li>
+                <li>Nunca muestra notas individuales frente al curso.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Panel estudiante -->
+          <div class="panel" role="tabpanel" id="panel-estudiante" aria-labelledby="tab-estudiante" tabindex="0" hidden>
+            <div class="capturas-duo">
+              <figure class="captura captura--movil">
+                <img src="img/capturas/estudiante-ingreso.webp" alt="Pantalla de ingreso en el celular: el estudiante escribe su usuario, sin contraseña, con un aviso de que el celular dirá sin acceso a internet." width="620" height="1342" loading="lazy">
+              </figure>
+              <figure class="captura captura--movil">
+                <img src="img/capturas/estudiante-pregunta.webp" alt="Pregunta en el celular del estudiante con cuatro botones grandes de respuesta, barra de progreso y tiempo restante." width="620" height="1281" loading="lazy">
+              </figure>
+            </div>
+            <div class="panel__texto">
+              <h3>Entrar es tan fácil como decir su nombre</h3>
+              <p>Sin descargar apps ni recordar contraseñas. El estudiante escribe su usuario o toca su nombre en la lista y empieza a responder.</p>
+              <ul class="lista-check">
+                <li>Funciona en celulares de gama básica.</li>
+                <li>Botones grandes, fáciles de tocar.</li>
+                <li>Un aviso le explica que no necesita internet.</li>
+                <li>Solo su profesor ve sus resultados.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MODOS ══════════════════════════════════════════════════════════ -->
+    <section class="seccion seccion--blanca" id="modos" aria-labelledby="titulo-modos">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2 id="titulo-modos">Cuatro formas de jugar, según lo que tu clase necesita</h2>
+          <p>No todos los momentos de la clase piden lo mismo. A veces hace falta energía, a veces calma, a veces conversar.</p>
+        </div>
+
+        <div class="modos">
+          <article class="modo modo--vivo">
+            <div>
+              <span class="modo__marca">Todo el curso a la vez</span>
+              <h3>En vivo</h3>
+              <p>La pregunta aparece en el tablero con reloj y todos responden desde su celular al mismo tiempo. Tú decides cuándo revelar la respuesta y explicarla.</p>
+              <ul class="lista-check">
+                <li>Tiempo límite y revelado controlado por ti.</li>
+                <li>El tablero muestra cuántos ya respondieron.</li>
+                <li>Espacio para explicar la respuesta correcta.</li>
+              </ul>
+              <p class="modo__uso"><b>Úsalo para</b> abrir o cerrar la clase y recuperar la atención del grupo.</p>
+            </div>
+            <div class="modo__visual">
+              <figure class="captura">
+                <img src="img/capturas/proyeccion-pregunta-800.webp" alt="Pregunta del modo En vivo proyectada con el reloj en cuenta regresiva." width="800" height="450" loading="lazy">
+              </figure>
+            </div>
+          </article>
+
+          <article class="modo modo--dominio">
+            <div>
+              <span class="modo__marca">A ritmo propio</span>
+              <h3>Dominio</h3>
+              <p>Cada estudiante practica en su celular. Si falla una pregunta, no se la repite de inmediato: vuelve a salir más adelante, después de otras, hasta que la domine.</p>
+              <ul class="lista-check">
+                <li>Sin reloj: cada quien avanza a su ritmo.</li>
+                <li>El informe separa el acierto en el primer intento de los reintentos.</li>
+                <li>Sabes quién llegó a dominar todas las preguntas.</li>
+              </ul>
+              <p class="modo__uso"><b>Úsalo para</b> repasar antes de un examen y reforzar lo que costó.</p>
+            </div>
+            <div class="modo__visual">
+              <!-- IMAGEN PENDIENTE: reemplaza el <figure class="reservado"> por
+                   <figure class="captura captura--movil" style="margin-inline:auto"><img src="img/capturas/modo-dominio.webp" alt="..." width="620" height="1342" loading="lazy"></figure> -->
+              <figure class="reservado" style="--proporcion: 620 / 1100; max-width: 320px; margin-inline: auto;" aria-label="Espacio reservado para captura del modo Dominio">
+                <div class="reservado__info">
+                  <span class="reservado__tipo">Captura pendiente</span>
+                  <strong>Modo Dominio en el celular</strong>
+                  <p>Pantalla del estudiante con su avance: preguntas dominadas y pendientes, y el aviso de que una pregunta fallada volverá más adelante.</p>
+                  <dl>
+                    <dt>Archivo</dt><dd>img/capturas/modo-dominio.webp</dd>
+                    <dt>Tamaño</dt><dd>620 × 1342 px (vertical)</dd>
+                    <dt>Peso</dt><dd>menos de 80 KB</dd>
+                  </dl>
+                </div>
+              </figure>
+            </div>
+          </article>
+
+          <article class="modo modo--duelo">
+            <div>
+              <span class="modo__marca">Por equipos</span>
+              <h3>Duelo de saberes</h3>
+              <p>Los equipos se turnan frente a un tablero de casillas ocultas. Cada pregunta tiene varias respuestas válidas con distinto puntaje, y un vocero responde en voz alta después de conversar con su equipo.</p>
+              <ul class="lista-check">
+                <li>Preguntas abiertas con respuestas puntuadas.</li>
+                <li>Marcador de equipos en el tablero.</li>
+                <li>Tú moderas y validas cada respuesta.</li>
+              </ul>
+              <p class="modo__uso"><b>Úsalo para</b> repasos orales, trabajo en equipo y argumentar en voz alta.</p>
+            </div>
+            <div class="modo__visual">
+              <!-- IMAGEN PENDIENTE: reemplaza el <figure class="reservado"> por
+                   <figure class="captura"><img src="img/capturas/modo-duelo.webp" alt="..." width="1600" height="900" loading="lazy"></figure> -->
+              <figure class="reservado" style="--proporcion: 16 / 9;" aria-label="Espacio reservado para captura del modo Duelo de saberes">
+                <div class="reservado__info">
+                  <span class="reservado__tipo">Captura pendiente</span>
+                  <strong>Tablero del Duelo de saberes</strong>
+                  <p>Proyección con la pregunta abierta, las casillas de respuesta (algunas descubiertas con su puntaje) y el marcador de dos o más equipos.</p>
+                  <dl>
+                    <dt>Archivo</dt><dd>img/capturas/modo-duelo.webp</dd>
+                    <dt>Tamaño</dt><dd>1600 × 900 px (16:9)</dd>
+                    <dt>Peso</dt><dd>menos de 120 KB</dd>
+                  </dl>
+                </div>
+              </figure>
+            </div>
+          </article>
+
+          <article class="modo modo--sinprisa">
+            <div>
+              <span class="modo__marca">En calma</span>
+              <h3>Sin prisa</h3>
+              <p>Sin reloj y sin podio. Cada estudiante lee y responde con tranquilidad. Está pensado para primaria, lectura comprensiva y estudiantes que necesitan más tiempo.</p>
+              <ul class="lista-check">
+                <li>Nadie compite por velocidad.</li>
+                <li>El videobeam es opcional.</li>
+                <li>Ayuda a aplicar ajustes razonables del DUA y el PIAR.</li>
+              </ul>
+              <p class="modo__uso"><b>Úsalo para</b> evaluar comprensión sin la presión del tiempo.</p>
+            </div>
+            <div class="modo__visual">
+              <!-- IMAGEN PENDIENTE: reemplaza el <figure class="reservado"> por
+                   <figure class="captura captura--movil" style="margin-inline:auto"><img src="img/capturas/modo-sin-prisa.webp" alt="..." width="620" height="1342" loading="lazy"></figure> -->
+              <figure class="reservado" style="--proporcion: 620 / 1100; max-width: 320px; margin-inline: auto;" aria-label="Espacio reservado para captura del modo Sin prisa">
+                <div class="reservado__info">
+                  <span class="reservado__tipo">Captura pendiente</span>
+                  <strong>Modo Sin prisa en el celular</strong>
+                  <p>Pregunta de lectura en el celular, sin reloj visible, con letra grande y botones amplios.</p>
+                  <dl>
+                    <dt>Archivo</dt><dd>img/capturas/modo-sin-prisa.webp</dd>
+                    <dt>Tamaño</dt><dd>620 × 1342 px (vertical)</dd>
+                    <dt>Peso</dt><dd>menos de 80 KB</dd>
+                  </dl>
+                </div>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INFORMES ═══════════════════════════════════════════════════════ -->
+    <section class="seccion" id="informes" aria-labelledby="titulo-informes">
+      <div class="contenedor informes">
+        <div>
+          <div class="encabezado" style="margin-bottom: 0;">
+            <h2 id="titulo-informes">Al terminar, sabes qué no quedó claro</h2>
+            <p>Cada partida genera un informe con el acierto del curso, la participación y quién necesita apoyo. Y te dice por qué pudo fallar una pregunta.</p>
+          </div>
+          <div class="diagnosticos">
+            <div class="diagnostico diagnostico--concepto">
+              <h3>Cuando es un problema de concepto</h3>
+              <p>Si buena parte del curso eligió la misma opción equivocada, probablemente hay una idea mal entendida que vale la pena volver a explicar.</p>
+            </div>
+            <div class="diagnostico diagnostico--enunciado">
+              <h3>Cuando puede ser la pregunta</h3>
+              <p>Si las respuestas se repartieron entre varias opciones, conviene revisar si el enunciado era claro o si el tema aún no se había trabajado.</p>
+            </div>
+          </div>
+          <p style="margin-bottom: 12px; color: var(--tinta-2);">Filtra a tus estudiantes con un clic:</p>
+          <ul class="niveles">
+            <li>Necesita apoyo</li>
+            <li>En camino</li>
+            <li>Lo domina</li>
+          </ul>
+          <p style="margin-top: 24px; color: var(--tinta-2);">Exporta el informe en <strong>PDF</strong> y la planilla de notas en <strong>Excel</strong>.</p>
+        </div>
+
+        <!-- IMAGEN PENDIENTE: reemplaza el <figure class="reservado"> por
+             <figure class="captura"><img src="img/capturas/informe-cierre.webp" alt="..." width="1440" height="900" loading="lazy"></figure> -->
+        <figure class="reservado" style="--proporcion: 16 / 10;" aria-label="Espacio reservado para captura del informe de cierre">
+          <div class="reservado__info">
+            <span class="reservado__tipo">Captura pendiente</span>
+            <strong>Informe de cierre de una partida</strong>
+            <p>Panel docente con el resumen del curso (acierto inicial y participación), el bloque «Qué no quedó claro» con una pregunta marcada y la tabla de estudiantes con los filtros Necesita apoyo, En camino y Lo domina. Usa nombres de ejemplo, no de estudiantes reales.</p>
+            <dl>
+              <dt>Archivo</dt><dd>img/capturas/informe-cierre.webp</dd>
+              <dt>Tamaño</dt><dd>1440 × 900 px (16:10)</dd>
+              <dt>Peso</dt><dd>menos de 120 KB</dd>
+            </dl>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══ PEDAGOGÍA ══════════════════════════════════════════════════════ -->
+    <section class="seccion seccion--oscura" id="pedagogia" aria-labelledby="titulo-pedagogia">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2 id="titulo-pedagogia">Jugar sí, pero con propósito</h2>
+          <p>Cada modo de QuizOton se apoya en ideas bien estudiadas sobre cómo se aprende y cómo se evalúa para mejorar.</p>
+        </div>
+
+        <div class="principios">
+          <article class="principio">
+            <h3>Evaluar para ajustar la enseñanza</h3>
+            <p class="principio__en">En QuizOton: el informe y el diagnóstico de cada partida.</p>
+            <p>La evaluación formativa usa la evidencia del aula para decidir qué hacer en la siguiente clase. Su revisión de investigaciones encontró mejoras notables en el aprendizaje cuando los docentes la aplican.</p>
+            <cite>Black, P. y Wiliam, D. (1998). Assessment and classroom learning. <i>Assessment in Education: Principles, Policy &amp; Practice, 5</i>(1), 7–74.</cite>
+          </article>
+          <article class="principio">
+            <h3>Recordar es aprender</h3>
+            <p class="principio__en">En QuizOton: los modos En vivo y Dominio.</p>
+            <p>Intentar recordar una respuesta fortalece la memoria más que volver a leer. Responder preguntas no solo mide lo aprendido: también ayuda a retenerlo.</p>
+            <cite>Roediger, H. L. y Karpicke, J. C. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <i>Psychological Science, 17</i>(3), 249–255.</cite>
+          </article>
+          <article class="principio">
+            <h3>Más tiempo, más logros</h3>
+            <p class="principio__en">En QuizOton: los modos Dominio y Sin prisa.</p>
+            <p>Con tiempo suficiente y apoyo donde hay dificultades, la mayoría de los estudiantes puede alcanzar un buen nivel de aprendizaje.</p>
+            <cite>Bloom, B. S. (1968). Learning for mastery. <i>Evaluation Comment, 1</i>(2), 1–12.</cite>
+          </article>
+        </div>
+
+        <div class="cuidado">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <h3>Nadie queda expuesto frente al curso</h3>
+            <p>El tablero muestra el progreso del grupo, nunca la nota de un estudiante. Los resultados individuales solo los ves tú.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EN EL AULA ═════════════════════════════════════════════════════ -->
+    <section class="seccion" aria-labelledby="titulo-aula">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2 id="titulo-aula">Así se ve una clase con QuizOton</h2>
+        </div>
+        <!-- FOTO PENDIENTE: reemplaza el <figure class="reservado"> por
+             <figure class="foto-marco"><img src="img/fotos/clase-celulares.webp"
+               srcset="img/fotos/clase-celulares-800.webp 800w, img/fotos/clase-celulares.webp 1600w"
+               sizes="100vw" alt="..." width="1600" height="900" loading="lazy"></figure> -->
+        <figure class="reservado" style="--proporcion: 16 / 9;" aria-label="Espacio reservado para fotografía de una clase">
+          <div class="reservado__info">
+            <span class="reservado__tipo">Foto pendiente</span>
+            <strong>Estudiantes respondiendo con el celular en un salón real</strong>
+            <p>Plano abierto de un salón colombiano con uniformes, estudiantes con celulares en la mano y la pregunta de QuizOton proyectada al fondo. Luz natural, ambiente participativo. Pide autorización escrita de padres o acudientes si aparecen menores con el rostro visible, o toma la foto de espaldas.</p>
+            <dl>
+              <dt>Archivo</dt><dd>img/fotos/clase-celulares.webp</dd>
+              <dt>Tamaño</dt><dd>1600 × 900 px y una copia de 800 × 450 px</dd>
+              <dt>Peso</dt><dd>menos de 250 KB</dd>
+            </dl>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══ GUÍA DOCENTE ═══════════════════════════════════════════════════ -->
+    <section class="seccion seccion--blanca" id="guia" aria-labelledby="titulo-guia">
+      <div class="contenedor">
+        <div class="guia-banner">
+          <div>
+            <h2 id="titulo-guia">La guía docente, gratis y en tu idioma</h2>
+            <p>Todo lo que necesitas para tu primera clase, explicado sin tecnicismos. Léela en línea o descárgala en PDF para imprimirla.</p>
+            <ul class="lista-check">
+              <li>Tu primera clase, paso a paso.</li>
+              <li>Cómo preparar preguntas en Excel.</li>
+              <li>Qué modo usar en cada momento.</li>
+              <li>Cómo leer el informe y el diagnóstico.</li>
+              <li>Soluciones a los problemas más comunes.</li>
+            </ul>
+            <div class="guia-banner__acciones">
+              <a class="boton boton--grande" href="guia/index.html">Leer la guía</a>
+              <a class="boton boton--amarillo boton--grande" href="guia/index.html?imprimir=1">Descargar en PDF</a>
+            </div>
+          </div>
+          <div class="guia-portada" aria-hidden="true">
+            <img src="img/marca/logotipo-color.webp" alt="" width="719" height="404" loading="lazy">
+            <strong>Guía docente</strong>
+            <span>Para preparar y dar tu primera clase con QuizOton</span>
+            <ol>
+              <li>Antes de empezar</li>
+              <li>Tu primera clase</li>
+              <li>Preguntas y plantillas</li>
+              <li>Los cuatro modos</li>
+              <li>Informes</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PRECIOS ════════════════════════════════════════════════════════ -->
+    <!-- Los precios se editan en js/config.js -->
+    <section class="seccion" id="precios" aria-labelledby="titulo-precios">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2 id="titulo-precios">Precios en pesos, pagos por canales que ya usas</h2>
+          <p>Sin tarjeta de crédito internacional y sin cobros en dólares. Pruébalo gratis antes de decidir.</p>
+        </div>
+
+        <div class="planes">
+          <article class="plan plan--destacado">
+            <span class="plan__sello">El más elegido</span>
+            <h3 data-nombre-plan="anual">Docente anual</h3>
+            <p class="plan__desc">Para usar QuizOton durante todo el año escolar.</p>
+            <p class="plan__precio"><span class="plan__valor" data-precio="anual">—</span> <span class="plan__periodo" data-periodo="anual"></span></p>
+            <p class="plan__equivale" data-equivale="anual"></p>
+            <ul class="lista-check">
+              <li>Licencia personal para un computador.</li>
+              <li>Los cuatro modos de juego.</li>
+              <li>Cursos y estudiantes sin límite de licencia.</li>
+              <li>Exportación a Excel y PDF.</li>
+              <li>Actualizaciones y soporte por WhatsApp durante el año.</li>
+            </ul>
+            <a class="boton boton--menta boton--bloque" data-whatsapp="plan:anual" href="#">Comprar plan anual</a>
+          </article>
+
+          <article class="plan">
+            <h3 data-nombre-plan="vitalicio">Docente vitalicio</h3>
+            <p class="plan__desc">Un solo pago para usar QuizOton sin renovaciones.</p>
+            <p class="plan__precio"><span class="plan__valor" data-precio="vitalicio">—</span> <span class="plan__periodo" data-periodo="vitalicio"></span></p>
+            <p class="plan__equivale" data-equivale="vitalicio"></p>
+            <ul class="lista-check">
+              <li>Licencia permanente para un computador.</li>
+              <li>Todo lo del plan anual.</li>
+              <li>Un año de actualizaciones incluidas.</li>
+              <li>Soporte por WhatsApp.</li>
+            </ul>
+            <a class="boton boton--bloque" data-whatsapp="plan:vitalicio" href="#">Comprar licencia vitalicia</a>
+          </article>
+
+          <article class="plan">
+            <h3 data-nombre-plan="institucional">Institucional</h3>
+            <p class="plan__desc">Para colegios que quieren equipar a varios docentes.</p>
+            <p class="plan__precio"><span class="plan__periodo">Desde</span> <span class="plan__valor" data-precio="institucional">—</span> <span class="plan__periodo">COP por año</span></p>
+            <p class="plan__equivale"></p>
+            <ul class="paquetes" data-paquetes></ul>
+            <ul class="lista-check">
+              <li>Capacitación virtual para el equipo docente.</li>
+              <li>Soporte prioritario.</li>
+            </ul>
+            <a class="boton boton--bloque" data-whatsapp="plan:institucional" href="#">Cotizar para mi colegio</a>
+          </article>
+        </div>
+
+        <div class="prueba">
+          <div>
+            <h3>Pruébalo gratis en tu propio salón</h3>
+            <p>Descarga QuizOton y úsalo con todas sus funciones durante <strong><span data-config="pruebaDias">15</span> días o <span data-config="pruebaPartidas">12</span> partidas</strong>, lo que ocurra primero. No pedimos tarjeta ni datos de pago.</p>
+            <p>Cuando decidas comprar, QuizOton te muestra el código de tu computador. Nos lo envías por WhatsApp junto con tu comprobante de pago y te respondemos con tu clave de activación. La activación no necesita internet.</p>
+            <div class="hero__acciones" style="margin-bottom: 0;">
+              <a class="boton boton--menta" href="#descargar" data-abrir-descarga>Descargar prueba gratis</a>
+              <a class="boton" data-whatsapp="activacion" href="#">Ya lo probé, quiero activarlo</a>
+            </div>
+            <p class="pagos">Paga por <span>Nequi</span> <span>Daviplata</span> <span>PSE</span> <span>Bancolombia</span></p>
+          </div>
+          <figure class="captura">
+            <img src="img/capturas/activacion-licencia.webp"
+                 srcset="img/capturas/activacion-licencia-800.webp 800w, img/capturas/activacion-licencia.webp 1440w"
+                 sizes="(max-width: 960px) 100vw, 50vw"
+                 alt="Pantalla de activación de QuizOton con el identificador del equipo, el campo para la clave de licencia y la opción de prueba gratuita de 15 días o 12 partidas." width="1440" height="900" loading="lazy">
+            <figcaption>Pantalla de activación: prueba gratis o activa tu licencia.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PREGUNTAS FRECUENTES ═══════════════════════════════════════════ -->
+    <section class="seccion seccion--blanca" id="preguntas" aria-labelledby="titulo-preguntas">
+      <div class="contenedor">
+        <div class="encabezado">
+          <h2 id="titulo-preguntas">Preguntas frecuentes</h2>
+          <p>Si tu duda no está aquí, <a class="enlace-subrayado" data-whatsapp="general" href="#">escríbenos por WhatsApp</a>.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>¿De verdad funciona si el colegio no tiene internet?</summary>
+            <div class="faq__resp">
+              <p>Sí. QuizOton se ejecuta en tu computador y los celulares se conectan a él a través del router del salón. Las respuestas no pasan por internet, así que tampoco se consumen los datos de los estudiantes.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Qué router necesito?</summary>
+            <div class="faq__resp">
+              <p>Cualquier router Wi-Fi doméstico funciona, incluso uno viejo que esté guardado en el colegio. Solo debe estar conectado a la corriente; no necesita cable de internet. Para cursos muy grandes, un router más reciente responde mejor.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Tengo que instalar algo más en mi computador?</summary>
+            <div class="faq__resp">
+              <p>No. Descargas un instalador, lo abres y QuizOton queda listo, con acceso directo en el escritorio. Los estudiantes tampoco instalan nada: usan el navegador de su celular.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Windows me dice «Windows protegió su PC». ¿Es seguro?</summary>
+            <div class="faq__resp">
+              <p>Windows muestra ese aviso con programas nuevos que todavía no reconoce. Para continuar:</p>
+              <ol>
+                <li>Haz clic en <strong>Más información</strong>.</li>
+                <li>Verifica que el archivo sea el instalador de QuizOton que descargaste de esta página.</li>
+                <li>Haz clic en <strong>Ejecutar de todas formas</strong>.</li>
+              </ol>
+              <p>Descarga QuizOton solo desde esta página o desde el enlace que te enviemos por WhatsApp.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Los celulares no logran entrar. ¿Qué reviso?</summary>
+            <div class="faq__resp">
+              <ol>
+                <li>Que los celulares estén conectados al mismo Wi-Fi que tu computador.</li>
+                <li>Que hayan escrito la dirección exactamente como aparece en el tablero, o que usen el código QR.</li>
+                <li>Que Windows haya permitido a QuizOton usar la red. Si al abrirlo elegiste no permitirlo, escríbenos y te ayudamos a cambiarlo.</li>
+                <li>Algunos routers traen activado el «aislamiento de clientes», que impide que los equipos se vean entre sí. Si es tu caso, desactívalo en la configuración del router.</li>
+              </ol>
+            </div>
+          </details>
+          <details>
+            <summary>¿Qué celulares pueden usar mis estudiantes?</summary>
+            <div class="faq__resp">
+              <p>Cualquier celular, tableta o computador con navegador actualizado: Chrome, Safari, Edge o Firefox. No importa la marca ni la gama. El celular puede decir «sin acceso a internet»; es normal y no afecta la clase.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Cómo cargo las preguntas que ya tengo?</summary>
+            <div class="faq__resp">
+              <p>Descarga la plantilla de Excel desde QuizOton. Escribe el enunciado, la respuesta correcta en la columna A y las incorrectas en B, C y D. Al jugar, QuizOton baraja las opciones para que la correcta no quede siempre en el mismo lugar. Para el Duelo de saberes hay una plantilla aparte.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Dónde quedan guardados los datos de mis estudiantes?</summary>
+            <div class="faq__resp">
+              <p>En tu computador. QuizOton no envía nombres, respuestas ni notas a internet. Te recomendamos proteger tu computador con contraseña y guardar copias de tus informes exportados.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Cómo funciona la activación de la licencia?</summary>
+            <div class="faq__resp">
+              <p>Cada licencia es personal y queda vinculada a un computador. QuizOton te muestra un código de tu equipo; nos lo envías por WhatsApp con el comprobante de pago y te respondemos con tu clave. La pegas en QuizOton y listo, sin necesidad de internet.</p>
+            </div>
+          </details>
+          <details>
+            <summary>¿Qué pasa si cambio de computador?</summary>
+            <div class="faq__resp">
+              <p>Escríbenos por WhatsApp antes de cambiarlo y te indicamos cómo trasladar tu licencia al nuevo equipo.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LLAMADO FINAL ══════════════════════════════════════════════════ -->
+    <section class="seccion seccion--oscura final" aria-labelledby="titulo-final">
+      <div class="contenedor final__caja">
+        <div>
+          <h2 id="titulo-final">Tu próxima clase puede empezar con un código en el tablero.</h2>
+          <p>Descarga QuizOton, conecta el router y prueba con tu curso durante <span data-config="pruebaDias">15</span> días.</p>
+        </div>
+        <div class="final__acciones">
+          <a class="boton boton--menta boton--grande" href="#descargar" data-abrir-descarga>Descargar prueba gratis</a>
+          <a class="boton boton--grande" data-whatsapp="general" href="#">Hablar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ PIE ════════════════════════════════════════════════════════════ -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+        <div>
+          <img src="img/marca/logotipo-blanco.webp" alt="QuizOton" width="670" height="312" loading="lazy">
+          <p>Evaluación formativa y aprendizaje activo en la red local del salón. Hecho en Colombia para el aula real.</p>
+        </div>
+        <div>
+          <h2>Explora</h2>
+          <ul>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#modos">Modos de juego</a></li>
+            <li><a href="guia/index.html">Guía docente</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contacto y legal</h2>
+          <ul>
+            <li><a data-whatsapp="general" href="#">WhatsApp</a></li>
+            <li><a href="legal/privacidad.html">Política de privacidad</a></li>
+            <li><a href="legal/terminos.html">Términos de licencia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pie__base">
+        <span>© <span data-anio>2026</span> QuizOton. Todos los derechos reservados.</span>
+        <span>Tus datos escolares se quedan en tu computador.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ VENTANA DE DESCARGA ════════════════════════════════════════════ -->
+  <!-- El enlace del instalador se configura en js/config.js (descargaInstalador) -->
+  <dialog class="dialogo" id="dialogo-descarga" aria-labelledby="titulo-descarga">
+    <div class="dialogo__cuerpo" id="descargar">
+      <button class="dialogo__cerrar" type="button" data-cerrar aria-label="Cerrar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h2 id="titulo-descarga">Descarga QuizOton</h2>
+      <p>Prueba gratis durante <strong><span data-config="pruebaDias">15</span> días o <span data-config="pruebaPartidas">12</span> partidas</strong>, con todas las funciones.</p>
+      <ol>
+        <li>Descarga el instalador (<span data-config="pesoInstalador">62 MB</span>) en tu computador con Windows 10 u 11.</li>
+        <li>Ábrelo. Si Windows muestra «Windows protegió su PC», haz clic en <strong>Más información</strong> y luego en <strong>Ejecutar de todas formas</strong>.</li>
+        <li>Abre QuizOton desde el escritorio y elige <strong>Prueba gratuita</strong>.</li>
+        <li>Si Windows pregunta por la red, permite el acceso en <strong>redes privadas</strong>.</li>
+      </ol>
+      <div class="dialogo__acciones">
+        <a class="boton boton--menta boton--grande" id="enlace-descarga" href="#" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar instalador
+        </a>
+        <p class="aviso-enlace" id="aviso-enlace" role="status">La descarga estará disponible muy pronto. Mientras tanto, escríbenos por WhatsApp y te enviamos el instalador.</p>
+        <a class="boton" data-whatsapp="ayudaInstalacion" href="#">Necesito ayuda para instalarlo</a>
+        <a class="enlace-subrayado" href="guia/index.html#antes" style="justify-self: center; margin-top: 4px;">Ver la guía de instalación</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
