@@ -20,9 +20,9 @@
 window.QUIZOTON = {
 
   /* ── Descarga ──────────────────────────────────────────────────────────── */
-  // Pega aquí el enlace donde quede alojado el instalador.
-  // Mientras sea "#", el botón muestra un aviso de "enlace próximamente".
-  descargaInstalador: '#',
+  // Ruta del instalador dentro del sitio. Si cambia de lugar, actualízala aquí.
+  // Si vuelve a ser "#", el botón muestra un aviso de "enlace próximamente".
+  descargaInstalador: '/beta/Instalar_QuizOton.exe',
   nombreInstalador: 'QuizOton-Instalador.exe',
   pesoInstalador: '62 MB',
 
@@ -31,8 +31,7 @@ window.QUIZOTON = {
   whatsapp: '573134528352',
 
   /* ── Prueba gratuita ───────────────────────────────────────────────────── */
-  pruebaDias: 15,
-  pruebaPartidas: 12,
+  pruebaDias: 30,
 
   /* ── Moneda ────────────────────────────────────────────────────────────── */
   moneda: 'COP',
@@ -67,6 +66,7 @@ window.QUIZOTON = {
   /* ── Mensajes genéricos de WhatsApp ────────────────────────────────────── */
   mensajes: {
     general: 'Hola, quiero conocer más sobre QuizOton.',
+    colegio: 'Hola, quiero conocer QuizOton para mi colegio',
     activacion: 'Hola, ya probé QuizOton y quiero activar mi licencia.',
     ayudaInstalacion: 'Hola, descargué QuizOton y necesito ayuda para instalarlo.'
   }

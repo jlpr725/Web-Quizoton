@@ -28,7 +28,7 @@
   });
 
   /* ── Textos que vienen de la configuración ────────────────────────────── */
-  // Uso en HTML: data-config="pruebaDias" | "pruebaPartidas" | "pesoInstalador" | "nombreInstalador"
+  // Uso en HTML: data-config="pruebaDias" | "pesoInstalador" | "nombreInstalador"
   document.querySelectorAll('[data-config]').forEach(function (el) {
     var v = C[el.getAttribute('data-config')];
     if (v !== undefined) el.textContent = v;
