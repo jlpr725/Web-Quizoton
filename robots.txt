@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /beta/
+Disallow: /sitio-completo.html
 
-# DOMINIO: reemplaza cuando tengas dominio
-Sitemap: https://TU-DOMINIO.com/sitemap.xml
+Sitemap: https://web-quizoton.vercel.app/sitemap.xml

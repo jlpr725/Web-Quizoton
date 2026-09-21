@@ -3,31 +3,74 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>QuizOton — Muy pronto</title>
-<meta name="description" content="QuizOton: evaluación de aula que funciona sin internet. Los estudiantes responden desde su celular en la red local del salón.">
+<title>QuizOton — Evaluación de aula sin internet | Beta gratis para docentes</title>
+<meta name="description" content="QuizOton: evaluación de aula que funciona sin internet. El computador del docente es el servidor y los estudiantes responden desde su celular en la red local del salón. Prueba beta gratis de 30 días para Windows.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="QuizOton">
+<meta name="application-name" content="QuizOton">
+<link rel="canonical" href="https://web-quizoton.vercel.app/">
 <meta property="og:title" content="QuizOton — Aprende jugando, sin internet">
-<meta property="og:description" content="Evaluación de aula que funciona en la red local del salón. Muy pronto.">
+<meta property="og:description" content="Evaluación de aula que funciona en la red local del salón. Los estudiantes responden desde su celular. Beta gratis de 30 días.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="QuizOton">
 <meta property="og:locale" content="es_CO">
-<!-- MINIATURA DEL ENLACE (Open Graph).
-     Cuando tengas dominio, reemplaza  https://TU-DOMINIO.com  por el tuyo.
-     WhatsApp y Facebook EXIGEN dirección completa: una ruta relativa no funciona. -->
-<meta property="og:url" content="https://TU-DOMINIO.com/">
-<meta property="og:image" content="https://TU-DOMINIO.com/img/og-quizoton.png">
+<meta property="og:url" content="https://web-quizoton.vercel.app/">
+<meta property="og:image" content="https://web-quizoton.vercel.app/img/og-quizoton.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="QuizOton — la evaluación de aula que funciona sin internet">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="QuizOton — Aprende jugando, sin internet">
-<meta name="twitter:description" content="Evaluación de aula en la red local del salón. Muy pronto.">
-<meta name="twitter:image" content="https://TU-DOMINIO.com/img/og-quizoton.png">
+<meta name="twitter:description" content="Evaluación de aula en la red local del salón. Beta gratis de 30 días.">
+<meta name="twitter:image" content="https://web-quizoton.vercel.app/img/og-quizoton.png">
+<meta name="twitter:image:alt" content="QuizOton — la evaluación de aula que funciona sin internet">
 <meta name="theme-color" content="#0A1412">
-<link rel="icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/marca/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/marca/apple-touch-icon.png">
+<link rel="preload" href="/fuentes/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fuentes/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://web-quizoton.vercel.app/#organizacion",
+      "name": "QuizOton",
+      "url": "https://web-quizoton.vercel.app/",
+      "logo": "https://web-quizoton.vercel.app/img/marca/apple-touch-icon.png",
+      "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "availableLanguage": "es", "areaServed": "CO", "hoursAvailable": "Mo-Fr 09:00-18:00" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://web-quizoton.vercel.app/#sitio",
+      "url": "https://web-quizoton.vercel.app/",
+      "name": "QuizOton",
+      "inLanguage": "es-CO",
+      "publisher": { "@id": "https://web-quizoton.vercel.app/#organizacion" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "QuizOton",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Windows 10, Windows 11",
+      "inLanguage": "es",
+      "url": "https://web-quizoton.vercel.app/",
+      "image": "https://web-quizoton.vercel.app/img/og-quizoton.png",
+      "description": "Plataforma de evaluación de aula que funciona en la red local del salón, sin internet. Los estudiantes responden desde el celular sin crear cuentas.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "COP", "description": "Beta gratuita con 30 días de prueba completa" },
+      "publisher": { "@id": "https://web-quizoton.vercel.app/#organizacion" }
+    }
+  ]
+}
+</script>
 <style>
+@font-face{font-family:'Inter';src:url('/fuentes/inter-latin-400-normal.woff2') format('woff2');font-weight:400 500;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('/fuentes/inter-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('/fuentes/inter-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Space Grotesk';src:url('/fuentes/space-grotesk-latin-700-normal.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
 :root{
   color-scheme:dark;
   --ink:#0A1412;
@@ -193,6 +236,7 @@ footer{
   position:relative;z-index:2;text-align:center;padding:22px 20px 30px;
   font-size:12.5px;color:var(--text-2);display:grid;gap:5px;
 }
+footer .legal a{color:var(--text-2);text-underline-offset:3px}footer .legal a:hover{color:var(--mint)}
 @media (prefers-reduced-motion:reduce){.dot{animation:none}.btn{transition:none}}
 </style>
 </head>
@@ -316,7 +360,7 @@ footer{
 
     <div>
       <h2 class="h-sm">En qué punto vamos</h2>
-      <p class="intro" style="margin-bottom:18px">Hoy QuizOton está en <b>fase beta</b>: es gratis, funciona completo y lo entregamos para aprender de su uso en salones reales. Lo que aparece marcado como <b>al salir a la venta</b> son las cosas que estamos construyendo y que llegarán cuando la aplicación pase a ser un producto de pago. Todavía no están disponibles.</p>
+      <p class="intro" style="margin-bottom:18px">Hoy QuizOton está en <b>fase beta</b>: es gratis, funciona completo y lo entregamos para aprender de su uso en salones reales. Lo que aparece marcado como <b>en la versión final</b> son las cosas que estamos construyendo y que llegarán cuando la aplicación pase a ser un producto con licencia. Todavía no están disponibles.</p>
       <div class="cards">
         <article class="card">
           <span class="k">DISPONIBLE HOY</span>
@@ -324,12 +368,12 @@ footer{
           <p>Descarga el instalador y usa QuizOton con todos sus modos durante 30 días, sin costo y sin compromiso. Tu única contraprestación es contarnos cómo te fue.</p>
         </article>
         <article class="card next">
-          <span class="k">AL SALIR A LA VENTA</span>
+          <span class="k">EN LA VERSIÓN FINAL</span>
           <h3>Bancos de preguntas listos</h3>
           <p>Paquetes precargados por área y grado, más bancos personalizados según lo que cada docente enseña. Para que no empieces con el banco en blanco.</p>
         </article>
         <article class="card next">
-          <span class="k">AL SALIR A LA VENTA</span>
+          <span class="k">EN LA VERSIÓN FINAL</span>
           <h3>Routers preconfigurados</h3>
           <p>Llegan listos para encender y usar. Sin entrar a configuraciones, sin claves de red, sin llamar al de sistemas. Se conecta y la clase arranca.</p>
         </article>
@@ -357,7 +401,7 @@ footer{
         <span class="cupo">Solo 5 cupos</span>
       </div>
 
-      <p>Cuando QuizOton salga a la venta, entregaremos <b>5 membresías gratuitas por un año completo</b> a los docentes que hayan acompañado esta beta de verdad. No se trata de descargar la aplicación: se trata de usarla en clase y ayudarnos a mejorarla. Para acceder hay que cumplir los tres puntos:</p>
+      <p>Cuando llegue la versión final de QuizOton, entregaremos <b>5 membresías gratuitas por un año completo</b> a los docentes que hayan acompañado esta beta de verdad. No se trata de descargar la aplicación: se trata de usarla en clase y ayudarnos a mejorarla. Para acceder hay que cumplir los tres puntos:</p>
 
       <ul class="reqs">
         <li>
@@ -383,7 +427,7 @@ footer{
         </li>
       </ul>
 
-      <p class="fine">Los cupos se asignan por orden de llegada entre quienes cumplan los tres puntos, y te confirmamos por WhatsApp si quedaste dentro. La membresía cubre un año completo desde el lanzamiento y conserva el precio congelado para la renovación.</p>
+      <p class="fine">Los cupos se asignan por orden de llegada entre quienes cumplan los tres puntos, y te confirmamos por WhatsApp si quedaste dentro. La membresía cubre un año completo desde el lanzamiento y conserva el precio congelado para la renovación. Consulta las <a href="/legal/terminos.html#fundador" style="color:#F0D38A">condiciones formales de la Membresía Fundador</a>.</p>
     </div>
 
     <div>
@@ -396,23 +440,26 @@ footer{
   <div class="cierre">
     <p class="cierre-t">¿Listo para probarlo en tu próxima clase?</p>
     <div class="cta">
-      <a class="btn btn-main" href="beta/Instalar_QuizOton.exe" download>
+      <a class="btn btn-main" data-descarga href="/beta/Instalar_QuizOton.exe" download>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
         Descargar QuizOton Beta
       </a>
-      <a class="btn btn-ghost" href="https://wa.me/573134528352?text=Hola%2C%20quiero%20conocer%20QuizOton%20para%20mi%20colegio" target="_blank" rel="noopener">
+      <a class="btn btn-ghost" data-whatsapp="colegio" href="#">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
         Escríbeme por WhatsApp
       </a>
     </div>
-    <p class="nota">Versión beta para Windows 10 y 11 &middot; 71 MB &middot; La primera vez Windows mostrará un aviso de seguridad: elige <b>Más información</b> y luego <b>Ejecutar de todas formas</b>.</p>
+    <p class="nota">Versión beta para Windows 10 y 11 &middot; 71 MB.</p>
   </div>
 </main>
 
 <footer>
   <p>&copy; 2026 QuizOton. Todos los derechos reservados.</p>
   <p>Hecho para colegios que no pueden depender de la conexión.</p>
+  <p class="legal"><a href="/legal/privacidad.html">Política de privacidad</a> &middot; <a href="/legal/terminos.html">Términos de uso y licencia</a> &middot; <a href="/legal/terminos.html#fundador">Membresía Fundador</a></p>
 </footer>
 
+<script src="/js/config.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>

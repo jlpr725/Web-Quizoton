@@ -30,12 +30,12 @@ landing-v1.2/
 | Precios, paquetes institucionales | `js/config.js` → `planes` |
 | Enlace de descarga del .exe | `js/config.js` → `descargaInstalador` |
 | Número de WhatsApp y mensajes | `js/config.js` → `whatsapp`, `mensajes` |
-| Días o partidas de la prueba | `js/config.js` → `pruebaDias`, `pruebaPartidas` |
+| Días de la prueba | `js/config.js` → `pruebaDias` |
 | Precio en los datos para Google | `index.html`, bloque `application/ld+json` (`"price"`) |
 
 ## Cuando tengas dominio
 
-Busca y reemplaza `https://TU-DOMINIO.com` en: `index.html`, `guia/index.html`, `legal/privacidad.html`, `legal/terminos.html`, `robots.txt` y `sitemap.xml`.
+Busca y reemplaza `https://web-quizoton.vercel.app` en: `index.html`, `guia/index.html`, `legal/privacidad.html`, `legal/terminos.html`, `robots.txt` y `sitemap.xml`.
 
 ## Imágenes y video pendientes
 

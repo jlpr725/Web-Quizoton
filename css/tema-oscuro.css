@@ -1,0 +1,257 @@
+/* ============================================================================
+   QuizOton · Tema claro con hero oscuro  ·  css/tema-oscuro.css
+   ----------------------------------------------------------------------------
+   Toma el carácter de la página "en construcción" —botones de píldora, líneas
+   finas en vez de bordes de tinta, sin sombras sólidas, esquinas suaves—
+   pero deja el sitio en claro. Solo el hero y el pie van en pizarra.
+
+   CÓMO QUITARLO: borra la línea <link ... tema-oscuro.css> del HTML y el
+   sitio vuelve al diseño original. No se toca estilos.css.
+   ============================================================================ */
+
+/* ── 1. Tokens: mismo color, otro carácter ───────────────────────────────── */
+:root {
+  --tinta:   #101413;
+  --tinta-2: #46544F;
+  --tinta-3: #6B7B75;
+  --papel:   #F4F7F5;
+  --blanco:  #FFFFFF;
+  --linea:   #DDE5E1;
+
+  --menta:        #2FCE9B;
+  --menta-suave:  #E2F8F0;
+  --verde:        #0E7C5B;
+  --amarillo:     #FFD91A;
+  --amarillo-suave: #FFF8D6;
+  --lila:         #E7DEFF;
+  --celeste:      #DCEBFF;
+
+  --borde:     1px solid #DDE5E1;
+  --sombra:    none;
+  --sombra-sm: none;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+}
+
+/* ── 2. Base ─────────────────────────────────────────────────────────────── */
+body { background: var(--papel); color: var(--tinta); }
+
+:focus-visible { outline: 3px solid var(--verde); outline-offset: 3px; box-shadow: none; }
+.saltar { background: var(--amarillo); color: #241C00; border: 0; }
+
+/* ── 3. Botones: píldoras sin sombra sólida ──────────────────────────────── */
+.boton {
+  background: var(--blanco); color: var(--tinta);
+  border: 1px solid rgba(16, 20, 19, .20);
+  border-radius: 999px; box-shadow: none;
+}
+.boton:hover { transform: translateY(-1px); box-shadow: none; border-color: var(--verde); color: var(--verde); }
+.boton:active { transform: translateY(0); box-shadow: none; }
+.boton--menta { background: var(--menta); color: #06211A; border-color: var(--menta); }
+.boton--menta:hover { background: #22B486; color: #FFFFFF; border-color: #22B486; }
+.boton--amarillo { background: var(--amarillo); color: #241C00; border-color: var(--amarillo); }
+.boton--amarillo:hover { background: #FFE457; color: #241C00; border-color: #FFE457; }
+
+/* ── 4. Cabecera ─────────────────────────────────────────────────────────── */
+.cabecera { background: rgba(244, 247, 245, .9); border-bottom: 1px solid var(--linea); }
+.nav__lista a:hover { background: var(--blanco); color: var(--tinta); box-shadow: none; }
+.menu-boton { background: var(--blanco); border: 1px solid var(--linea); box-shadow: none; }
+
+/* ── 5. HERO EN PIZARRA ──────────────────────────────────────────────────── */
+/* Única sección con fondo oscuro. Redefine los tokens en su propio ámbito,
+   así que todo lo que vive dentro se adapta solo. */
+.hero {
+  background: #0A1412;
+  color: #EAF6F1;
+  background-image:
+    radial-gradient(52rem 34rem at 18% 8%, rgba(68, 220, 172, .16), transparent 62%),
+    radial-gradient(40rem 28rem at 94% 92%, rgba(255, 226, 6, .07), transparent 60%);
+  background-repeat: no-repeat;
+
+  --tinta:   #EAF6F1;
+  --tinta-2: #9DBFB3;
+  --tinta-3: #87ABA0;
+  --blanco:  #12261F;
+  --linea:   rgba(234, 246, 241, .14);
+  --menta:   #44DCAC;
+  --verde:   #44DCAC;
+}
+.hero h1 { color: #EAF6F1; }
+.hero__texto { color: #9DBFB3; }
+.hero__nota { color: #87ABA0; }
+.hero__nota svg { color: #44DCAC; }
+.hero .boton { background: rgba(234, 246, 241, .05); color: #EAF6F1; border-color: rgba(234, 246, 241, .24); }
+.hero .boton:hover { border-color: #44DCAC; color: #44DCAC; background: rgba(68, 220, 172, .08); }
+.hero .boton--menta { background: #44DCAC; color: #06211A; border-color: #44DCAC; }
+.hero .boton--menta:hover { background: #5FE8BC; color: #06211A; border-color: #5FE8BC; }
+
+.proyector { padding: 0; }
+.pantalla {
+  background: #0C1B16; border: 1px solid rgba(234, 246, 241, .16);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, .45); border-radius: var(--r-lg);
+}
+.pantalla__qr { box-shadow: none; background: #FFFFFF; }
+.pantalla__codigo { box-shadow: none; color: #241C00; }
+.pantalla__aviso { color: #241C00; }
+
+/* ── 6. Secciones: todas claras, con alternancia suave ───────────────────── */
+.seccion--blanca { background: var(--blanco); border-block: 1px solid var(--linea); }
+.seccion--oscura { background: var(--blanco); color: var(--tinta); border-block: 1px solid var(--linea); }
+.seccion--oscura .encabezado p { color: var(--tinta-2); }
+.encabezado p { color: var(--tinta-2); }
+
+/* Franja de hechos: pasa de tinta sólida a una banda clara con línea */
+.hechos { background: var(--blanco); color: var(--tinta); border-block: 1px solid var(--linea); }
+.hechos__lista li + li { border-left: 1px solid var(--linea); }
+.hechos__lista svg { color: var(--verde); }
+.hechos__lista span { color: var(--tinta-2); }
+@media (max-width: 720px) { .hechos__lista li + li { border-left: 0; border-top: 1px solid var(--linea); } }
+
+/* ── 7. Pasos, fotos y requisitos ────────────────────────────────────────── */
+.paso::before { border: 0; box-shadow: none; color: #06211A; }
+.paso:nth-child(2)::before { color: #241C00; }
+.paso:nth-child(3)::before { background: var(--papel); border: 1px solid var(--linea); color: var(--tinta); }
+.paso code { background: var(--menta-suave); border: 1px solid #B6EBD8; color: var(--verde); }
+.foto-marco { background: var(--blanco); border: 1px solid var(--linea); box-shadow: none; }
+.requisito { border-top: 2px solid var(--verde); }
+.nota-caja { background: var(--amarillo-suave); border: 1px solid #EBD97A; }
+
+/* ── 8. Pestañas y capturas ──────────────────────────────────────────────── */
+.pestanas__lista { background: var(--blanco); border: 1px solid var(--linea); border-radius: 999px; }
+.pestana { border-radius: 999px; border-color: transparent; }
+.pestana:hover { background: var(--papel); }
+.pestana[aria-selected="true"] { background: var(--menta); color: #06211A; }
+.lista-check li::before { border: 1px solid #9FE3CB; }
+
+.captura { background: var(--blanco); border: 1px solid var(--linea); box-shadow: none; border-radius: var(--r-md); }
+.captura figcaption { background: var(--blanco); border-top: 1px solid var(--linea); color: var(--tinta-2); }
+.captura--movil { border-radius: 24px; }
+/* Una sola captura por pestaña: queda centrada y sin estirarse */
+.capturas-duo--una { grid-template-columns: 1fr; justify-items: center; }
+.capturas-pila > .captura:only-child { margin-inline: auto; }
+
+.reservado {
+  border: 1px dashed rgba(16, 20, 19, .26);
+  background: repeating-linear-gradient(135deg, transparent 0 14px, rgba(16, 20, 19, .03) 14px 28px), var(--blanco);
+}
+.seccion--oscura .reservado { background: repeating-linear-gradient(135deg, transparent 0 14px, rgba(16, 20, 19, .03) 14px 28px), var(--papel); border-color: rgba(16, 20, 19, .26); color: var(--tinta); }
+.reservado__tipo { background: var(--amarillo); color: #241C00; border: 0; }
+
+/* ── 9. Modos e informes ─────────────────────────────────────────────────── */
+.modo { background: var(--blanco); border: 1px solid var(--linea); box-shadow: none; }
+.modo__marca { border: 1px solid var(--linea); }
+.modo__uso { border-left: 3px solid var(--menta); }
+.diagnostico { background: var(--blanco); border: 1px solid var(--linea); box-shadow: none; }
+.diagnostico--concepto { box-shadow: none; border-left: 3px solid var(--amarillo); }
+.diagnostico--enunciado { box-shadow: none; border-left: 3px solid #B79DFF; }
+.niveles li { border: 1px solid var(--linea); }
+
+/* ── 10. Pedagogía: ahora en claro ───────────────────────────────────────── */
+.principios { background: var(--linea); border: 1px solid var(--linea); }
+.principio { background: var(--papel); }
+.principio h3 { color: var(--tinta); }
+.principio p { color: var(--tinta-2); }
+.principio__en { color: var(--verde); }
+.principio cite { color: var(--tinta-3); border-top: 1px solid var(--linea); }
+.cuidado { border: 1px solid #9FE3CB; background: var(--menta-suave); }
+.cuidado h3 { color: var(--tinta); }
+.cuidado p { color: var(--tinta-2); }
+.cuidado svg { color: var(--verde); }
+
+/* ── 11. Guía docente ────────────────────────────────────────────────────── */
+.guia-banner { border: 0; box-shadow: none; color: #06211A; }
+.guia-banner h2, .guia-banner p, .guia-banner li { color: #06211A; }
+.guia-banner .boton { background: rgba(6, 33, 26, .06); color: #06211A; border-color: rgba(6, 33, 26, .30); }
+.guia-banner .boton:hover { background: #06211A; color: var(--menta); border-color: #06211A; }
+.guia-portada { background: var(--blanco); border: 1px solid var(--linea); box-shadow: none; }
+
+/* ── 12. Precios ─────────────────────────────────────────────────────────── */
+.plan { background: var(--blanco); border: 1px solid var(--linea); box-shadow: none; }
+.plan--destacado { background: var(--amarillo-suave); border-color: #EBD97A; box-shadow: none; }
+.plan__sello { background: var(--amarillo); color: #241C00; border: 0; }
+.plan__equivale { color: var(--verde); }
+.paquetes { border: 1px solid var(--linea); }
+.paquetes li + li { border-top: 1px solid var(--linea); }
+.pagos span { background: var(--blanco); border: 1px solid var(--linea); color: var(--tinta-2); }
+
+/* ── 13. Preguntas frecuentes ────────────────────────────────────────────── */
+.faq details { background: var(--blanco); border: 1px solid var(--linea); border-radius: 18px; }
+.faq details[open] { box-shadow: none; border-color: #9FE3CB; }
+.faq summary::after { border: 1px solid rgba(16, 20, 19, .26); background-color: transparent; }
+.faq details[open] summary::after { background-color: var(--menta); border-color: var(--menta); }
+
+/* ── 14. Cierre y pie ────────────────────────────────────────────────────── */
+/* El bloque final vuelve a claro; el pie se queda en pizarra. */
+.final p { color: var(--tinta-2); }
+.pie { background: #07100D; color: #9DBFB3; border-top: 0; }
+.pie h2 { color: #EAF6F1; }
+.pie a:hover { color: #44DCAC; }
+.pie__base { border-top: 1px solid rgba(234, 246, 241, .14); }
+
+/* ── 15. Ventana de descarga: centrada en la pantalla ────────────────────── */
+.dialogo {
+  margin: auto;                     /* centra en los dos ejes */
+  inset: 0;                         /* evita que quede pegada a un costado */
+  position: fixed;
+  background: var(--blanco); color: var(--tinta);
+  border: 1px solid var(--linea); border-radius: var(--r-lg);
+  box-shadow: 0 30px 80px rgba(16, 20, 19, .28);
+}
+.dialogo::backdrop { background: rgba(16, 20, 19, .55); backdrop-filter: blur(3px); }
+.dialogo__cuerpo { position: relative; }
+.dialogo__cerrar { background: var(--papel); border: 1px solid var(--linea); }
+.aviso-enlace { background: var(--amarillo-suave); border: 1px solid #EBD97A; }
+
+/* ── 16. Páginas de texto ────────────────────────────────────────────────── */
+.borrador { background: var(--amarillo-suave); border: 1px solid #EBD97A; }
+
+/* ============================================================================
+   17. GUÍA DOCENTE  (se carga también en guia/index.html, después de guia.css)
+   Hereda los tokens de arriba, así que los bordes de tinta y las sombras
+   sólidas desaparecen solos. Aquí van los remates que quedan sueltos.
+   ============================================================================ */
+.portada { border-bottom: 0; }
+.portada h1, .portada p { color: #06211A; }
+.portada__meta li { background: rgba(255, 255, 255, .78); border: 1px solid rgba(6, 33, 26, .18); color: #06211A; }
+.portada__logo { filter: none; }
+.guia-cabecera .boton { border-radius: 999px; }
+
+.indice ol { border-left: 1px solid var(--linea); }
+.indice a { border-left: 2px solid transparent; border-radius: 0 8px 8px 0; }
+.indice a:hover { background: var(--papel); }
+.indice a[aria-current="true"] { border-left-color: var(--verde); color: var(--verde); background: var(--menta-suave); }
+
+.capitulo { border-bottom: 1px solid var(--linea); }
+.capitulo > header::before { border: 0; box-shadow: none; color: #241C00; border-radius: 50%; }
+
+kbd, .dato { border: 1px solid var(--linea); border-bottom-width: 1px; background: var(--papel); }
+.dato { background: var(--menta-suave); border-color: #B6EBD8; color: var(--verde); }
+
+.pasos-guia > li { background: var(--blanco); border: 1px solid var(--linea); border-radius: 16px; }
+.pasos-guia > li::before { border: 0; color: #06211A; }
+
+.caja { border: 1px solid var(--linea); border-radius: 16px; }
+.caja::before { border: 0; }
+.caja--consejo { border-color: #B6EBD8; }
+.caja--importante { border-color: #EBD97A; }
+.caja--aula { border-color: #BEDAFB; }
+
+.figura .captura { box-shadow: none; }
+
+/* Gráficos vectoriales de la guía: trazos más finos, extremos redondeados
+   y esquinas suaves, para que hablen el mismo idioma que el resto del sitio. */
+.diagrama { background: var(--blanco); border: 1px solid var(--linea); border-radius: var(--r-lg); }
+.diagrama svg { overflow: visible; }
+.diagrama svg [stroke-width="3"], .diagrama svg [stroke-width="2.5"], .diagrama svg [stroke-width="2"] { stroke-width: 1.8; }
+.diagrama svg line, .diagrama svg path, .diagrama svg polyline { stroke-linecap: round; stroke-linejoin: round; }
+.diagrama svg rect { rx: 12; }
+
+.tabla-marco { border: 1px solid var(--linea); border-radius: var(--r-md); }
+.tabla thead th { background: var(--tinta); color: #FFFFFF; }
+.tabla th, .tabla td { border-bottom: 1px solid var(--linea); }
+.etiqueta { border: 1px solid rgba(16, 20, 19, .18); }
+
+.hoja { border: 1px solid var(--linea); border-radius: var(--r-md); }
+.hoja th { background: #EDF5F1; }
+.hoja th, .hoja td { border: 1px solid var(--linea); }
