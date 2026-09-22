@@ -211,11 +211,3 @@ kbd, .dato { border: 1px solid var(--linea); border-bottom-width: 1px; backgroun
   a { text-decoration: none; color: inherit; }
   p, li { orphans: 3; widows: 3; }
 }
-
-
-/* ── Mascota en la guía ─────────────────────────────────────────────────── */
-.mascota-guia { float: right; width: clamp(84px, 14vw, 130px); height: auto; margin: 0 0 10px 18px; shape-margin: 12px; }
-.caja .mascota-guia { width: clamp(64px, 10vw, 96px); margin: -6px 0 6px 14px; }
-.capitulo { clear: both; }
-@media (max-width: 640px) { .mascota-guia { width: 84px; margin-left: 12px; } }
-@media print { .mascota-guia { width: 84px; } .caja .mascota-guia { width: 64px; } }

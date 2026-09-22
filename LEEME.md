@@ -10,7 +10,7 @@ Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias).
 
 | Archivo | Qué es |
 | :--- | :--- |
-| `index.html` | **Landing** corta y animada. Autocontenida (estilos en el propio archivo). Encabezado fijo (logo + WhatsApp), portada oscura con dos botones (demo y guía), cinta de ventajas y secciones en tarjetas con mascota: aviso de sitio en construcción, qué es, así funciona en tu salón (3 pasos con iconos + video de YouTube), demo de 30 días, activación en 4 pasos, guía docente, beta y versión final, feedback, preguntas frecuentes y pie legal. Se genera a mano; si se edita una pregunta frecuente hay que cambiarla también en el JSON-LD. |
+| `index.html` | **Landing** corta y animada. Autocontenida (estilos en el propio archivo). Encabezado fijo (logo + WhatsApp), portada oscura con un solo botón principal («Quiero probar QuizOtón») y cinta de ventajas. Secciones en tarjetas con mascota: aviso de sitio en construcción, «¿Qué es QuizOtón?» (con las 4 tarjetas de modos: En vivo, Dominio, Duelo de saberes, Sin prisa), «Así funciona en tu salón» (3 pasos con iconos + video de YouTube), demo de 30 días, activación en 3 pasos (autoservicio, sin WhatsApp), guía docente, beta y versión final, feedback, preguntas frecuentes y pie. Se genera a mano; si se edita una pregunta frecuente hay que cambiarla también en el JSON-LD. |
 | `guia/index.html` | Guía docente v1.1 con descarga en PDF. Página blanca (`body.pagina-blanca`). |
 | `legal/privacidad.html` | Política de privacidad, aviso de tratamiento de datos y reportes de fallos. |
 | `legal/terminos.html` | Términos de uso y licencia. |
@@ -48,18 +48,22 @@ Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias).
 | Datos del titular y horarios legales | `legal/privacidad.html` y `legal/terminos.html`. |
 | Colores de la landing | Bloque `<style>` de `index.html` (variables al inicio). |
 | Animaciones | CSS en el bloque `<style>` de `index.html` (títulos que aparecen, aurora, cinta, botones) y `js/animaciones.js`. Todo se apaga si el sistema del visitante pide «reducir movimiento». |
-| Mascota | `img/mascota/` (copias optimizadas y estáticas de `07_Media/mascota_colibri`; no editar aquí el original). Poses en uso: saludo (portada), idea (aviso), computador (demo), lectura (guía), mochila (beta), soporte (feedback) y guiño (pie). |
-| Pie de página | Bloque `<footer class="pie">` de `index.html`; usa el logo blanco `img/marca/logotipo-blanco.webp`. |
+| Mascota | `img/mascota/` (copias optimizadas y estáticas de `07_Media/mascota_colibri`; no editar aquí el original). Poses en uso: saludo (portada y pie), idea (aviso), computador (demo), mochila (beta), soporte (feedback) y guiño (pie). La guía docente **no lleva mascota**. Todas comparten el mismo tamaño (`.mcard>.m`, `clamp(88px,14vw,150px)`); **solo la del hero** tiene un tamaño propio, más grande. En el pie, la mascota se oculta en móvil (`max-width:860px`) y solo se ve en escritorio. |
+| Logo | Un único archivo, `img/marca/logo.svg` (con el eslogan «Aprende jugando»), usado en el encabezado de `index.html`, la guía y las dos páginas legales. **No usar** `logotipo-color.webp` ni `logo v1.0.svg` — quedaron descartados. El pie oscuro usa aparte `logotipo-blanco.webp` (versión clara para fondo oscuro). Si `logo.svg` se reemplaza, debe conservar el atributo `xmlns="http://www.w3.org/2000/svg"` en la etiqueta `<svg>` raíz, o no se renderiza como `<img>`. |
 
-## Proceso de activación del demo (lo que explica la web)
+## Proceso de activación (lo que explica la web) — verificado contra `01_APP`
 
+**Demo (lo que describe la landing y la guía):** es autoservicio, sin enviar nada.
 1. El docente instala y abre QuizOtón; ve la pantalla de activación.
-2. Copia el identificador de su equipo (empieza por `QZ-`).
-3. Lo envía por WhatsApp o a `info@quizoton.online`, con su nombre y colegio.
-4. Se le responde con una clave única para ese computador.
-5. La pega en «Clave de licencia» y pulsa «Activar QuizOtón en este equipo». No requiere internet.
+2. Hace clic en la insignia «QUIZOTON-DEMO» (`panel.html`/`panel.js`): el campo de clave se completa solo.
+3. Hace clic en «Activar QuizOtón en este equipo». Listo: 30 días completos, sin esperar respuesta ni internet.
 
-La clave de evaluación `QUIZOTON-DEMO` **no se publica** en la web.
+**Licencia paga (solo se explica en la guía y en la FAQ «¿Qué pasa cuando termina el demo?», no en el flujo principal):**
+1. El docente copia el identificador de su equipo (empieza por `QZ-`).
+2. Lo envía por WhatsApp o a `info@quizoton.online`, con su nombre y colegio.
+3. Se le responde con una clave única para ese computador, que pega y activa. Tampoco requiere internet.
+
+Si `01_APP` cambia este flujo, hay que actualizar `index.html` (sección «Activar»), `guia/index.html» y `legal/terminos.html` §3 / `legal/privacidad.html` §3 a la vez — los tres quedaron corregidos el 22-sep-2026 tras verificar que antes describían mal la activación del demo.
 
 ## SEO (región principal: Neiva, Huila, sin limitarse a ella)
 
