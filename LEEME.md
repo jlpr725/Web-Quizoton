@@ -1,64 +1,83 @@
-# Landing QuizOton v1.2
+# Sitio web de QuizOtón
 
-Sitio estático (HTML, CSS y JavaScript, sin dependencias). Se puede subir tal cual a Netlify, Vercel, GitHub Pages, Cloudflare Pages o cualquier hosting.
+Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias). Publicada en Vercel: https://quizoton.online
+
+**Qué es hoy:** una presentación básica de la app con la descarga del demo de 30 días, la guía docente y los canales de feedback (correo y WhatsApp). Cuando esté lista la versión final del sitio oficial, `index.html` se reemplazará.
+
+**Datos oficiales (deben ser iguales en todo el sitio):** dominio `quizoton.online` · correo `info@quizoton.online` · WhatsApp `+57 313 452 8352` · nombre en textos `QuizOtón` (el logotipo y las capturas de la app conservan «QuizOton»; los archivos y direcciones van sin tilde).
+
+## Páginas
+
+| Archivo | Qué es |
+| :--- | :--- |
+| `index.html` | **Landing** corta y animada. Autocontenida (estilos en el propio archivo). Encabezado fijo (logo + WhatsApp), portada oscura con dos botones (demo y guía), cinta de ventajas y secciones en tarjetas con mascota: aviso de sitio en construcción, qué es, así funciona en tu salón (3 pasos con iconos + video de YouTube), demo de 30 días, activación en 4 pasos, guía docente, beta y versión final, feedback, preguntas frecuentes y pie legal. Se genera a mano; si se edita una pregunta frecuente hay que cambiarla también en el JSON-LD. |
+| `guia/index.html` | Guía docente v1.1 con descarga en PDF. Página blanca (`body.pagina-blanca`). |
+| `legal/privacidad.html` | Política de privacidad, aviso de tratamiento de datos y reportes de fallos. |
+| `legal/terminos.html` | Términos de uso y licencia. |
+| `.archivo/` | Borradores fuera del despliegue (`sitio-completo.html`). Se excluye con `.vercelignore` y `/sitio-completo` redirige a `/`. |
 
 ## Estructura
 
 ```
-landing-v1.2/
-├── index.html            Página principal
-├── guia/index.html       Guía docente (en línea y descarga en PDF)
-├── legal/                Privacidad y términos (BORRADORES)
-├── css/estilos.css       Estilos generales
-├── css/guia.css          Estilos de la guía y de la impresión a PDF
-├── js/config.js          PRECIOS, ENLACES Y CONTACTO (edita aquí)
-├── js/app.js             Comportamiento de la página
-├── js/guia.js            Descarga en PDF e índice de la guía
-├── img/capturas/         Capturas de la aplicación (WebP)
-├── img/fotos/            Fotografías (WebP)
-├── img/marca/            Logotipos, favicon e ícono
-├── fuentes/              Tipografías locales
-├── favicon.ico
-├── robots.txt
-└── sitemap.xml
+├── index.html
+├── guia/index.html
+├── legal/                 privacidad.html · terminos.html
+├── beta/                  Instalar_QuizOton.exe   (lo genera y entrega el equipo de la app; solo se enlaza)
+├── css/estilos.css        Estilos de legales
+├── css/guia.css           Estilos de la guía y de su impresión a PDF
+├── js/config.js           DATOS ÚNICOS: contacto, descarga, prueba, video (edita aquí)
+├── js/app.js              Escribe los datos de config.js en la página y carga el video
+├── js/inicio.js           Marca la página como «con JavaScript» (va en el head)
+├── js/animaciones.js      Encabezado fijo, aparición al desplazar, brillo en tarjetas y mascota
+├── js/guia.js             Descarga en PDF e índice de la guía
+├── img/                   capturas/ · fotos/ · marca/ · mascota/ · og-quizoton.png
+├── fuentes/               Tipografías locales (.woff2)
+├── .archivo/              Borradores (no se publica)
+├── .vercelignore · favicon.ico · robots.txt · sitemap.xml
+└── vercel.json            Cabeceras de seguridad (CSP), caché y redirección
 ```
 
 ## Cambios rápidos
 
 | Qué quieres cambiar | Dónde |
 | :--- | :--- |
-| Precios, paquetes institucionales | `js/config.js` → `planes` |
-| Enlace de descarga del .exe | `js/config.js` → `descargaInstalador` |
-| Número de WhatsApp y mensajes | `js/config.js` → `whatsapp`, `mensajes` |
-| Días de la prueba | `js/config.js` → `pruebaDias` |
-| Precio en los datos para Google | `index.html`, bloque `application/ld+json` (`"price"`) |
+| Ruta, versión y peso del instalador | `js/config.js` → `descargaInstalador`, `versionBeta`, `pesoInstalador`, `hashInstalador` (los botones con `data-descarga` la leen de ahí). El `.exe` conserva el nombre `Instalar_QuizOton.exe`. |
+| **Video de YouTube** | `js/config.js` → `videoYoutubeId`: pega solo el ID del video (11 caracteres, lo que va después de `v=`). Vacío = se muestra «Video próximamente». No hay que tocar el HTML. |
+| Correo, WhatsApp y horario | `js/config.js` → `correo`, `whatsapp`, `horario`, `mensajes`. Además, el HTML trae los valores escritos por si el JavaScript no carga: si cambian, buscar y reemplazar en `index.html`, `guia/index.html` y `legal/`. |
+| Días del demo | `js/config.js` → `pruebaDias` (`index.html`, la guía y los términos lo leen de ahí; la captura `img/capturas/activacion-licencia*.webp` lo tiene escrito). |
+| Datos del titular y horarios legales | `legal/privacidad.html` y `legal/terminos.html`. |
+| Colores de la landing | Bloque `<style>` de `index.html` (variables al inicio). |
+| Animaciones | CSS en el bloque `<style>` de `index.html` (títulos que aparecen, aurora, cinta, botones) y `js/animaciones.js`. Todo se apaga si el sistema del visitante pide «reducir movimiento». |
+| Mascota | `img/mascota/` (copias optimizadas y estáticas de `07_Media/mascota_colibri`; no editar aquí el original). Poses en uso: saludo (portada), idea (aviso), computador (demo), lectura (guía), mochila (beta), soporte (feedback) y guiño (pie). |
+| Pie de página | Bloque `<footer class="pie">` de `index.html`; usa el logo blanco `img/marca/logotipo-blanco.webp`. |
 
-## Cuando tengas dominio
+## Proceso de activación del demo (lo que explica la web)
 
-Busca y reemplaza `https://web-quizoton.vercel.app` en: `index.html`, `guia/index.html`, `legal/privacidad.html`, `legal/terminos.html`, `robots.txt` y `sitemap.xml`.
+1. El docente instala y abre QuizOtón; ve la pantalla de activación.
+2. Copia el identificador de su equipo (empieza por `QZ-`).
+3. Lo envía por WhatsApp o a `info@quizoton.online`, con su nombre y colegio.
+4. Se le responde con una clave única para ese computador.
+5. La pega en «Clave de licencia» y pulsa «Activar QuizOtón en este equipo». No requiere internet.
 
-## Imágenes y video pendientes
+La clave de evaluación `QUIZOTON-DEMO` **no se publica** en la web.
 
-Cada espacio pendiente se ve en la página como un recuadro rayado con el tamaño y la descripción. En el código, justo encima de cada recuadro, hay un comentario con el HTML exacto que lo reemplaza.
+## SEO (región principal: Neiva, Huila, sin limitarse a ella)
 
-| Recurso | Archivo sugerido | Tamaño |
-| :--- | :--- | :--- |
-| Video de demostración | `video/quizoton-demo.mp4` + portada `img/fotos/video-portada.webp` | 1920 × 1080 / 1600 × 900 |
-| Modo Dominio (celular) | `img/capturas/modo-dominio.webp` | 620 × 1342 |
-| Duelo de saberes (proyección) | `img/capturas/modo-duelo.webp` | 1600 × 900 |
-| Modo Sin prisa (celular) | `img/capturas/modo-sin-prisa.webp` | 620 × 1342 |
-| Informe de cierre | `img/capturas/informe-cierre.webp` | 1440 × 900 |
-| Foto de clase con celulares | `img/fotos/clase-celulares.webp` y `-800.webp` | 1600 × 900 y 800 × 450 |
-| Imagen para compartir | `img/og-quizoton.jpg` (no se ve en la página) | 1200 × 630 |
+- Título, descripción, Open Graph y `geo.region` con Neiva, Huila; el contenido menciona «docentes de Neiva, Huila y toda Colombia».
+- Datos estructurados (JSON-LD) en `index.html`: `Organization` (con dirección Neiva, Huila, correo y área de servicio), `WebSite`, `SoftwareApplication` (demo gratuito de 30 días) y `FAQPage` (mismas preguntas que la sección visible). La guía lleva `TechArticle` y `BreadcrumbList`.
+- Si se cambia una pregunta frecuente, cambiarla también en el JSON-LD (deben coincidir).
+- Pendiente fuera del código: verificar `quizoton.online` en Google Search Console y enviar `sitemap.xml`; crear el perfil de negocio en Google (Neiva); pedir enlaces desde sitios locales educativos.
 
-Recomendaciones: exporta en WebP con calidad 75–80, respeta las proporciones y usa nombres sin espacios ni tildes. Si un video pesa más de 25 MB, súbelo a YouTube y usa un `<iframe>`.
+## Cuando cambie el dominio
 
-## Antes de publicar
+Reemplaza `https://quizoton.online` en: los `.html`, `robots.txt` y `sitemap.xml`.
 
-- Completa los datos entre corchetes en `legal/` y hazlos revisar por un abogado. Borra el recuadro amarillo de borrador.
-- Revisa la captura `estudiante-pregunta.webp`: se tomó de un mockup porque la captura real de la pregunta en el celular era un duplicado de la de ingreso.
-- Si abres `index.html` con doble clic desde el explorador, las fuentes pueden verse distintas: el navegador bloquea fuentes locales en ese modo. En un hosting o con un servidor local se ven bien.
+## Antes de publicar cambios
 
-## Descarga de la guía en PDF
-
-El botón **Descargar PDF** abre el diálogo de impresión del navegador con un diseño preparado para hoja carta. Hay que elegir **Guardar como PDF** y activar **Gráficos de fondo** para conservar los colores.
+- La política `Content-Security-Policy` de `vercel.json` solo permite recursos del propio sitio y, para el video, `youtube-nocookie.com`. Si agregas otro servicio externo hay que autorizarlo ahí y actualizar la política de privacidad.
+- No hay scripts en línea: todo el JavaScript va en `js/`. Los estilos en línea sí están permitidos.
+- Al cambiar el contenido de una página, actualiza su fecha en `sitemap.xml` (`lastmod`) y la fecha de «Última actualización» de los legales.
+- `vercel.json` debe quedar en la raíz de lo que se despliega (junto a `index.html`).
+- `robots.txt` bloquea `/beta/` y `/.archivo/`; el enlace de descarga sigue funcionando para quien lo tiene.
+- Descarga de la guía en PDF: el botón abre el diálogo de impresión; hay que elegir **Guardar como PDF** y activar **Gráficos de fondo**. El PDF sale siempre en claro.
+- El instalador lo compila otro equipo. Al recibir uno nuevo: reemplazar `beta/Instalar_QuizOton.exe` (mismo nombre) y revisar `pesoInstalador`, `versionBeta` y **`hashInstalador`** (SHA-256) en `js/config.js`, y el valor escrito dentro de `index.html`.

@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guía docente de QuizOton: instala y da tu primera clase</title>
-  <meta name="description" content="Guía para preparar y dar tu primera clase con QuizOton: instalación, cursos, preguntas en Excel, los cuatro modos de juego, informes y solución de problemas.">
-  <meta name="theme-color" content="#2FCE9B">
-  <link rel="canonical" href="https://web-quizoton.vercel.app/guia/">
+  <title>Guía docente de QuizOtón: instala y da tu primera clase</title>
+  <meta name="description" content="Guía para docentes de Colombia: instala el demo de QuizOtón, actívalo, crea tus cursos, carga preguntas en Excel y usa los 4 modos de juego. Sin internet.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="canonical" href="https://quizoton.online/guia/">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="es_CO">
-  <meta property="og:title" content="Guía docente de QuizOton">
-  <meta property="og:description" content="Todo lo que necesitas para tu primera clase con QuizOton, explicado sin tecnicismos.">
-  <meta property="og:url" content="https://web-quizoton.vercel.app/guia/">
-  <meta property="og:image" content="https://web-quizoton.vercel.app/img/og-quizoton.png">
+  <meta property="og:title" content="Guía docente de QuizOtón: instala y da tu primera clase">
+  <meta property="og:description" content="Instalación, activación del demo de 30 días, cursos, preguntas en Excel, modos de juego e informes, explicado sin tecnicismos.">
+  <meta property="og:url" content="https://quizoton.online/guia/">
+  <meta property="og:image" content="https://quizoton.online/img/og-quizoton.png">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta property="og:site_name" content="QuizOton">
+  <meta property="og:site_name" content="QuizOtón">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="QuizOtón, la evaluación de aula que funciona sin internet">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Guía docente de QuizOton">
-  <meta name="twitter:description" content="Todo lo que necesitas para tu primera clase con QuizOton, explicado sin tecnicismos.">
-  <meta name="twitter:image" content="https://web-quizoton.vercel.app/img/og-quizoton.png">
+  <meta name="twitter:title" content="Guía docente de QuizOtón">
+  <meta name="twitter:description" content="Instalación, activación del demo de 30 días, cursos, preguntas en Excel, modos de juego e informes.">
+  <meta name="twitter:image" content="https://quizoton.online/img/og-quizoton.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"TechArticle","headline":"Guía docente de QuizOton","description":"Instalación, cursos, preguntas en Excel, modos de juego, informes y solución de problemas.","inLanguage":"es-CO","url":"https://web-quizoton.vercel.app/guia/","image":"https://web-quizoton.vercel.app/img/og-quizoton.png","dateModified":"2026-09-20","author":{"@type":"Organization","name":"QuizOton","url":"https://web-quizoton.vercel.app/"},"publisher":{"@type":"Organization","name":"QuizOton","url":"https://web-quizoton.vercel.app/"},"mainEntityOfPage":"https://web-quizoton.vercel.app/guia/"}
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"TechArticle","headline":"Guía docente de QuizOtón","alternativeHeadline":"Cómo instalar, activar y usar QuizOtón en tu primera clase","description":"Instalación, activación del demo de 30 días, cursos, preguntas en Excel, modos de juego, informes y solución de problemas.","inLanguage":"es-CO","url":"https://quizoton.online/guia/","image":"https://quizoton.online/img/og-quizoton.png","datePublished":"2026-09-13","dateModified":"2026-09-21","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"about":{"@type":"SoftwareApplication","name":"QuizOtón","alternateName":["QuizOtón","Quizoton"]},"author":{"@id":"https://quizoton.online/#organizacion"},"publisher":{"@id":"https://quizoton.online/#organizacion"},"mainEntityOfPage":"https://quizoton.online/guia/"},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"QuizOtón","item":"https://quizoton.online/"},{"@type":"ListItem","position":2,"name":"Guía docente","item":"https://quizoton.online/guia/"}]}
+  ]}
   </script>
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/marca/favicon-32.png">
@@ -30,23 +34,21 @@
   <link rel="preload" href="../fuentes/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../css/estilos.css">
   <link rel="stylesheet" href="../css/guia.css">
-  <!-- TEMA (prueba). Para volver al diseño original, borra esta línea. -->
-  <link rel="stylesheet" href="../css/tema-oscuro.css">
-</head>
-<body>
+  </head>
+<body class="pagina-blanca">
   <a class="saltar" href="#contenido">Saltar al contenido</a>
 
   <header class="cabecera guia-cabecera">
     <div class="contenedor cabecera__fila">
-      <a class="marca" href="../index.html" aria-label="Volver a la página de QuizOton">
-        <img src="../img/marca/logotipo-color.webp" alt="QuizOton" width="719" height="404">
+      <a class="marca" href="/" aria-label="Volver a la página de QuizOtón">
+        <img src="../img/marca/logotipo-color.webp" alt="QuizOtón" width="719" height="404">
       </a>
       <div class="guia-cabecera__acciones">
         <button class="boton boton--amarillo" type="button" data-imprimir>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Descargar PDF
         </button>
-        <a class="boton boton--menta boton--cta-cabecera" href="../index.html#descargar">Probar QuizOton</a>
+        <a class="boton boton--menta boton--cta-cabecera" href="/#demo">Descargar demo</a>
       </div>
     </div>
   </header>
@@ -55,10 +57,10 @@
     <section class="portada">
       <div class="contenedor portada__rejilla">
         <div>
-          <h1>Guía docente de QuizOton</h1>
+          <h1>Guía docente de QuizOtón</h1>
           <p>Todo lo que necesitas para preparar y dar tu primera clase, sin tecnicismos. Léela en orden la primera vez y vuelve a ella cuando la necesites.</p>
           <ul class="portada__meta">
-            <li>Versión 1.0</li>
+            <li>Versión 1.1 · septiembre de 2026</li>
             <li>Windows 10 y 11</li>
             <li>Lectura de 15 minutos</li>
           </ul>
@@ -78,6 +80,7 @@
           <li><a href="#modos">Los cuatro modos</a></li>
           <li><a href="#informes">Informes y notas</a></li>
           <li><a href="#problemas">Si algo no funciona</a></li>
+          <li><a href="#opinion">Cuéntanos tu experiencia</a></li>
           <li><a href="#fundamentos">Fundamentos pedagógicos</a></li>
         </ol>
         <button class="boton boton--bloque indice__pdf" type="button" data-imprimir>Descargar PDF</button>
@@ -89,12 +92,13 @@
         <section class="capitulo" id="antes" aria-labelledby="t-antes">
           <header><h2 id="t-antes">Antes de empezar</h2></header>
 
-          <p class="intro">QuizOton convierte tu computador en el centro de la clase. Tus estudiantes se conectan con el celular a través del Wi-Fi del salón y responden desde el navegador. Nada pasa por internet.</p>
+          <img class="mascota-guia" src="/img/mascota/colibri-lectura.svg" width="233" height="342" alt="" loading="lazy">
+          <p class="intro">QuizOtón convierte tu computador en el centro de la clase. Tus estudiantes se conectan con el celular a través del Wi-Fi del salón y responden desde el navegador. Nada pasa por internet.</p>
 
           <h3>Cómo se conecta todo</h3>
           <div class="diagrama">
             <svg viewBox="0 0 720 360" role="img" aria-labelledby="diag-t diag-d">
-              <title id="diag-t">Esquema de conexión de QuizOton</title>
+              <title id="diag-t">Esquema de conexión de QuizOtón</title>
               <desc id="diag-d">El computador del docente y los celulares de los estudiantes se conectan al mismo router Wi-Fi. El videobeam muestra la pantalla del computador. No hay conexión a internet.</desc>
               <g stroke="#101413" stroke-width="3" stroke-dasharray="7 6" fill="none" stroke-linecap="round">
                 <path d="M360 190 L200 140"/>
@@ -111,7 +115,7 @@
               <rect x="70" y="92" width="130" height="80" rx="8" fill="#3FDFA9" stroke="#101413" stroke-width="3"/>
               <rect x="55" y="172" width="160" height="12" rx="4" fill="#101413"/>
               <text x="135" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#101413">Tu computador</text>
-              <text x="135" y="208" text-anchor="middle" font-size="13" fill="#3A4541">aquí vive QuizOton</text>
+              <text x="135" y="208" text-anchor="middle" font-size="13" fill="#3A4541">aquí vive QuizOtón</text>
               <!-- videobeam -->
               <rect x="40" y="20" width="160" height="40" rx="8" fill="#fff" stroke="#101413" stroke-width="3"/>
               <text x="120" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#101413">Videobeam</text>
@@ -140,27 +144,34 @@
             <li><strong>Un videobeam o televisor</strong> para proyectar. En el modo Sin prisa es opcional.</li>
           </ul>
 
-          <h3>Instala QuizOton</h3>
+          <h3>Instala QuizOtón</h3>
           <ol class="pasos-guia">
-            <li><strong>Descarga el instalador</strong><p>Hazlo desde la página oficial de QuizOton o desde el enlace que te enviemos por WhatsApp.</p></li>
-            <li><strong>Ábrelo</strong><p>Haz doble clic sobre el archivo descargado y sigue las instrucciones. Al terminar tendrás un acceso directo de QuizOton en el escritorio.</p></li>
+            <li><strong>Descarga el demo</strong><p>Entra a <a class="enlace-subrayado" href="/#demo">quizoton.online</a> y haz clic en <strong>Descargar demo de 30 días</strong> (<span data-config="pesoInstalador">71 MB</span>, versión <span data-config="versionBeta">Beta 1.0</span>). También puedes usar el enlace que te enviemos por WhatsApp. Es una versión de prueba de <span data-config="pruebaDias">30</span> días con acceso completo a todas las funciones.</p></li>
+            <li><strong>Ábrelo</strong><p>Haz doble clic sobre el archivo descargado y sigue las instrucciones. Al terminar tendrás un acceso directo de QuizOtón en el escritorio.</p></li>
             <li><strong>Si aparece «Windows protegió su PC»</strong><p>Haz clic en <strong>Más información</strong> y luego en <strong>Ejecutar de todas formas</strong>. Windows muestra este aviso con programas nuevos que todavía no reconoce.</p></li>
           </ol>
 
+          <p class="no-imprimir"><a class="boton boton--menta" data-descarga href="/beta/Instalar_QuizOton.exe" download>Descargar demo de 30 días</a></p>
+
           <div class="caja caja--importante">
             <span class="caja__titulo">Permite el acceso a la red</span>
-            <p>La primera vez que abras QuizOton, Windows puede preguntarte si permites que se comunique en la red. Marca <strong>redes privadas</strong> y acepta. Si lo rechazas, los celulares no podrán conectarse a tu computador.</p>
+            <p>La primera vez que abras QuizOtón, Windows puede preguntarte si permites que se comunique en la red. Marca <strong>redes privadas</strong> y acepta. Si lo rechazas, los celulares no podrán conectarse a tu computador.</p>
           </div>
 
-          <h3>Activa la prueba o tu licencia</h3>
-          <figure class="figura">
-            <div class="captura">
-              <img src="../img/capturas/activacion-licencia-800.webp" alt="Pantalla de activación con el identificador del equipo, el campo para la clave y la opción de prueba gratuita." width="800" height="500" loading="lazy">
-            </div>
-            <figcaption class="pie-foto">La pantalla de activación aparece al abrir QuizOton por primera vez.</figcaption>
-          </figure>
-          <p><strong>Para probar:</strong> usa la clave de prueba gratuita que aparece en esa misma pantalla. Tendrás todas las funciones durante <span data-config="pruebaDias">30</span> días.</p>
-          <p><strong>Para activar tu licencia:</strong> copia el identificador de tu equipo (empieza por <span class="dato">QZ-</span>) y envíalo por WhatsApp con tu comprobante de pago. Te responderemos con tu clave. Pégala en el campo de licencia y haz clic en <strong>Activar QuizOton en este equipo</strong>. No necesitas internet para activarlo.</p>
+          <h3>Activa tu demo de <span data-config="pruebaDias">30</span> días</h3>
+          <p>Lo que descargas es una <strong>versión de prueba de <span data-config="pruebaDias">30</span> días con acceso completo a todas las funciones</strong>. Para activarla, cada computador necesita una <strong>clave única</strong>, que se genera a partir del identificador de ese equipo. No necesitas internet para activarla.</p>
+          <ol class="pasos-guia">
+            <li><strong>Abre QuizOtón</strong><p>Desde el acceso directo del escritorio. La primera vez verás la pantalla de activación.</p></li>
+            <li><strong>Copia el identificador de tu equipo</strong><p>Aparece en un recuadro y empieza por <span class="dato">QZ-</span>. Usa el botón <strong>Copiar</strong>.</p></li>
+            <li><strong>Envíanoslo</strong><p>Por <a class="enlace-subrayado" data-whatsapp="demo" href="https://wa.me/573134528352">WhatsApp</a> o al correo <a class="enlace-subrayado" data-correo="general" href="mailto:info@quizoton.online">info@quizoton.online</a>, con tu nombre y el de tu colegio. Atendemos de lunes a viernes, de 9:00 a. m. a 6:00 p. m. (hora de Colombia).</p></li>
+            <li><strong>Recibe tu clave</strong><p>Te responderemos con la clave hecha solo para tu computador.</p></li>
+            <li><strong>Pégala y activa</strong><p>En el campo <strong>Clave de licencia</strong> pega la clave y haz clic en <strong>Activar QuizOtón en este equipo</strong>.</p></li>
+          </ol>
+          <div class="caja caja--consejo">
+            <span class="caja__titulo">La clave es solo para ese computador</span>
+            <p>Si cambias de equipo, escríbenos y te ayudamos a trasladar tu licencia.</p>
+          </div>
+          <p><strong>Cuando termine el demo:</strong> tus cursos y sesiones siguen guardados en tu computador. Para seguir usando QuizOtón se necesita una licencia; escríbenos y te contamos las opciones.</p>
         </section>
 
         <!-- ═══ 2. PREPARA TU CLASE ════════════════════════════════════════ -->
@@ -172,7 +183,7 @@
           <p>La primera vez que entres al panel docente, registra tu nombre, un usuario, una contraseña y tu asignatura principal. Si dictas más materias, agrégalas desde tu perfil.</p>
           <div class="caja caja--importante">
             <span class="caja__titulo">Anota tu usuario y contraseña</span>
-            <p>QuizOton funciona sin internet, así que no hay un correo de recuperación. Guárdalos en un lugar seguro.</p>
+            <p>QuizOtón funciona sin internet, así que no hay un correo de recuperación. Guárdalos en un lugar seguro.</p>
           </div>
 
           <h3>Crea tus cursos</h3>
@@ -201,13 +212,13 @@
         <!-- ═══ 3. PREGUNTAS Y PLANTILLAS ══════════════════════════════════ -->
         <section class="capitulo" id="preguntas" aria-labelledby="t-preguntas">
           <header><h2 id="t-preguntas">Preguntas y plantillas</h2></header>
-          <p class="intro">Puedes escribir tus preguntas una a una en el editor o cargarlas todas juntas desde Excel. QuizOton trae dos plantillas descargables.</p>
+          <p class="intro">Puedes escribir tus preguntas una a una en el editor o cargarlas todas juntas desde Excel. QuizOtón trae dos plantillas descargables.</p>
 
           <h3>Plantilla estándar</h3>
           <p>Sirve para los modos En vivo, Dominio y Sin prisa. La regla es una sola:</p>
           <div class="caja caja--consejo">
             <span class="caja__titulo">La respuesta correcta siempre va en la columna A</span>
-            <p>Las incorrectas van en B, C y D. No te preocupes: al jugar, QuizOton baraja las opciones para que la correcta no quede siempre en el mismo lugar.</p>
+            <p>Las incorrectas van en B, C y D. No te preocupes: al jugar, QuizOtón baraja las opciones para que la correcta no quede siempre en el mismo lugar.</p>
           </div>
           <div class="hoja">
             <table>
@@ -250,7 +261,7 @@
           <ol class="pasos-guia">
             <li><strong>Enciende el router</strong><p>Conéctalo a la corriente y espera a que aparezca su red Wi-Fi.</p></li>
             <li><strong>Conecta tu computador</strong><p>Al router, por Wi-Fi o por cable. Conecta también el videobeam.</p></li>
-            <li><strong>Abre QuizOton y elige la sesión</strong><p>Desde <strong>Mis sesiones</strong>, haz clic en <strong>Jugar</strong> y proyecta la pantalla.</p></li>
+            <li><strong>Abre QuizOtón y elige la sesión</strong><p>Desde <strong>Mis sesiones</strong>, haz clic en <strong>Jugar</strong> y proyecta la pantalla.</p></li>
             <li><strong>Pide a tus estudiantes que se conecten</strong><p>Al mismo Wi-Fi del router. Luego escanean el código QR del tablero o escriben en el navegador la dirección que aparece.</p></li>
             <li><strong>Ingresan con su nombre</strong><p>Escriben su usuario (primer nombre y primer apellido, en minúscula, sin tildes y con guion bajo, como <span class="dato">maria_rojas</span>) o tocan su nombre en la lista.</p></li>
             <li><strong>Empieza</strong><p>Cuando veas al curso conectado, haz clic en <strong>Empezar</strong>. Puedes pausar o terminar cuando lo necesites.</p></li>
@@ -269,6 +280,11 @@
           <div class="caja caja--aula">
             <span class="caja__titulo">Díselo al curso antes de empezar</span>
             <p>«Su celular va a decir que no hay internet. Es normal: estamos conectados al computador del salón y no se gastan datos.» Así evitas que se desconecten para buscar otra red.</p>
+          </div>
+
+          <div class="caja caja--consejo">
+            <span class="caja__titulo">Al terminar la clase</span>
+            <p>Cierra QuizOtón con el botón <strong>Apagar Aula y Salir</strong> de su ventana de control. Así el aula se cierra por completo.</p>
           </div>
 
           <h3>Si un estudiante no tiene celular</h3>
@@ -328,7 +344,7 @@
           <p>Muestra el acierto inicial, cuántos participaron y cuántos estudiantes necesitan apoyo. En el modo Dominio indica también cuántos dominaron todas las preguntas.</p>
 
           <h3>Qué no quedó claro</h3>
-          <p>QuizOton revisa cada pregunta y te sugiere una posible causa cuando muchos fallaron:</p>
+          <p>QuizOtón revisa cada pregunta y te sugiere una posible causa cuando muchos fallaron:</p>
           <h4>Problema de concepto</h4>
           <p>Buena parte del curso eligió la misma opción incorrecta. Es probable que exista una idea mal entendida. Vuelve a explicarla, idealmente con un ejemplo distinto.</p>
           <h4>Revisa la pregunta</h4>
@@ -363,7 +379,7 @@
                 <li>Verifica que los celulares estén conectados al Wi-Fi del router del salón, no a sus datos móviles ni a otra red.</li>
                 <li>Pídeles que escaneen el código QR o que escriban la dirección exactamente como aparece en el tablero, con puntos y sin espacios.</li>
                 <li>Si el celular pregunta si quiere seguir conectado a una red sin internet, deben responder que sí.</li>
-                <li>Revisa que Windows permita a QuizOton usar la red privada. Si al instalarlo lo rechazaste, escríbenos y te ayudamos.</li>
+                <li>Revisa que Windows permita a QuizOtón usar la red privada. Si al instalarlo lo rechazaste, escríbenos y te ayudamos.</li>
                 <li>Algunos routers traen activado el «aislamiento de clientes» o «AP isolation», que impide que los equipos se vean. Desactívalo en la configuración del router.</li>
               </ol>
             </div>
@@ -372,7 +388,7 @@
           <article class="problema">
             <h3>Aparece «Windows protegió su PC»</h3>
             <div>
-              <p>Haz clic en <strong>Más información</strong>, verifica que el archivo sea el instalador de QuizOton que descargaste de la página oficial y haz clic en <strong>Ejecutar de todas formas</strong>.</p>
+              <p>Haz clic en <strong>Más información</strong>, verifica que el archivo sea el instalador de QuizOtón que descargaste de la página oficial y haz clic en <strong>Ejecutar de todas formas</strong>.</p>
             </div>
           </article>
 
@@ -391,25 +407,59 @@
           </article>
 
           <article class="problema">
-            <h3>La prueba gratuita terminó</h3>
+            <h3>No me llega la clave o no funciona</h3>
             <div>
-              <p>Tus sesiones y cursos siguen guardados en tu computador. Para seguir usando QuizOton, envía el identificador de tu equipo por WhatsApp con tu comprobante de pago y activa tu licencia.</p>
+              <p>Revisa que hayas enviado el identificador completo (empieza por <span class="dato">QZ-</span> y sigue con tres grupos de cuatro caracteres) y que pegues la clave completa, sin espacios. La clave solo funciona en el computador para el que se generó. Si sigue fallando, envíanos una captura de la pantalla de activación.</p>
+            </div>
+          </article>
+
+          <article class="problema">
+            <h3>El demo de 30 días terminó</h3>
+            <div>
+              <p>Tus cursos y sesiones siguen guardados en tu computador. Para seguir usando QuizOtón se necesita una licencia: escríbenos por WhatsApp o al correo y te contamos las opciones.</p>
             </div>
           </article>
 
           <div class="caja caja--aula no-imprimir">
             <span class="caja__titulo">¿Necesitas ayuda?</span>
-            <p><a class="enlace-subrayado" data-whatsapp="general" href="#">Escríbenos por WhatsApp</a> y cuéntanos qué ves en pantalla. Una foto ayuda mucho.</p>
+            <img class="mascota-guia" src="/img/mascota/colibri-soporte.svg" width="745" height="724" alt="" loading="lazy">
+            <p><a class="enlace-subrayado" data-whatsapp="ayudaInstalacion" href="https://wa.me/573134528352">Escríbenos por WhatsApp</a> o a <a class="enlace-subrayado" data-correo="general" href="mailto:info@quizoton.online">info@quizoton.online</a> y cuéntanos qué ves en pantalla. Una captura o una foto ayuda mucho.</p>
           </div>
         </section>
 
-        <!-- ═══ 8. FUNDAMENTOS ═════════════════════════════════════════════ -->
+        <!-- ═══ 8. TU OPINIÓN ══════════════════════════════════════════════ -->
+        <section class="capitulo" id="opinion" aria-labelledby="t-opinion">
+          <header><h2 id="t-opinion">Cuéntanos tu experiencia</h2></header>
+          <img class="mascota-guia" src="/img/mascota/colibri-saludo.svg" width="312" height="340" alt="" loading="lazy">
+          <p class="intro">QuizOtón está en fase beta y lo mejoramos con lo que nos cuentan los docentes. Lo que más necesitamos de ti es tu feedback: fallas, errores, dificultades, consejos e ideas.</p>
+
+          <h3>Dónde contarnos</h3>
+          <ul>
+            <li><strong>Correo:</strong> <a class="enlace-subrayado" data-correo="feedback" href="mailto:info@quizoton.online">info@quizoton.online</a></li>
+            <li><strong>WhatsApp:</strong> <a class="enlace-subrayado" data-whatsapp="feedback" href="https://wa.me/573134528352">escríbenos por WhatsApp</a>. Por esa misma línea avisamos las actualizaciones y novedades.</li>
+          </ul>
+
+          <h3>Qué datos ayudan</h3>
+          <ul>
+            <li>Qué pasó o qué opinas, y en qué momento de la clase.</li>
+            <li>Tu equipo y versión de Windows, y qué celulares usaron los estudiantes.</li>
+            <li>Una captura de pantalla, si puedes.</li>
+            <li>Tu nombre y el de tu colegio (opcional).</li>
+          </ul>
+
+          <div class="caja caja--importante">
+            <span class="caja__titulo">No envíes datos de estudiantes</span>
+            <p>Por favor no mandes nombres, fotos, voces ni listas de estudiantes. Consulta cómo tratamos lo que nos envías en la <a class="enlace-subrayado" href="../legal/privacidad.html">política de privacidad</a>.</p>
+          </div>
+        </section>
+
+        <!-- ═══ 9. FUNDAMENTOS ═════════════════════════════════════════════ -->
         <section class="capitulo" id="fundamentos" aria-labelledby="t-fundamentos">
           <header><h2 id="t-fundamentos">Fundamentos pedagógicos</h2></header>
-          <p class="intro">Estas son las ideas en las que se apoya el diseño de QuizOton, por si quieres profundizar o presentarlo a tu institución.</p>
+          <p class="intro">Estas son las ideas en las que se apoya el diseño de QuizOtón, por si quieres profundizar o presentarlo a tu institución.</p>
 
           <h3>Evaluación formativa</h3>
-          <p>Evaluar durante el proceso, y no solo al final, permite ajustar la enseñanza a tiempo. Los informes y el diagnóstico de QuizOton existen para eso.</p>
+          <p>Evaluar durante el proceso, y no solo al final, permite ajustar la enseñanza a tiempo. Los informes y el diagnóstico de QuizOtón existen para eso.</p>
 
           <h3>Práctica de recuperación</h3>
           <p>Intentar recordar una respuesta fortalece el aprendizaje más que releer. Responder preguntas es, en sí mismo, una forma de estudiar. Los modos En vivo y Dominio se basan en esta idea.</p>
@@ -430,7 +480,7 @@
 
           <div class="guia-pie">
             <button class="boton boton--amarillo" type="button" data-imprimir>Descargar esta guía en PDF</button>
-            <a class="boton" href="../index.html">Volver a QuizOton</a>
+            <a class="boton" href="/">Volver a QuizOtón</a>
           </div>
         </section>
       </div>
@@ -439,8 +489,8 @@
 
   <footer class="pie">
     <div class="contenedor pie__base" style="border-top: 0; padding-top: 0;">
-      <span>© <span data-anio>2026</span> QuizOton. Guía docente, versión 1.0.</span>
-      <span style="display:flex;gap:18px;"><a href="../legal/privacidad.html">Privacidad</a><a href="../legal/terminos.html">Términos</a></span>
+      <span>&copy; 2026 QuizOtón. Todos los derechos reservados. Guía docente, versión 1.1.</span>
+      <span style="display:flex;gap:18px;flex-wrap:wrap;"><a href="/">quizoton.online</a><a href="../legal/privacidad.html">Privacidad</a><a href="../legal/terminos.html">Términos</a></span>
     </div>
   </footer>
 

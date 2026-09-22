@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /beta/
+Disallow: /.archivo/
 Disallow: /sitio-completo.html
 
-Sitemap: https://web-quizoton.vercel.app/sitemap.xml
+Sitemap: https://quizoton.online/sitemap.xml

@@ -1,67 +1,193 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>QuizOton — Evaluación de aula sin internet | Beta gratis para docentes</title>
-<meta name="description" content="QuizOton: evaluación de aula que funciona sin internet. El computador del docente es el servidor y los estudiantes responden desde su celular en la red local del salón. Prueba beta gratis de 30 días para Windows.">
+<title>QuizOtón: quiz para el aula sin internet | Demo de 30 días</title>
+<meta name="description" content="QuizOtón es evaluación de aula que funciona sin internet. Docentes de Neiva, Huila y toda Colombia: descarga el demo de 30 días con todas las funciones.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="author" content="QuizOton">
-<meta name="application-name" content="QuizOton">
-<link rel="canonical" href="https://web-quizoton.vercel.app/">
-<meta property="og:title" content="QuizOton — Aprende jugando, sin internet">
-<meta property="og:description" content="Evaluación de aula que funciona en la red local del salón. Los estudiantes responden desde su celular. Beta gratis de 30 días.">
+<meta name="author" content="QuizOtón">
+<meta name="application-name" content="QuizOtón">
+<meta name="geo.region" content="CO-HUI">
+<meta name="geo.placename" content="Neiva, Huila, Colombia">
+<link rel="canonical" href="https://quizoton.online/">
+<link rel="alternate" hreflang="es-CO" href="https://quizoton.online/">
+<meta property="og:title" content="QuizOtón: evaluación de aula sin internet, desde Neiva, Huila">
+<meta property="og:description" content="Los estudiantes responden desde su celular en la red del salón, sin internet ni cuentas. Descarga el demo de 30 días y la guía docente.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="QuizOton">
+<meta property="og:site_name" content="QuizOtón">
 <meta property="og:locale" content="es_CO">
-<meta property="og:url" content="https://web-quizoton.vercel.app/">
-<meta property="og:image" content="https://web-quizoton.vercel.app/img/og-quizoton.png">
+<meta property="og:url" content="https://quizoton.online/">
+<meta property="og:image" content="https://quizoton.online/img/og-quizoton.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="QuizOton — la evaluación de aula que funciona sin internet">
+<meta property="og:image:alt" content="QuizOtón, la evaluación de aula que funciona sin internet">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="QuizOton — Aprende jugando, sin internet">
-<meta name="twitter:description" content="Evaluación de aula en la red local del salón. Beta gratis de 30 días.">
-<meta name="twitter:image" content="https://web-quizoton.vercel.app/img/og-quizoton.png">
-<meta name="twitter:image:alt" content="QuizOton — la evaluación de aula que funciona sin internet">
+<meta name="twitter:title" content="QuizOtón: evaluación de aula sin internet">
+<meta name="twitter:description" content="Los estudiantes responden desde su celular en la red del salón. Demo de 30 días y guía docente.">
+<meta name="twitter:image" content="https://quizoton.online/img/og-quizoton.png">
+<meta name="twitter:image:alt" content="QuizOtón, la evaluación de aula que funciona sin internet">
 <meta name="theme-color" content="#0A1412">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/marca/favicon-32.png">
 <link rel="apple-touch-icon" href="/img/marca/apple-touch-icon.png">
 <link rel="preload" href="/fuentes/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fuentes/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script src="/js/inicio.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://web-quizoton.vercel.app/#organizacion",
-      "name": "QuizOton",
-      "url": "https://web-quizoton.vercel.app/",
-      "logo": "https://web-quizoton.vercel.app/img/marca/apple-touch-icon.png",
-      "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "availableLanguage": "es", "areaServed": "CO", "hoursAvailable": "Mo-Fr 09:00-18:00" }
+      "@id": "https://quizoton.online/#organizacion",
+      "name": "QuizOtón",
+      "alternateName": [
+        "QuizOton",
+        "Quizoton"
+      ],
+      "url": "https://quizoton.online/",
+      "logo": "https://quizoton.online/img/marca/apple-touch-icon.png",
+      "email": "info@quizoton.online",
+      "description": "Desarrollo de tecnología educativa en Neiva, Huila, Colombia. Creadores de QuizOtón, evaluación de aula que funciona sin internet.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Neiva",
+        "addressRegion": "Huila",
+        "addressCountry": "CO"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Neiva"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Huila"
+        },
+        {
+          "@type": "Country",
+          "name": "Colombia"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@quizoton.online",
+        "availableLanguage": "es",
+        "areaServed": "CO",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      }
     },
     {
       "@type": "WebSite",
-      "@id": "https://web-quizoton.vercel.app/#sitio",
-      "url": "https://web-quizoton.vercel.app/",
-      "name": "QuizOton",
+      "@id": "https://quizoton.online/#sitio",
+      "url": "https://quizoton.online/",
+      "name": "QuizOtón",
+      "alternateName": [
+        "QuizOton",
+        "Quizoton"
+      ],
       "inLanguage": "es-CO",
-      "publisher": { "@id": "https://web-quizoton.vercel.app/#organizacion" }
+      "publisher": {
+        "@id": "https://quizoton.online/#organizacion"
+      }
     },
     {
       "@type": "SoftwareApplication",
-      "name": "QuizOton",
+      "@id": "https://quizoton.online/#aplicacion",
+      "name": "QuizOtón",
+      "alternateName": [
+        "QuizOton",
+        "Quizoton"
+      ],
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Windows 10, Windows 11",
+      "softwareVersion": "Beta 1.0",
       "inLanguage": "es",
-      "url": "https://web-quizoton.vercel.app/",
-      "image": "https://web-quizoton.vercel.app/img/og-quizoton.png",
-      "description": "Plataforma de evaluación de aula que funciona en la red local del salón, sin internet. Los estudiantes responden desde el celular sin crear cuentas.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "COP", "description": "Beta gratuita con 30 días de prueba completa" },
-      "publisher": { "@id": "https://web-quizoton.vercel.app/#organizacion" }
+      "url": "https://quizoton.online/",
+      "downloadUrl": "https://quizoton.online/beta/Instalar_QuizOton.exe",
+      "image": "https://quizoton.online/img/og-quizoton.png",
+      "description": "Plataforma de evaluación de aula que funciona en la red local del salón, sin internet. El docente usa su computador como servidor y los estudiantes responden desde el celular sin crear cuentas.",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "teacher"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "COP",
+        "description": "Demo de 30 días con acceso completo a todas las funciones. Después se requiere una licencia."
+      },
+      "publisher": {
+        "@id": "https://quizoton.online/#organizacion"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://quizoton.online/#preguntas",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿QuizOtón necesita internet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Solo necesitas un router Wi-Fi encendido en el salón, aunque no tenga conexión a internet. El computador del docente actúa como servidor y los celulares se conectan a esa red local."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los estudiantes necesitan crear una cuenta o gastar datos del celular?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Entran desde el navegador de su celular con su nombre, sin cuentas ni contraseñas y sin gastar datos móviles. Cursos, listas, respuestas y notas se guardan solo en el computador del docente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito para usar QuizOtón en mi clase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un computador con Windows 10 u 11 para el docente, un router Wi-Fi encendido y los celulares o tabletas de los estudiantes con un navegador. Si quieres proyectar, un videobeam o televisor. La versión beta es solo para Windows; los estudiantes pueden usar cualquier celular o tableta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto dura el demo y cómo se activa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El demo dura 30 días e incluye acceso completo a todas las funciones. Al abrir QuizOtón verás el identificador único de tu equipo, que empieza por QZ-. Envíalo por WhatsApp o a info@quizoton.online y te respondemos con tu clave de activación, que no necesita internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa cuando termina el demo de 30 días?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tus cursos y sesiones siguen guardados en tu computador. Para seguir usando QuizOtón se necesita una licencia; escríbenos por WhatsApp o correo y te contamos las opciones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Atienden a docentes de fuera de Neiva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. QuizOtón se desarrolla en Neiva, Huila, y atendemos a docentes de toda Colombia por WhatsApp y correo, de lunes a viernes."
+          }
+        }
+      ]
     }
   ]
 }
@@ -72,208 +198,323 @@
 @font-face{font-family:'Inter';src:url('/fuentes/inter-latin-700-normal.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Space Grotesk';src:url('/fuentes/space-grotesk-latin-700-normal.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
 :root{
-  color-scheme:dark;
-  --ink:#0A1412;
-  --mint:#44DCAC;
-  --yellow:#FFE206;
-  --text:#EAF6F1;
-  --text-2:#93B5AA;
+  color-scheme:light;
+  --bg:#FFFFFF;--papel:#F4F7F5;--linea:#DDE5E1;
+  --text:#101413;--text-2:#46544F;--text-3:#5F6F69;
+  --acento:#0E7C5B;--mint:#44DCAC;--yellow:#FFE206;--ink:#0A1412;
+  --top:72px;
   --display:'Space Grotesk',system-ui,sans-serif;
   --body:'Inter',system-ui,sans-serif;
 }
 *{box-sizing:border-box;min-width:0}
-html,body{height:100%}
+html{scroll-behavior:smooth}
 body{
-  margin:0;background:var(--ink);color:var(--text);
+  margin:0;background:var(--bg);color:var(--text);
   font-family:var(--body);line-height:1.5;-webkit-font-smoothing:antialiased;
-  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
-  display:grid;grid-template-rows:1fr auto;overflow-x:hidden;
+  padding-bottom:env(safe-area-inset-bottom,0px);overflow-x:hidden;
 }
-.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.bg svg{position:absolute;width:100%;height:100%}
-.glow{
-  position:fixed;left:50%;top:38%;transform:translate(-50%,-50%);
-  width:min(120vw,900px);aspect-ratio:1;border-radius:50%;z-index:0;pointer-events:none;
-  background:radial-gradient(circle, rgba(68,220,172,.16) 0%, rgba(68,220,172,0) 62%);
+img{max-width:100%;height:auto}
+.saltar{position:absolute;left:-999px;top:8px;background:var(--yellow);color:#101413;padding:10px 16px;border-radius:8px;font-weight:600;z-index:100}
+.saltar:focus{left:8px}
+
+/* ── Encabezado fijo: logo + WhatsApp ────────────────────────────────── */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:50;height:var(--top);
+  padding-top:env(safe-area-inset-top,0px);
+  background:rgba(10,20,18,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(234,246,241,.07);transition:background .3s ease,border-color .3s ease;
 }
-main{
-  position:relative;z-index:2;display:grid;align-content:center;justify-items:center;
-  gap:clamp(20px,3.2vw,34px);text-align:center;
-  padding:clamp(32px,7vw,72px) clamp(20px,5vw,40px);
+.topbar.scrolled{background:rgba(10,20,18,.92);border-bottom-color:rgba(234,246,241,.12)}
+.topbar-in{
+  height:100%;max-width:1020px;margin:0 auto;padding:0 clamp(16px,5vw,40px);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
-/* ── Hero ─────────────────────────────────────────────────────── */
+.topbar-logo{display:flex;align-items:center;height:100%;text-decoration:none}
+.logo-top{height:54px;width:auto;display:block}
+
+/* ── Portada (zona oscura) ───────────────────────────────────────────── */
+.banda{
+  --text:#EAF6F1;--text-2:#B4CFC5;--acento:#44DCAC;
+  position:relative;overflow:hidden;background:var(--ink);color:var(--text);
+  padding:calc(var(--top) + clamp(28px,6vw,64px)) clamp(20px,5vw,40px) clamp(32px,5vw,56px);
+  isolation:isolate;
+}
+.fondo{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.puntos{
+  position:absolute;inset:0;background-image:radial-gradient(rgba(234,246,241,.16) 1px,transparent 1.5px);background-size:28px 28px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 80% at 65% 40%,#000 15%,transparent 75%);mask-image:radial-gradient(ellipse 70% 80% at 65% 40%,#000 15%,transparent 75%);
+  animation:desliza 40s linear infinite;
+}
+@keyframes desliza{to{background-position:28px 28px}}
+.aurora{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform}
+.a1{width:520px;height:520px;right:-6%;top:-10%;background:radial-gradient(circle,rgba(68,220,172,.75),transparent 65%);animation:deriva1 16s ease-in-out infinite alternate}
+.a2{width:420px;height:420px;left:-8%;bottom:-25%;background:radial-gradient(circle,rgba(255,226,6,.35),transparent 65%);animation:deriva2 19s ease-in-out infinite alternate}
+.a3{width:360px;height:360px;right:22%;bottom:-30%;background:radial-gradient(circle,rgba(70,140,255,.28),transparent 65%);animation:deriva1 22s ease-in-out infinite alternate-reverse}
+@keyframes deriva1{from{transform:translate(0,0) scale(1)}to{transform:translate(-50px,40px) scale(1.15)}}
+@keyframes deriva2{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,-30px) scale(1.1)}}
+
 .hero{
-  width:100%;max-width:980px;display:grid;justify-items:center;
-  gap:clamp(18px,2.8vw,30px);
+  position:relative;width:100%;max-width:1020px;margin:0 auto;
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);align-items:center;gap:clamp(20px,4vw,48px);
 }
-.logo{width:min(78vw,430px);height:auto;display:block}
+.hero-texto{display:grid;justify-items:start;gap:clamp(14px,2vw,22px)}
 .badge{
   display:inline-flex;align-items:center;gap:9px;
-  font-family:var(--display);font-weight:600;font-size:clamp(11px,1.5vw,13px);
-  letter-spacing:.04em;color:var(--mint);
-  border:1px solid rgba(68,220,172,.38);border-radius:999px;
-  padding:7px 16px;background:rgba(68,220,172,.07);
+  font-family:var(--display);font-weight:600;font-size:clamp(12px,1.5vw,13px);letter-spacing:.04em;
+  border:1px solid rgba(68,220,172,.38);border-radius:999px;padding:7px 16px;background:rgba(68,220,172,.07);
 }
+.shiny{
+  background:linear-gradient(110deg,#44DCAC 35%,#fff 50%,#44DCAC 65%);background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:brilla 3.2s linear infinite;
+}
+@keyframes brilla{from{background-position:120% 0}to{background-position:-120% 0}}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--mint);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.72)}}
 h1{
-  font-family:var(--display);font-weight:700;letter-spacing:-.035em;line-height:1.02;
-  font-size:clamp(28px,5.4vw,54px);margin:0;max-width:20ch;
+  font-family:var(--display);font-weight:700;letter-spacing:-.035em;line-height:1.05;
+  font-size:clamp(30px,5.2vw,52px);margin:0;max-width:19ch;
 }
-h1 em{font-style:normal;color:var(--mint)}
-.lede{font-size:clamp(14.5px,1.7vw,19px);color:var(--text-2);max-width:none;margin:0;line-height:1.6}
-.rule{width:52px;height:3px;border-radius:2px;background:var(--yellow);opacity:.9}
-.points{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;
-  max-width:none;width:100%;padding:0;margin:0;list-style:none;
+.nw{white-space:nowrap}.bt{display:inline-block;opacity:0;filter:blur(12px);transform:translateY(14px);animation:aparece .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*80ms + 200ms)}
+@keyframes aparece{to{opacity:1;filter:blur(0);transform:none}}
+.grad{background:linear-gradient(100deg,#44DCAC,#FFE206,#44DCAC);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.bt.grad{animation:aparece .8s cubic-bezier(.2,.7,.2,1) forwards,fluye 6s linear infinite;animation-delay:calc(var(--i)*80ms + 200ms),0s}
+@keyframes fluye{to{background-position:-200% 0}}
+.lede{font-size:clamp(14.5px,1.6vw,18px);color:var(--text-2);max-width:54ch;margin:0;line-height:1.6}
+.lede b{color:var(--text);font-weight:600}
+.hero-mascota{display:grid;justify-items:center;position:relative}
+.hero-mascota::before{content:"";position:absolute;width:88%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(68,220,172,.28),transparent 68%);top:6%}
+.hero-mascota img{position:relative;width:min(100%,290px);height:auto;filter:drop-shadow(0 16px 30px rgba(0,0,0,.4))}
+
+/* ── Cinta que se desplaza ───────────────────────────────────────────── */
+.cinta{
+  background:var(--ink);border-top:1px solid rgba(234,246,241,.08);padding:14px 0;overflow:hidden;
 }
-.points li{
-  font-size:clamp(12px,1.4vw,14px);color:var(--text);
-  border:1px solid rgba(234,246,241,.14);border-radius:999px;padding:7px 15px;
-  background:rgba(234,246,241,.035);
+.cinta-pista{display:flex;width:max-content;animation:cinta 34s linear infinite}
+.cinta:hover .cinta-pista{animation-play-state:paused}
+.cinta ul{display:flex;gap:12px;padding:0 6px;margin:0;list-style:none;flex:0 0 auto}
+.cinta li{
+  font-size:13.5px;color:#EAF6F1;white-space:nowrap;border:1px solid rgba(234,246,241,.16);border-radius:999px;padding:6px 15px;background:rgba(234,246,241,.04);
 }
-.points li b{color:var(--mint);font-weight:600}
-.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin-top:4px}
+.cinta li b{color:var(--mint);font-weight:600}
+@keyframes cinta{to{transform:translateX(-50%)}}
+
+/* ── Botones ─────────────────────────────────────────────────────────── */
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .btn{
-  display:inline-flex;align-items:center;gap:10px;text-decoration:none;
-  font-family:var(--display);font-weight:600;font-size:clamp(14px,1.6vw,17px);
-  padding:14px 26px;border-radius:999px;transition:transform .15s ease,background .15s ease;
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;overflow:hidden;
+  font-family:var(--display);font-weight:600;font-size:clamp(14px,1.5vw,16px);
+  padding:13px 24px;border-radius:999px;border:1px solid transparent;transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease;
 }
-.btn-main{background:var(--mint);color:#06211A}
-.btn-main:hover{background:#5FE8BC;transform:translateY(-1px)}
-.btn-ghost{border:1px solid rgba(234,246,241,.22);color:var(--text)}
-.btn-ghost:hover{border-color:var(--mint);color:var(--mint)}
-.btn:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
-.nota{font-size:clamp(11.5px,1.2vw,13px);color:var(--text-2);max-width:48ch;margin:0;line-height:1.5}
+.btn.sm{padding:9px 16px;font-size:14px}
+.btn-main{background:var(--mint);color:#06211A;box-shadow:0 0 0 0 rgba(68,220,172,.5)}
+.btn-main:hover{background:#2FCE9B;transform:translateY(-2px);box-shadow:0 10px 26px -6px rgba(68,220,172,.55)}
+.btn-main::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);transform:translateX(-120%);animation:destello 4.5s ease-in-out infinite}
+@keyframes destello{0%,55%{transform:translateX(-120%)}80%,100%{transform:translateX(120%)}}
+.btn-ghost{border-color:rgba(16,20,19,.28);color:var(--text)}
+.btn-ghost:hover{border-color:var(--acento);color:var(--acento);transform:translateY(-2px)}
+.banda .btn-ghost,.topbar .btn-ghost,.panel .btn-ghost{border-color:rgba(234,246,241,.4);color:#EAF6F1}
+.banda .btn-ghost:hover,.topbar .btn-ghost:hover,.panel .btn-ghost:hover{border-color:var(--mint);color:var(--mint)}
+.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
+.banda .btn:focus-visible,.topbar .btn:focus-visible,.panel .btn:focus-visible{outline-color:var(--mint)}
+.nota{font-size:clamp(12px,1.25vw,13px);color:var(--text-3);margin:0;line-height:1.55}
 .nota b{color:var(--text);font-weight:600}
+.nota a{color:var(--acento);text-underline-offset:3px}
+.banda .nota,.panel .nota{color:var(--text-2)}
+.banda .nota b,.panel .nota b{color:var(--text)}
 
-/* ── Sección informativa ─────────────────────────────────────────────── */
-.info{
-  width:100%;max-width:980px;margin-top:clamp(30px,5vw,58px);
-  padding-top:clamp(28px,5vw,52px);border-top:1px solid rgba(234,246,241,.12);
-  display:grid;gap:clamp(26px,4vw,44px);text-align:left;
+/* ── Contenido ───────────────────────────────────────────────────────── */
+main{max-width:1020px;margin:0 auto;padding:clamp(30px,5vw,56px) clamp(20px,5vw,40px);display:grid;gap:clamp(30px,5vw,52px)}
+.sec,.mcard,.panel{scroll-margin-top:calc(var(--top) + 16px)}
+.sec{display:grid;gap:16px}
+.sec h2,.mcard h2,.panel h2{
+  font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.1;
+  font-size:clamp(22px,3vw,31px);margin:0;
 }
-.info h2{
-  font-family:var(--display);font-weight:700;letter-spacing:-.03em;line-height:1.08;
-  font-size:clamp(21px,3vw,32px);margin:0 0 14px;max-width:none;
-}
-.info h2.h-sm{font-size:clamp(18px,2.3vw,25px)}
-.info h2 em{font-style:normal;color:var(--mint)}
-.info .intro{font-size:clamp(13.5px,1.5vw,16px);color:var(--text-2);max-width:none;margin:0;line-height:1.65}
-.info .intro b{color:var(--text);font-weight:600}
+.sec h2 em,.mcard h2 em{font-style:normal;color:var(--acento)}
+.intro{font-size:clamp(14px,1.5vw,16px);color:var(--text-2);margin:0;line-height:1.7}
+.intro b{color:var(--text);font-weight:600}
 
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.card{
-  border:1px solid rgba(234,246,241,.13);border-radius:18px;padding:20px;
-  background:rgba(234,246,241,.035);display:grid;gap:7px;align-content:start;
-}
-.card .k{
-  font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.08em;
-  color:var(--mint);
-}
-.card.next .k{color:var(--text-2)}
-.card h3{font-family:var(--display);font-weight:600;font-size:clamp(15px,1.6vw,18px);margin:0;letter-spacing:-.015em}
-.card p{font-size:clamp(12.5px,1.3vw,14px);color:var(--text-2);margin:0;line-height:1.5}
+/* Aparición al desplazar (solo si hay JavaScript) */
+.js [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0)*100ms)}
+.js [data-reveal].in{opacity:1;transform:none}
 
-/* ── Membresía Fundador ──────────────────────────────────────────────── */
-.founder{
-  position:relative;border-radius:22px;padding:clamp(22px,3vw,34px);
-  background:
-    linear-gradient(180deg, rgba(232,193,90,.10), rgba(232,193,90,.03)),
-    rgba(10,20,18,.6);
-  border:1px solid rgba(232,193,90,.38);
-  display:grid;gap:16px;
+/* ── Tarjeta con mascota (estilo del aviso) ──────────────────────────── */
+.mcard{
+  position:relative;overflow:hidden;display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,32px);align-items:center;
+  border:1px solid var(--linea);border-radius:26px;padding:clamp(20px,3.2vw,34px);background:#fff;
 }
-.founder-top{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-.medal{flex:0 0 auto;width:clamp(52px,6vw,66px);height:auto}
-.founder .gold{
-  font-family:var(--display);font-size:10.5px;font-weight:600;letter-spacing:.08em;
-  color:#E8C15A;display:block;margin-bottom:4px;
-}
-.founder h3{
-  font-family:var(--display);font-weight:700;letter-spacing:-.025em;margin:0;
-  font-size:clamp(19px,2.4vw,27px);
-  background:linear-gradient(92deg,#F5DE9B,#E8C15A 48%,#C79B36);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.founder .cupo{
-  margin-left:auto;font-family:var(--display);font-weight:700;
-  font-size:clamp(12px,1.4vw,14px);color:#0A1412;
-  background:linear-gradient(92deg,#F5DE9B,#E8C15A);
-  border-radius:999px;padding:7px 16px;white-space:nowrap;
-}
-.founder>p{font-size:clamp(13px,1.4vw,15px);color:var(--text-2);margin:0;max-width:none;line-height:1.65}
-.founder>p b{color:#F0D38A;font-weight:600}
-.reqs{list-style:none;margin:0;padding:0;display:grid;gap:11px}
-.reqs li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}
-.reqs .n{
-  font-family:var(--display);font-weight:700;font-size:12px;color:#0A1412;
-  background:#E8C15A;border-radius:50%;width:24px;height:24px;
-  display:grid;place-items:center;margin-top:1px;
-}
-.reqs strong{display:block;font-family:var(--display);font-weight:600;font-size:clamp(13.5px,1.45vw,15.5px);color:var(--text);letter-spacing:-.01em}
-.reqs span{font-size:clamp(12.5px,1.3vw,14px);color:var(--text-2);line-height:1.5}
-.fine{font-size:12px;color:var(--text-2);margin:0;padding-top:12px;border-top:1px solid rgba(232,193,90,.22);line-height:1.55}
+.mcard>.m{width:clamp(88px,14vw,150px);height:auto;filter:drop-shadow(0 10px 16px rgba(0,0,0,.14))}
+.mcard.grande>.m{width:clamp(150px,26vw,300px)}
+.mcard.der{grid-template-columns:minmax(0,1fr) auto}
+.mcard.der>.m{order:2}
+.mcard.amarilla{background:#FFF9E6;border-color:#E6CF85}
+.mcard.amarilla h2{color:#5C4209}
+.mcard.menta{background:#E9FAF3;border-color:#B6EBD8}
+.mcard.gris{background:var(--papel)}
+.mcard.blanca{background:#fff;box-shadow:0 18px 40px -26px rgba(16,20,19,.4)}
+.mcard>div{display:grid;gap:12px;align-content:center}
+.mcard p{margin:0;font-size:clamp(13.5px,1.45vw,15.5px);color:var(--text-2);line-height:1.65}
+.mcard p b{color:var(--text)}
+.mcard.amarilla p b{color:#5C4209}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.chips li{font-size:13px;font-weight:600;color:#0B4F3B;background:#fff;border:1px solid #B6EBD8;border-radius:999px;padding:5px 13px}
+.doble{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mini{border-radius:16px;padding:14px 16px;background:#fff;border:1px solid var(--linea)}
+.mini.next{background:#FFF9E6;border-color:#E6CF85}
+.mini strong{display:block;font-family:var(--display);font-size:13px;letter-spacing:.06em;color:var(--acento);margin-bottom:6px}
+.mini.next strong{color:#7A5A0E}
+.mini ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px;color:var(--text-2)}
 
-/* ── Cierre con botones ────────────────────────────────────────────── */
-.cierre{
-  width:100%;max-width:980px;margin-top:clamp(30px,5vw,56px);
-  padding-top:clamp(26px,4vw,44px);border-top:1px solid rgba(234,246,241,.12);
-  display:grid;justify-items:center;gap:16px;
+/* ── Tarjetas con brillo que sigue al cursor ─────────────────────────── */
+.spot{position:relative;overflow:hidden;isolation:isolate}
+.spot::before{
+  content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .3s ease;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(68,220,172,.22),transparent 70%);
 }
-.cierre-t{
-  font-family:var(--display);font-weight:700;letter-spacing:-.025em;margin:0;
-  font-size:clamp(19px,2.5vw,29px);color:var(--text);
+.spot:hover::before{opacity:1}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.paso3{
+  border:1px solid var(--linea);border-radius:22px;background:#fff;padding:clamp(18px,2.4vw,26px);display:grid;gap:10px;align-content:start;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
 }
-.cierre .cta{margin-top:0}
-.cierre .nota{text-align:center}
+.paso3:hover{transform:translateY(-4px);border-color:var(--mint);box-shadow:0 16px 34px -16px rgba(14,124,91,.4)}
+.ico3{position:relative;width:54px;height:54px;border-radius:16px;background:#E9FAF3;color:var(--acento);display:grid;place-items:center}
+.ico3 i{position:absolute;top:-8px;right:-8px;width:24px;height:24px;border-radius:50%;background:var(--yellow);color:#101413;font:700 12px/24px var(--display);text-align:center;font-style:normal}
+.paso3 h3{font-family:var(--display);font-weight:600;font-size:clamp(16px,1.7vw,18px);margin:4px 0 0;letter-spacing:-.015em}
+.paso3 p{margin:0;font-size:clamp(13px,1.35vw,14.5px);color:var(--text-2);line-height:1.55}
 
-@media (max-width:760px){
-  .cards{grid-template-columns:1fr}
-  .founder .cupo{margin-left:0}
+/* ── Video ───────────────────────────────────────────────────────────── */
+.video{
+  aspect-ratio:16/9;border-radius:24px;background:linear-gradient(135deg,#0E1F1B,#12352C);color:#EAF6F1;
+  display:grid;place-items:center;text-align:center;padding:18px;overflow:hidden;position:relative;
 }
-footer{
-  position:relative;z-index:2;text-align:center;padding:22px 20px 30px;
-  font-size:12.5px;color:var(--text-2);display:grid;gap:5px;
+.video:has(iframe){padding:0;background:#000}
+.video iframe{width:100%;height:100%;border:0;border-radius:24px}
+.video-vacio{display:grid;justify-items:center;gap:10px}
+.video-vacio .pl{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:#06211A;animation:latido 2.4s ease-in-out infinite}
+@keyframes latido{0%,100%{box-shadow:0 0 0 0 rgba(68,220,172,.5)}50%{box-shadow:0 0 0 16px rgba(68,220,172,0)}}
+.video-vacio strong{font-family:var(--display);font-size:clamp(17px,2.2vw,22px)}
+.video-vacio p{margin:0;font-size:14px;color:#B4CFC5}
+.video-boton{
+  appearance:none;border:0;cursor:pointer;background:var(--mint);color:#06211A;font-family:var(--display);font-weight:700;font-size:clamp(15px,1.8vw,18px);
+  padding:16px 28px;border-radius:999px;display:inline-flex;align-items:center;gap:12px;animation:latido 2.4s ease-in-out infinite;
 }
-footer .legal a{color:var(--text-2);text-underline-offset:3px}footer .legal a:hover{color:var(--mint)}
-@media (prefers-reduced-motion:reduce){.dot{animation:none}.btn{transition:none}}
+.video-boton[hidden],.video-vacio[hidden]{display:none}
+
+/* ── Demo ────────────────────────────────────────────────────────────── */
+.smart{font-size:13px;color:var(--text-2);background:#fff;border:1px solid #B6EBD8;border-radius:14px;padding:12px 14px;line-height:1.55;margin:0}
+.smart b{color:var(--text)}
+.hash code{font-family:ui-monospace,Consolas,monospace;font-size:11px;word-break:break-all;color:var(--text-2)}
+
+/* ── Activación (panel oscuro con recorrido animado) ─────────────────── */
+.panel{
+  position:relative;overflow:hidden;isolation:isolate;background:var(--ink);color:#EAF6F1;border-radius:30px;
+  padding:clamp(24px,4vw,46px);display:grid;gap:22px;
+  --text:#EAF6F1;--text-2:#B4CFC5;
+}
+.panel::before{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:-140px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(68,220,172,.35),transparent 65%);filter:blur(40px)}
+.panel::after{content:"";position:absolute;z-index:-1;width:420px;height:420px;left:-140px;bottom:-220px;border-radius:50%;background:radial-gradient(circle,rgba(255,226,6,.22),transparent 65%);filter:blur(40px)}
+.panel .cab{display:grid;gap:8px;max-width:60ch}
+.panel .cab p{margin:0;color:var(--text-2);font-size:clamp(14px,1.5vw,16px);line-height:1.6}
+.panel .cab p b{color:#fff}
+.flujo{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:6px 0}
+.flujo::before{
+  content:"";position:absolute;top:38px;left:12.5%;right:12.5%;height:3px;border-radius:2px;
+  background:linear-gradient(90deg,var(--mint),var(--yellow));transform:scaleX(0);transform-origin:left;transition:transform 1.6s cubic-bezier(.3,.7,.2,1) .3s;
+}
+.flujo.in::before{transform:scaleX(1)}
+.paso4{position:relative;z-index:1;display:grid;justify-items:center;text-align:center;gap:10px}
+.ico4{
+  position:relative;width:76px;height:76px;border-radius:50%;background:var(--ink);color:var(--mint);display:grid;place-items:center;
+  border:3px solid var(--mint);box-shadow:0 0 0 7px rgba(68,220,172,.12),0 0 30px rgba(68,220,172,.4);transition:transform .3s ease;
+}
+.paso4:hover .ico4{transform:scale(1.08) rotate(-4deg)}
+.ico4 i{position:absolute;top:-6px;right:-6px;width:26px;height:26px;border-radius:50%;background:var(--yellow);color:#101413;font:700 13px/26px var(--display);text-align:center;font-style:normal}
+.paso4 h3{font-family:var(--display);font-weight:600;font-size:clamp(15px,1.6vw,17px);margin:2px 0 0;letter-spacing:-.01em}
+.paso4 p{margin:0;font-size:13.5px;color:var(--text-2);line-height:1.5;max-width:24ch}
+.paso4 .qz{font-family:ui-monospace,Consolas,monospace;font-weight:700;color:var(--mint)}
+.js .flujo .paso4{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;transition-delay:calc(var(--i)*260ms + 200ms)}
+.js .flujo.in .paso4{opacity:1;transform:none}
+.panel .cta{margin-top:4px}
+
+/* ── Preguntas frecuentes ────────────────────────────────────────────── */
+.faq{display:grid;gap:10px}
+details{border:1px solid var(--linea);border-radius:14px;background:#fff;transition:border-color .2s ease,box-shadow .2s ease}
+details:hover,details[open]{border-color:#B6EBD8;box-shadow:0 8px 22px -14px rgba(14,124,91,.35)}
+summary{cursor:pointer;list-style:none;padding:15px 18px;font-family:var(--display);font-weight:600;font-size:clamp(14.5px,1.6vw,16.5px);display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;line-height:1;color:var(--acento);flex:0 0 auto;transition:transform .25s ease}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color:var(--text-2);line-height:1.65}
+
+/* ── Pie ─────────────────────────────────────────────────────────────── */
+/* ── Pie de página ───────────────────────────────────────────────────── */
+.pie{
+  position:relative;overflow:hidden;isolation:isolate;background:var(--ink);color:#EAF6F1;margin-top:clamp(8px,2vw,24px);
+  padding:clamp(40px,6vw,64px) clamp(20px,5vw,40px) 22px;
+}
+.pie::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--mint),var(--yellow),var(--mint))}
+.pie::after{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:-120px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(68,220,172,.28),transparent 65%);filter:blur(40px)}
+.pie .puntos{-webkit-mask-image:radial-gradient(ellipse 70% 90% at 20% 30%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse 70% 90% at 20% 30%,#000 10%,transparent 70%);animation:none;z-index:-1}
+.pie-in{position:relative;max-width:1020px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) auto;gap:clamp(24px,4vw,48px);align-items:center}
+.pie-marca{display:grid;gap:12px;justify-items:start}
+.pie-logo{width:clamp(120px,15vw,160px);height:auto;display:block}
+.pie-marca p{margin:0;font-size:14px;color:#B4CFC5;max-width:30ch;line-height:1.5}
+.pie-links{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pie-links div{display:grid;gap:9px;align-content:start}
+.pie-links strong{font-family:var(--display);font-size:12px;letter-spacing:.1em;color:var(--mint);text-transform:uppercase;margin-bottom:2px}
+.pie a{color:#EAF6F1;text-decoration:none;font-size:14px;opacity:.88;transition:color .2s ease,opacity .2s ease}
+.pie a:hover{color:var(--mint);opacity:1}
+.pie a:focus-visible{outline:2px solid var(--mint);outline-offset:3px;border-radius:4px}
+.pie-mascota{width:clamp(96px,12vw,140px);height:auto;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4))}
+.pie-copy{position:relative;max-width:1020px;margin:clamp(24px,4vw,36px) auto 0;padding-top:16px;border-top:1px solid rgba(234,246,241,.12);font-size:13px;color:#B4CFC5;text-align:center}
+
+@media (max-width:860px){
+  .pie-in{grid-template-columns:1fr;justify-items:start}
+  .pie-mascota{order:-1;width:96px}
+  .hero{grid-template-columns:1fr}
+  .hero-mascota{order:-1}
+  .hero-mascota img{width:min(46vw,190px)}
+  .trio{grid-template-columns:1fr}
+  .paso3{grid-template-columns:auto 1fr;column-gap:16px;align-items:start}
+  .paso3 .ico3{grid-row:span 2}
+  .paso3 h3{margin:0}
+  .flujo{grid-template-columns:1fr;gap:20px}
+  .flujo::before{top:38px;bottom:38px;left:38px;right:auto;width:3px;height:auto;transform:scaleY(0);transform-origin:top}
+  .flujo.in::before{transform:scaleY(1)}
+  .paso4{grid-template-columns:76px 1fr;justify-items:start;text-align:left;align-items:center;column-gap:18px}
+  .paso4 .ico4{grid-row:span 2}
+  .paso4 p{max-width:none}
+}
+@media (max-width:640px){
+  .mcard,.mcard.der{grid-template-columns:1fr;justify-items:start}
+  .mcard.der>.m{order:0}
+  .mcard>.m{width:96px}
+  .mcard.grande>.m{width:min(58vw,220px)}
+  .doble{grid-template-columns:1fr}
+  .cta{width:100%}
+  .cta .btn:not(.sm){width:100%}
+  .logo-top{height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .bt{opacity:1;filter:none;transform:none}
+  .js [data-reveal],.js .flujo .paso4{opacity:1;transform:none}
+  .flujo::before{transform:none}
+  .cinta{-webkit-mask-image:none;mask-image:none}
+  .cinta-pista{width:auto;flex-wrap:wrap;justify-content:center}
+  .cinta-pista ul[aria-hidden]{display:none}
+  .cinta ul{flex-wrap:wrap;justify-content:center}
+}
 </style>
 </head>
 <body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
 
-<div class="glow"></div>
-<div class="bg" aria-hidden="true">
-  <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-    <g opacity=".05" transform="translate(1090 330) scale(2.1) rotate(-8)">
-      <path d="M166.34,356.26l-24.06-44.65c-33.19,16.99-81.14,17.5-105.08-12.8-18.24-23.08-17.97-54.1-9.36-81.72,8.19-26.29,22.04-50.09,41.17-69.94,24.09-24.99,58.62-42.74,93.68-41.47,11.63.42,22.73,2.98,32.36,9.27,41.28,26.99,23.16,105.23,1.51,143.42-5.29,9.14-10.68,17.38-17.74,25.22l33.42,40.18-45.9,32.49Z" fill="#44DCAC" transform="translate(-120 -250)"/>
-    </g>
-    <g opacity=".045" transform="translate(-40 620) scale(1.3) rotate(12)">
-      <path d="M166.34,356.26l-24.06-44.65c-33.19,16.99-81.14,17.5-105.08-12.8-18.24-23.08-17.97-54.1-9.36-81.72,8.19-26.29,22.04-50.09,41.17-69.94,24.09-24.99,58.62-42.74,93.68-41.47,11.63.42,22.73,2.98,32.36,9.27,41.28,26.99,23.16,105.23,1.51,143.42-5.29,9.14-10.68,17.38-17.74,25.22l33.42,40.18-45.9,32.49Z" fill="#FFE206" transform="translate(-120 -250)"/>
-    </g>
-    <g fill="#44DCAC" opacity=".3">
-      <circle cx="90" cy="120" r="3"/><circle cx="126" cy="120" r="3"/><circle cx="162" cy="120" r="3"/><circle cx="198" cy="120" r="3"/>
-      <circle cx="90" cy="156" r="3"/><circle cx="126" cy="156" r="3"/><circle cx="162" cy="156" r="3"/><circle cx="198" cy="156" r="3"/>
-      <circle cx="90" cy="192" r="3"/><circle cx="126" cy="192" r="3"/><circle cx="162" cy="192" r="3"/><circle cx="198" cy="192" r="3"/>
-    </g>
-    <g fill="#FFE206" opacity=".26">
-      <circle cx="1250" cy="700" r="3.5"/><circle cx="1290" cy="700" r="3.5"/><circle cx="1330" cy="700" r="3.5"/>
-      <circle cx="1250" cy="740" r="3.5"/><circle cx="1290" cy="740" r="3.5"/><circle cx="1330" cy="740" r="3.5"/>
-    </g>
-    <circle cx="1300" cy="140" r="58" fill="none" stroke="#FFE206" stroke-width="5" opacity=".35"/>
-    <circle cx="200" cy="740" r="34" fill="#44DCAC" opacity=".14"/>
-    <path d="M120 800 q34 -30 68 0 t68 0" fill="none" stroke="#44DCAC" stroke-width="4" stroke-linecap="round" opacity=".22"/>
-    <path d="M1180 830 q30 -26 60 0" fill="none" stroke="#FFE206" stroke-width="4" stroke-linecap="round" opacity=".3"/>
-    <g stroke="#44DCAC" stroke-width="3.5" stroke-linecap="round" opacity=".4">
-      <path d="M1360 420 l0 26 M1347 433 l26 0"/>
-      <path d="M78 470 l0 20 M68 480 l20 0"/>
-    </g>
-  </svg>
-</div>
-
-<main>
-  <div class="hero">
-  <svg class="logo" viewBox="0 0 718.59 403.11" role="img" aria-label="QuizOton — Aprende jugando">
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="topbar-logo" href="/" aria-label="QuizOtón, ir al inicio"><svg class="logo-top" viewBox="0 0 718.59 403.11" aria-hidden="true" focusable="false">
     <defs><style>
       .ql-1{fill:#010101}.ql-2{fill:#45dcab}.ql-3{fill:#45dbac}.ql-4{fill:#020202}.ql-5{fill:#fff}
       .ql-6{fill:#ffe206}.ql-7{fill:#fffefb}.ql-8{fill:#f3fcfb}.ql-9{fill:#44dcac}.ql-10{fill:#44ddac}
@@ -332,134 +573,183 @@ footer .legal a{color:var(--text-2);text-underline-offset:3px}footer .legal a:ho
       <path class="ql-5" d="M448.01,332.45l12.12-2.3c8.69-1.65,14.84,1.85,16.21,9.07,1.87,9.88-4.11,17.54-14.35,19.48l-14.27,2.71.29-28.96ZM461.03,352.35c5.9-1.12,8.44-5.81,7.42-11.15-.7-3.71-3.47-5.45-8.01-4.59l-4.62.88-.13,15.88,5.34-1.01Z"/>
       <path class="ql-5" d="M481.61,342.84c-1.84-9.68,4-18.1,14.24-20.04,8.57-1.62,14.83,2.43,16.2,9.65,1.84,9.68-4,18.1-14.24,20.04-8.57,1.62-14.83-2.43-16.2-9.65ZM504.17,334.43c-.7-3.71-3.57-5.76-7.75-4.97-5.46,1.04-7.92,6.13-6.92,11.39.7,3.71,3.57,5.76,7.75,4.97,5.46-1.04,7.92-6.13,6.92-11.39Z"/>
     </g>
-  </svg>
-
-  <span class="badge"><span class="dot"></span>Sitio en construcción</span>
-
-  <h1>La evaluación de aula que funciona <em>sin internet</em></h1>
-
-  <p class="lede">Estamos terminando el sitio. Mientras tanto, QuizOton ya está funcionando en salones reales: el computador del docente se vuelve el servidor y los estudiantes responden desde su propio celular, en la red del salón.</p>
-
-  <div class="rule"></div>
-
-  <ul class="points">
-    <li><b>Sin internet</b> en el salón</li>
-    <li><b>Sin datos</b> del celular del estudiante</li>
-    <li><b>Sin cuentas</b> ni contraseñas</li>
-    <li><b>4 modos</b> de juego</li>
-    <li>Informe y notas a <b>PDF y Excel</b></li>
-  </ul>
+  </svg></a>
+    <a class="btn btn-ghost sm" data-whatsapp="general" href="https://wa.me/573134528352" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>WhatsApp</a>
   </div>
+</header>
 
-  <section class="info">
-
-    <div>
-      <h2>Lo estamos construyendo <em>con</em> los docentes, no solo para ellos</h2>
-      <p class="intro">Somos un equipo pequeño y en crecimiento, y lo decimos de frente porque ahí está la ventaja: por eso estamos entregando versiones de prueba por tiempo limitado. Lo que nos digan los docentes que la usen en clase real es lo que define qué se arregla y qué se construye después. <b>No necesitas tarjeta, ni crear una cuenta, ni dejar datos de tus estudiantes en ningún servidor:</b> todo vive en tu propio computador.</p>
-    </div>
-
-    <div>
-      <h2 class="h-sm">En qué punto vamos</h2>
-      <p class="intro" style="margin-bottom:18px">Hoy QuizOton está en <b>fase beta</b>: es gratis, funciona completo y lo entregamos para aprender de su uso en salones reales. Lo que aparece marcado como <b>en la versión final</b> son las cosas que estamos construyendo y que llegarán cuando la aplicación pase a ser un producto con licencia. Todavía no están disponibles.</p>
-      <div class="cards">
-        <article class="card">
-          <span class="k">DISPONIBLE HOY</span>
-          <h3>30 días de prueba completa</h3>
-          <p>Descarga el instalador y usa QuizOton con todos sus modos durante 30 días, sin costo y sin compromiso. Tu única contraprestación es contarnos cómo te fue.</p>
-        </article>
-        <article class="card next">
-          <span class="k">EN LA VERSIÓN FINAL</span>
-          <h3>Bancos de preguntas listos</h3>
-          <p>Paquetes precargados por área y grado, más bancos personalizados según lo que cada docente enseña. Para que no empieces con el banco en blanco.</p>
-        </article>
-        <article class="card next">
-          <span class="k">EN LA VERSIÓN FINAL</span>
-          <h3>Routers preconfigurados</h3>
-          <p>Llegan listos para encender y usar. Sin entrar a configuraciones, sin claves de red, sin llamar al de sistemas. Se conecta y la clase arranca.</p>
-        </article>
+<div class="banda">
+  <div class="fondo" aria-hidden="true"><div class="puntos"></div><div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div></div>
+  <div class="hero">
+    <div class="hero-texto">
+      <span class="badge"><span class="dot"></span><span class="shiny">Sitio en construcción</span></span>
+      <h1><span class="bt" style="--i:0">La</span> <span class="bt" style="--i:1">evaluación</span> <span class="bt" style="--i:2">de</span> <span class="bt" style="--i:3">aula</span> <span class="bt" style="--i:4">que</span> <span class="bt" style="--i:5">funciona</span> <span class="nw"><span class="bt grad" style="--i:6">sin</span> <span class="bt grad" style="--i:7">internet</span></span></h1>
+      <p class="lede">Quiz para el aula que se juega desde el celular, en la red del salón: sin internet, sin cuentas y sin gastar datos. Hecho en <b>Neiva, Huila</b> para docentes de toda Colombia.</p>
+      <div class="cta">
+        <a class="btn btn-main" data-descarga href="/beta/Instalar_QuizOton.exe" download><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar demo de 30 días</a>
+        <a class="btn btn-ghost" href="/guia/">Guía docente</a>
       </div>
+      <p class="nota">Windows 10 y 11 · <span data-config="versionBeta">Beta 1.0</span> · <span data-config="pesoInstalador">71 MB</span> · Demo de <span data-config="pruebaDias">30</span> días con todas las funciones</p>
     </div>
-
-    <div class="founder">
-      <div class="founder-top">
-        <svg class="medal" viewBox="0 0 64 76" role="img" aria-label="Medalla de fundador">
-          <defs>
-            <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#F7E3A6"/><stop offset="45%" stop-color="#E8C15A"/><stop offset="100%" stop-color="#B8882A"/>
-            </linearGradient>
-          </defs>
-          <path d="M16 2 L26 2 L20 26 L10 24 Z" fill="#E8C15A" opacity=".55"/>
-          <path d="M48 2 L38 2 L44 26 L54 24 Z" fill="#E8C15A" opacity=".8"/>
-          <circle cx="32" cy="48" r="25" fill="url(#oro)"/>
-          <circle cx="32" cy="48" r="19.5" fill="none" stroke="#8A631A" stroke-width="1.6" opacity=".55"/>
-          <path d="M32 36.5 l3.4 7.2 7.9 1-5.8 5.5 1.5 7.9-7-3.8-7 3.8 1.5-7.9-5.8-5.5 7.9-1 Z" fill="#6B4A12" opacity=".85"/>
-        </svg>
-        <div>
-          <span class="gold">RECONOCIMIENTO</span>
-          <h3>Membresía Fundador</h3>
-        </div>
-        <span class="cupo">Solo 5 cupos</span>
-      </div>
-
-      <p>Cuando llegue la versión final de QuizOton, entregaremos <b>5 membresías gratuitas por un año completo</b> a los docentes que hayan acompañado esta beta de verdad. No se trata de descargar la aplicación: se trata de usarla en clase y ayudarnos a mejorarla. Para acceder hay que cumplir los tres puntos:</p>
-
-      <ul class="reqs">
-        <li>
-          <span class="n">1</span>
-          <span>
-            <strong>Usarla en una clase real y mostrarnos cómo fue</strong>
-            Un audio, una foto o un video corto contando la experiencia. Sin producción ni formalidad: basta con lo que grabarías para un colega. Nunca pedimos imágenes donde se identifique a los estudiantes.
-          </span>
-        </li>
-        <li>
-          <span class="n">2</span>
-          <span>
-            <strong>Darnos una opinión concreta sobre qué mejorar</strong>
-            Qué te estorbó, qué te faltó, qué cambiarías. Mientras más específico, más útil: “el botón de iniciar partida no se ve en mi pantalla” vale más que “está bien”.
-          </span>
-        </li>
-        <li>
-          <span class="n">3</span>
-          <span>
-            <strong>Reportar al menos un fallo o dificultad con su detalle</strong>
-            Qué pasó, en qué momento y con qué equipo o celular. Este es el aporte más valioso de todos, porque un error que un docente encuentra en su salón es un error que otros mil no van a sufrir.
-          </span>
-        </li>
-      </ul>
-
-      <p class="fine">Los cupos se asignan por orden de llegada entre quienes cumplan los tres puntos, y te confirmamos por WhatsApp si quedaste dentro. La membresía cubre un año completo desde el lanzamiento y conserva el precio congelado para la renovación. Consulta las <a href="/legal/terminos.html#fundador" style="color:#F0D38A">condiciones formales de la Membresía Fundador</a>.</p>
+    <div class="hero-mascota">
+      <img src="/img/mascota/colibri-saludo.svg" width="312" height="340" alt="Colibrí, la mascota de QuizOtón, saludando" fetchpriority="high">
     </div>
+  </div>
+</div>
 
+<div class="cinta" aria-label="Lo que hace especial a QuizOtón">
+  <div class="cinta-pista">
+    <ul><li><b>Sin internet</b> en el salón</li><li><b>Sin datos</b> del celular del estudiante</li><li><b>Sin cuentas</b> ni contraseñas</li><li><b>4 modos</b> de juego</li><li>Informes a <b>PDF y Excel</b></li><li>Tus datos <b>solo en tu computador</b></li></ul>
+    <ul aria-hidden="true"><li><b>Sin internet</b> en el salón</li><li><b>Sin datos</b> del celular del estudiante</li><li><b>Sin cuentas</b> ni contraseñas</li><li><b>4 modos</b> de juego</li><li>Informes a <b>PDF y Excel</b></li><li>Tus datos <b>solo en tu computador</b></li></ul>
+  </div>
+</div>
+
+<main id="contenido">
+
+  <section class="mcard amarilla" aria-labelledby="t-aviso" data-reveal>
+    <img class="m" src="/img/mascota/colibri-idea.svg" width="271" height="369" alt="">
     <div>
-      <h2>Tu opinión llega directo, sin formularios</h2>
-      <p class="intro">Todo el acompañamiento pasa por una sola línea de WhatsApp: ahí resolvemos dudas de instalación, recibimos reportes y escuchamos ideas. Por esa misma línea avisamos a la comunidad cada vez que haya una actualización, una mejora o una novedad, así que con escribirnos una vez ya quedas enterado de todo lo que viene. <b>Agradecemos cada comentario</b>, incluso los incómodos: son los que más han cambiado el producto hasta hoy.</p>
+      <h2 id="t-aviso">Estamos construyendo el sitio oficial de QuizOtón</h2>
+      <p>Lo que ves aquí es una <b>presentación básica de la aplicación</b>, con la descarga del demo y la guía docente para que te apoyes mientras tanto. Cuando esté lista la versión final, esta página se actualizará con todo lo nuevo.</p>
     </div>
-
   </section>
 
-  <div class="cierre">
-    <p class="cierre-t">¿Listo para probarlo en tu próxima clase?</p>
-    <div class="cta">
-      <a class="btn btn-main" data-descarga href="/beta/Instalar_QuizOton.exe" download>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
-        Descargar QuizOton Beta
-      </a>
-      <a class="btn btn-ghost" data-whatsapp="colegio" href="#">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-        Escríbeme por WhatsApp
-      </a>
+  <section class="sec" id="que-es" aria-labelledby="t-que-es" data-reveal>
+    <h2 id="t-que-es">¿Qué es <em>QuizOtón</em>?</h2>
+    <p class="intro">QuizOtón es una <b>plataforma de evaluación de aula</b> para hacer quizzes, repasos y juegos de preguntas <b>sin depender de internet</b>. Tu computador se convierte en el servidor y tus estudiantes participan desde su celular, con cuatro modos de juego: <b>En vivo, Dominio, Duelo de saberes y Sin prisa</b>. Al terminar, obtienes informes y notas en PDF y Excel.</p>
+    <p class="intro">Somos un <b>equipo pequeño</b> al que le apasiona crear herramientas que sean de utilidad para el aula. Pensamos QuizOtón para salones donde el internet falla, es lento o no existe, y sirve igual en cualquier municipio de Colombia. Si ya usas juegos de preguntas como Kahoot o Quizizz y tu colegio no tiene buena conexión, QuizOtón te da una dinámica parecida sin necesitar internet.</p>
+  </section>
+
+  <section class="sec" id="como-funciona" aria-labelledby="t-como">
+    <h2 id="t-como" data-reveal>Así funciona en tu salón</h2>
+    <div class="trio">
+      <article class="paso3 spot" data-reveal style="--d:0">
+        <div class="ico3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg><i>1</i></div>
+        <h3>Enciende el router</h3>
+        <p>Cualquier router Wi-Fi sirve. No necesita internet, solo estar encendido.</p>
+      </article>
+      <article class="paso3 spot" data-reveal style="--d:1">
+        <div class="ico3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg><i>2</i></div>
+        <h3>Abre QuizOtón en tu computador</h3>
+        <p>Conéctalo al router, elige tu sesión y proyecta la pantalla.</p>
+      </article>
+      <article class="paso3 spot" data-reveal style="--d:2">
+        <div class="ico3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg><i>3</i></div>
+        <h3>Tus estudiantes entran con el celular</h3>
+        <p>Escanean el código QR y escriben su nombre. Sin cuentas ni datos.</p>
+      </article>
     </div>
-    <p class="nota">Versión beta para Windows 10 y 11 &middot; 71 MB.</p>
-  </div>
+    <div class="video" data-video data-reveal>
+      <div class="video-vacio" data-video-vacio>
+        <span class="pl"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M8 5v14l11-7z" fill="currentColor" stroke="none"/></svg></span>
+        <strong>Video próximamente</strong>
+        <p>Estamos preparando un video corto para mostrarte QuizOtón en una clase.</p>
+      </div>
+      <button class="video-boton" type="button" data-video-boton hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M8 5v14l11-7z" fill="currentColor" stroke="none"/></svg>Ver el video de presentación</button>
+    </div>
+    <p class="nota">El video se aloja en YouTube y solo se conecta a YouTube cuando pulsas el botón de reproducir.</p>
+  </section>
+
+  <section class="mcard menta grande" id="demo" aria-labelledby="t-demo" data-reveal>
+    <img class="m" src="/img/mascota/colibri-computador.svg" width="334" height="269" alt="">
+    <div>
+      <h2 id="t-demo">Prueba QuizOtón <em>gratis</em> en tu clase</h2>
+      <p>Lo que descargas es una <b>versión de prueba de <span data-config="pruebaDias">30</span> días con acceso completo a todas las funcionalidades</b>. Sin tarjeta y sin crear una cuenta.</p>
+      <p>Necesitas un computador con <b>Windows 10 u 11</b>, un router encendido (sin internet) y los celulares de tus estudiantes.</p>
+      <div class="cta">
+        <a class="btn btn-main" data-descarga href="/beta/Instalar_QuizOton.exe" download><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar demo de 30 días</a>
+        <span class="nota"><span data-config="versionBeta">Beta 1.0</span> · <span data-config="pesoInstalador">71 MB</span> · Windows 10 y 11</span>
+      </div>
+      <p class="nota hash">Huella SHA-256 para verificar tu descarga: <code data-config="hashInstalador">C5428F7D7AF7EA66794605B4E08FAAE0D2670F39466BC3723A02AF7B38D1437C</code></p>
+    </div>
+  </section>
+
+  <section class="panel" id="activar" aria-labelledby="t-activar" data-reveal>
+    <div class="cab">
+      <h2 id="t-activar">Activa tu demo en <span class="grad">4 pasos</span></h2>
+      <p>Cada demo se activa con una <b>clave única para tu computador</b>. Funciona sin internet.</p>
+    </div>
+    <div class="flujo" data-reveal>
+      <div class="paso4" style="--i:0"><div class="ico4"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><i>1</i></div><h3>Instala y abre</h3><p>Abre QuizOtón: verás la pantalla de activación.</p></div>
+      <div class="paso4" style="--i:1"><div class="ico4"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><i>2</i></div><h3>Copia tu código</h3><p>Pulsa <b>Copiar</b> en el identificador que empieza por <span class="qz">QZ-</span>.</p></div>
+      <div class="paso4" style="--i:2"><div class="ico4"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg><i>3</i></div><h3>Envíanoslo</h3><p>Por WhatsApp o correo, con tu nombre y colegio.</p></div>
+      <div class="paso4" style="--i:3"><div class="ico4"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg><i>4</i></div><h3>Pega tu clave</h3><p>Te la enviamos y activas: <b>30 días completos</b>.</p></div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-main" data-whatsapp="demo" href="https://wa.me/573134528352" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Enviar mi código por WhatsApp</a>
+      <a class="btn btn-ghost" data-correo="general" href="mailto:info@quizoton.online"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Por correo</a>
+    </div>
+    <p class="nota">Atendemos <span data-config="horario">lunes a viernes, de 9:00 a. m. a 6:00 p. m. (hora de Colombia)</span>. Más detalle en la <a href="/guia/#antes">guía docente</a>.</p>
+  </section>
+
+  <section class="mcard blanca der" id="guia" aria-labelledby="t-guia" data-reveal>
+    <img class="m" src="/img/mascota/colibri-lectura.svg" width="233" height="342" alt="">
+    <div>
+      <h2 id="t-guia">Guía docente para tu primera clase</h2>
+      <p>Cómo instalar, crear tus cursos, cargar preguntas desde Excel, usar los cuatro modos y leer los informes, explicado sin tecnicismos. Léela en línea o descárgala en PDF.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="/guia/">Leer la guía docente</a>
+        <a class="btn btn-ghost" href="/guia/?imprimir=1">Descargar en PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mcard gris" id="version-final" aria-labelledby="t-final" data-reveal>
+    <img class="m" src="/img/mascota/colibri-mochila.svg" width="287" height="377" alt="">
+    <div>
+      <h2 id="t-final">En la beta hoy y <em>lo que viene</em></h2>
+      <div class="doble">
+        <div class="mini spot"><strong>DISPONIBLE HOY</strong><ul><li>Cuatro modos de juego</li><li>Cursos y preguntas desde Excel</li><li>Informes a PDF y Excel</li><li>Activación sin internet</li></ul></div>
+        <div class="mini next spot"><strong>EN LA VERSIÓN FINAL</strong><ul><li>Bancos de preguntas por área y personalizados</li><li>Routers preconfigurados</li><li>Logo de tu institución y más</li></ul></div>
+      </div>
+      <p class="nota">Lo de la versión final son planes de desarrollo: todavía no están disponibles ni tienen fecha confirmada.</p>
+    </div>
+  </section>
+
+  <section class="mcard blanca der" id="opinion" aria-labelledby="t-opinion" data-reveal>
+    <img class="m" src="/img/mascota/colibri-soporte.svg" width="745" height="724" alt="">
+    <div>
+      <h2 id="t-opinion">Lo que más necesitamos de ti: tu <em>feedback</em></h2>
+      <p>Cuéntanos <b>fallas, errores, dificultades, consejos o ideas</b>. Incluye qué pasó, tu equipo y versión de Windows, qué celulares usaron y una captura si puedes. <b>No envíes nombres, fotos ni datos de estudiantes.</b></p>
+      <div class="cta">
+        <a class="btn btn-main" data-correo="feedback" href="mailto:info@quizoton.online"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Enviar correo</a>
+        <a class="btn btn-ghost" data-whatsapp="feedback" href="https://wa.me/573134528352" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Contar por WhatsApp</a>
+      </div>
+      <p class="nota">Por la misma línea de WhatsApp avisamos las novedades. Mira cómo tratamos lo que nos envías en la <a href="/legal/privacidad.html">política de privacidad</a>.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="preguntas" aria-labelledby="t-faq" data-reveal>
+    <h2 id="t-faq">Preguntas frecuentes</h2>
+    <div class="faq">
+      <details><summary>¿QuizOtón necesita internet?</summary><p>No. Solo necesitas un router Wi-Fi encendido en el salón, aunque no tenga conexión a internet. El computador del docente actúa como servidor y los celulares se conectan a esa red local.</p></details>
+      <details><summary>¿Los estudiantes necesitan crear una cuenta o gastar datos del celular?</summary><p>No. Entran desde el navegador de su celular con su nombre, sin cuentas ni contraseñas y sin gastar datos móviles. Cursos, listas, respuestas y notas se guardan solo en el computador del docente.</p></details>
+      <details><summary>¿Qué necesito para usar QuizOtón en mi clase?</summary><p>Un computador con Windows 10 u 11 para el docente, un router Wi-Fi encendido y los celulares o tabletas de los estudiantes con un navegador. Si quieres proyectar, un videobeam o televisor. La versión beta es solo para Windows; los estudiantes pueden usar cualquier celular o tableta.</p></details>
+      <details><summary>¿Cuánto dura el demo y cómo se activa?</summary><p>El demo dura 30 días e incluye acceso completo a todas las funciones. Al abrir QuizOtón verás el identificador único de tu equipo, que empieza por QZ-. Envíalo por WhatsApp o a info@quizoton.online y te respondemos con tu clave de activación, que no necesita internet.</p></details>
+      <details><summary>¿Qué pasa cuando termina el demo de 30 días?</summary><p>Tus cursos y sesiones siguen guardados en tu computador. Para seguir usando QuizOtón se necesita una licencia; escríbenos por WhatsApp o correo y te contamos las opciones.</p></details>
+      <details><summary>¿Atienden a docentes de fuera de Neiva?</summary><p>Sí. QuizOtón se desarrolla en Neiva, Huila, y atendemos a docentes de toda Colombia por WhatsApp y correo, de lunes a viernes.</p></details>
+    </div>
+  </section>
 </main>
 
-<footer>
-  <p>&copy; 2026 QuizOton. Todos los derechos reservados.</p>
-  <p>Hecho para colegios que no pueden depender de la conexión.</p>
-  <p class="legal"><a href="/legal/privacidad.html">Política de privacidad</a> &middot; <a href="/legal/terminos.html">Términos de uso y licencia</a> &middot; <a href="/legal/terminos.html#fundador">Membresía Fundador</a></p>
+<footer class="pie">
+  <div class="fondo" aria-hidden="true"><div class="puntos"></div></div>
+  <div class="pie-in">
+    <div class="pie-marca">
+      <img class="pie-logo" src="/img/marca/logotipo-blanco.webp" width="670" height="312" alt="QuizOtón, aprende jugando" loading="lazy">
+      <p>La evaluación de aula que funciona sin internet.</p>
+    </div>
+    <nav class="pie-links" aria-label="Enlaces del sitio">
+      <div><strong>Recursos</strong><a href="/guia/">Guía docente</a><a data-descarga href="/beta/Instalar_QuizOton.exe" download>Descargar demo</a><a data-whatsapp="general" href="https://wa.me/573134528352" target="_blank" rel="noopener">WhatsApp</a></div>
+      <div><strong>Legal</strong><a href="/legal/privacidad.html">Política de privacidad</a><a href="/legal/terminos.html">Términos de uso y licencia</a></div>
+    </nav>
+    <img class="pie-mascota" src="/img/mascota/colibri-guino.svg" width="295" height="307" alt="">
+  </div>
+  <p class="pie-copy">&copy; 2026 QuizOtón. Todos los derechos reservados.</p>
 </footer>
 
 <script src="/js/config.js"></script>
 <script src="/js/app.js"></script>
+<script src="/js/animaciones.js"></script>
 </body>
 </html>
