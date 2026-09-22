@@ -226,7 +226,7 @@ img{max-width:100%;height:auto}
 }
 .topbar.scrolled{background:rgba(10,20,18,.92);border-bottom-color:rgba(234,246,241,.12)}
 .topbar-in{
-  height:100%;max-width:1020px;margin:0 auto;padding:0 clamp(16px,5vw,40px);
+  height:100%;max-width:1600px;margin:0 auto;padding:0 clamp(16px,5vw,40px);
   display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
 .topbar-logo{display:flex;align-items:center;height:100%;text-decoration:none}
@@ -236,6 +236,7 @@ img{max-width:100%;height:auto}
 .banda{
   --text:#EAF6F1;--text-2:#B4CFC5;--acento:#44DCAC;
   position:relative;overflow:hidden;background:var(--ink);color:var(--text);
+  width:100vw;margin-left:calc(50% - 50vw);
   padding:calc(var(--top) + clamp(28px,6vw,64px)) clamp(20px,5vw,40px) clamp(32px,5vw,56px);
   isolation:isolate;
 }
@@ -254,7 +255,7 @@ img{max-width:100%;height:auto}
 @keyframes deriva2{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,-30px) scale(1.1)}}
 
 .hero{
-  position:relative;width:100%;max-width:1020px;margin:0 auto;
+  position:relative;width:100%;max-width:1600px;margin:0 auto;
   display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);align-items:center;gap:clamp(20px,4vw,48px);
 }
 .hero-texto{display:grid;justify-items:start;gap:clamp(14px,2vw,22px)}
@@ -288,6 +289,7 @@ h1{
 /* ── Cinta que se desplaza ───────────────────────────────────────────── */
 .cinta{
   background:var(--ink);border-top:1px solid rgba(234,246,241,.08);padding:14px 0;overflow:hidden;
+  width:100vw;margin-left:calc(50% - 50vw);
 }
 .cinta-pista{display:flex;width:max-content;animation:cinta 34s linear infinite}
 .cinta:hover .cinta-pista{animation-play-state:paused}
@@ -323,7 +325,7 @@ h1{
 .banda .nota b,.panel .nota b{color:var(--text)}
 
 /* ── Contenido ───────────────────────────────────────────────────────── */
-main{max-width:1020px;margin:0 auto;padding:clamp(30px,5vw,56px) clamp(20px,5vw,40px);display:grid;gap:clamp(30px,5vw,52px)}
+main{max-width:1140px;margin:0 auto;padding:clamp(30px,5vw,56px) clamp(20px,5vw,40px);display:grid;gap:clamp(30px,5vw,52px)}
 .sec,.mcard,.panel{scroll-margin-top:calc(var(--top) + 16px)}
 .sec{display:grid;gap:16px}
 .sec h2,.mcard h2,.panel h2{
@@ -456,7 +458,7 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
 .pie::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--mint),var(--yellow),var(--mint))}
 .pie::after{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:-120px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(68,220,172,.28),transparent 65%);filter:blur(40px)}
 .pie .puntos{-webkit-mask-image:radial-gradient(ellipse 70% 90% at 20% 30%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse 70% 90% at 20% 30%,#000 10%,transparent 70%);animation:none;z-index:-1}
-.pie-in{position:relative;max-width:1020px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) auto;gap:clamp(24px,4vw,48px);align-items:center}
+.pie-in{position:relative;max-width:1140px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) auto;gap:clamp(24px,4vw,48px);align-items:center}
 .pie-marca{display:grid;gap:12px;justify-items:start}
 .pie-logo{width:clamp(120px,15vw,160px);height:auto;display:block}
 .pie-marca p{margin:0;font-size:14px;color:#B4CFC5;max-width:30ch;line-height:1.5}
@@ -467,7 +469,7 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
 .pie a:hover{color:var(--mint);opacity:1}
 .pie a:focus-visible{outline:2px solid var(--mint);outline-offset:3px;border-radius:4px}
 .pie-mascota{width:clamp(88px,14vw,150px);height:auto;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4))}
-.pie-copy{position:relative;max-width:1020px;margin:clamp(24px,4vw,36px) auto 0;padding-top:16px;border-top:1px solid rgba(234,246,241,.12);font-size:13px;color:#B4CFC5;text-align:center}
+.pie-copy{position:relative;max-width:1140px;margin:clamp(24px,4vw,36px) auto 0;padding-top:16px;border-top:1px solid rgba(234,246,241,.12);font-size:13px;color:#B4CFC5;text-align:center}
 
 @media (max-width:860px){
   .pie-in{grid-template-columns:1fr;justify-items:start}
