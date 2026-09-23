@@ -64,6 +64,9 @@ Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias).
 | Animaciones | CSS en el bloque `<style>` de `index.html` (títulos que aparecen, aurora, cinta, botones) y `js/animaciones.js`. Todo se apaga si el sistema del visitante pide «reducir movimiento». |
 | Mascota | `img/mascota/` (copias optimizadas y estáticas de `07_Media/mascota_colibri`; no editar aquí el original). Poses en uso: saludo (portada y pie), idea (aviso), computador (demo), mochila (beta), soporte (feedback) y guiño (pie). La guía docente **no lleva mascota**. Todas comparten el mismo tamaño (`.mcard>.m`, `clamp(88px,14vw,150px)`); **solo la del hero** tiene un tamaño propio, más grande. En el pie, la mascota se oculta en móvil (`max-width:860px`) y solo se ve en escritorio. |
 | Logo | Un único archivo, `img/marca/logo.svg` (con el eslogan «Aprende jugando»), usado en el encabezado de `index.html`, la guía y las dos páginas legales. **No usar** `logotipo-color.webp` ni `logo v1.0.svg` — quedaron descartados. El pie oscuro usa aparte `logotipo-blanco.webp` (versión clara para fondo oscuro). Si `logo.svg` se reemplaza, debe conservar el atributo `xmlns="http://www.w3.org/2000/svg"` en la etiqueta `<svg>` raíz, o no se renderiza como `<img>`. |
+<<<<<<< HEAD
+>>>>>>> parent of 631223d (update 22-09 1.3)
+=======
 >>>>>>> parent of 631223d (update 22-09 1.3)
 
 ## Proceso de activación (lo que explica la web) — verificado contra `01_APP`
