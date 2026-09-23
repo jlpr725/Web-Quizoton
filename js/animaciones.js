@@ -1,5 +1,5 @@
 /**
- * QuizOtón · Animaciones de la landing
+ * QuizOton · Animaciones de la landing
  * Sin dependencias. Todo se desactiva si la persona pidió "reducir movimiento".
  *   - Encabezado fijo que se oscurece al bajar.
  *   - Aparición suave de las secciones ([data-reveal]).
