@@ -33,10 +33,10 @@ window.QUIZOTON = {
   descargaInstalador: '/beta/Instalar_QuizOton.exe',
   nombreInstalador: 'Instalar_QuizOton.exe',
   versionBeta: 'Beta 1.0',
-  pesoInstalador: '71 MB',
+  pesoInstalador: '40 MB',
   // Huella SHA-256 del instalador publicado. SE DEBE ACTUALIZAR cada vez que se
   // reemplace el .exe (y también el valor escrito en guia/index.html).
-  hashInstalador: '5901AA4B3D88C75CE8E50251867FCA54CD5D10BA415CDCB49FDA668C11FB5FCF',
+  hashInstalador: '5A923CF3169AFE1C0E3B505077ED8FE726557CE2FC1923B8435A5EEF50BB581A',
 
   /* ── Contacto ──────────────────────────────────────────────────────────── */
   // WhatsApp en formato internacional, sin "+", espacios ni guiones.

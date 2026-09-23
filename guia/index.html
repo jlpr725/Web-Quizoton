@@ -24,7 +24,7 @@
   <meta name="twitter:image" content="https://quizoton.online/img/og-quizoton.png">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"TechArticle","headline":"Guía docente de QuizOton","alternativeHeadline":"Cómo instalar, activar y usar QuizOton en tu primera clase","description":"Instalación, activación del demo de 30 días, cursos, preguntas en Excel, modos de juego, informes y solución de problemas.","inLanguage":"es-CO","url":"https://quizoton.online/guia/","image":"https://quizoton.online/img/og-quizoton.png","datePublished":"2026-09-13","dateModified":"2026-09-23","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"about":{"@type":"SoftwareApplication","name":"QuizOton","alternateName":["QuizOtón","Quizoton"]},"author":{"@id":"https://quizoton.online/#organizacion"},"publisher":{"@id":"https://quizoton.online/#organizacion"},"mainEntityOfPage":"https://quizoton.online/guia/"},
+    {"@type":"TechArticle","headline":"Guía docente de QuizOton","alternativeHeadline":"Cómo instalar, activar y usar QuizOton en tu primera clase","description":"Instalación, activación del demo de 30 días, cursos, preguntas en Excel, modos de juego, informes y solución de problemas.","inLanguage":"es-CO","url":"https://quizoton.online/guia/","image":"https://quizoton.online/img/og-quizoton.png","datePublished":"2026-09-13","dateModified":"2026-09-23","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"about":{"@type":"SoftwareApplication","name":"QuizOton","alternateName":["QuizOton","Quizoton"]},"author":{"@id":"https://quizoton.online/#organizacion"},"publisher":{"@id":"https://quizoton.online/#organizacion"},"mainEntityOfPage":"https://quizoton.online/guia/"},
     {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"QuizOton","item":"https://quizoton.online/"},{"@type":"ListItem","position":2,"name":"Guía docente","item":"https://quizoton.online/guia/"}]}
   ]}
   </script>
@@ -146,16 +146,23 @@
 
           <h3>Instala QuizOton</h3>
           <ol class="pasos-guia">
-            <li><strong>Descarga el demo</strong><p>Entra a <a class="enlace-subrayado" href="/#demo">quizoton.online</a> y haz clic en <strong>Descargar demo de 30 días</strong> (<span data-config="pesoInstalador">71 MB</span>, versión <span data-config="versionBeta">Beta 1.0</span>). También puedes usar el enlace que te enviemos por WhatsApp. Es una versión de prueba de <span data-config="pruebaDias">30</span> días con acceso completo a todas las funciones.</p></li>
-            <li><strong>Ábrelo</strong><p>Haz doble clic sobre el archivo descargado y sigue las instrucciones. Al terminar tendrás un acceso directo de QuizOton en el escritorio.</p></li>
+            <li><strong>Descarga el demo</strong><p>Entra a <a class="enlace-subrayado" href="/#demo">quizoton.online</a> y haz clic en <strong>Descargar demo de 30 días</strong> (<span data-config="pesoInstalador">40 MB</span>, versión <span data-config="versionBeta">Beta 1.0</span>). También puedes usar el enlace que te enviemos por WhatsApp. Es una versión de prueba de <span data-config="pruebaDias">30</span> días con acceso completo a todas las funciones.</p></li>
+            <li><strong>Ábrelo</strong><p>Haz doble clic sobre el archivo descargado.</p></li>
             <li><strong>Si aparece «Windows protegió su PC»</strong><p>Haz clic en <strong>Más información</strong> y luego en <strong>Ejecutar de todas formas</strong>. Windows muestra este aviso con programas nuevos que todavía no reconoce.</p></li>
+            <li><strong>Haz clic en «Instalar»</strong><p>No necesitas ser administrador del equipo. Si te pregunta el modo de instalación, elige <strong>Instalar para mí solamente (recomendado)</strong>.</p></li>
+            <li><strong>Haz clic en «Finalizar»</strong><p>Deja marcada la casilla para iniciar QuizOton y se abrirá enseguida. Quedará un acceso directo en el escritorio y en el menú Inicio.</p></li>
           </ol>
+
+          <div class="caja caja--aula">
+            <span class="caja__titulo">¿Ya tenías QuizOton instalado?</span>
+            <p>Instala la versión nueva encima de la anterior: tus cursos, preguntas, informes y la activación se conservan. Si QuizOton está abierto, el instalador te pedirá cerrarlo antes de continuar.</p>
+          </div>
 
           <p class="no-imprimir"><a class="boton boton--menta" data-probar href="/#demo">Descargar demo de 30 días</a></p>
 
           <div class="caja caja--aula">
             <span class="caja__titulo">Para el encargado de sistemas</span>
-            <p>Huella SHA-256 del instalador: <code class="huella" data-config="hashInstalador">5901AA4B3D88C75CE8E50251867FCA54CD5D10BA415CDCB49FDA668C11FB5FCF</code>. Se puede comprobar en PowerShell con <span class="dato">Get-FileHash .\Instalar_QuizOton.exe</span>: el resultado debe ser idéntico.</p>
+            <p>QuizOton se instala solo para el usuario actual, en <span class="dato">%LOCALAPPDATA%\QuizOton</span>, sin permisos de administrador. Huella SHA-256 del instalador: <code class="huella" data-config="hashInstalador">5A923CF3169AFE1C0E3B505077ED8FE726557CE2FC1923B8435A5EEF50BB581A</code>. Se puede comprobar en PowerShell con <span class="dato">Get-FileHash .\Instalar_QuizOton.exe</span>: el resultado debe ser idéntico.</p>
           </div>
 
           <div class="caja caja--importante">
@@ -166,7 +173,7 @@
           <h3>Activa tu demo de <span data-config="pruebaDias">30</span> días</h3>
           <p>Lo que descargas es una <strong>versión de prueba de <span data-config="pruebaDias">30</span> días con acceso completo a todas las funciones</strong>. Se activa directamente desde la aplicación: no necesitas escribirnos ni enviarnos ningún dato.</p>
           <ol class="pasos-guia">
-            <li><strong>Abre QuizOton</strong><p>Desde el acceso directo del escritorio. La primera vez verás la pantalla de activación.</p></li>
+            <li><strong>Abre QuizOton</strong><p>Desde el acceso directo del escritorio o del menú Inicio. La primera vez verás la pantalla de activación.</p></li>
             <li><strong>Haz clic en «QUIZOTON-DEMO»</strong><p>Es la insignia de <strong>prueba gratuita</strong> junto al campo de clave. Al hacer clic, la clave se completa sola.</p></li>
             <li><strong>Haz clic en «Activar QuizOton en este equipo»</strong><p>Listo: tendrás <span data-config="pruebaDias">30</span> días de acceso completo, sin esperar ninguna respuesta.</p></li>
           </ol>
@@ -391,7 +398,7 @@
                 <li>Verifica que los dispositivos estén conectados al Wi-Fi del router del salón, no a datos móviles ni a otra red.</li>
                 <li>Pídeles que escaneen el código QR o que escriban la dirección exactamente como aparece en el tablero, con puntos y sin espacios.</li>
                 <li>Si el dispositivo pregunta si quiere seguir conectado a una red sin internet, deben responder que sí.</li>
-                <li>Revisa que Windows permita a QuizOton usar la red privada. Si al instalarlo lo rechazaste, escríbenos y te ayudamos.</li>
+                <li>Revisa que Windows permita a QuizOton usar la red privada. Si lo rechazaste la primera vez que abriste QuizOton, escríbenos y te ayudamos.</li>
                 <li>Algunos routers traen activado el «aislamiento de clientes» o «AP isolation», que impide que los equipos se vean. Desactívalo en la configuración del router.</li>
               </ol>
             </div>

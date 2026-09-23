@@ -4,7 +4,7 @@ Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias).
 
 **Qué es hoy:** una presentación básica de la app con la descarga del demo de 30 días, la guía docente y los canales de feedback (correo y WhatsApp). Cuando esté lista la versión final del sitio oficial, `index.html` se reemplazará.
 
-**Datos oficiales (deben ser iguales en todo el sitio):** dominio `quizoton.online` · correo `info@quizoton.online` · WhatsApp `+57 313 452 8352` · nombre **`QuizOton`, sin tilde** (decisión del 22-sep-2026: la marca amarilla del logo es un adorno, no una tilde). En los datos para buscadores (JSON-LD), «QuizOtón» queda solo como nombre alternativo, para quien lo busque con tilde. Los archivos y direcciones van sin tilde. Al estudiante siempre se le dice **«dispositivo»** (celular, tablet o computador), no «celular».
+**Datos oficiales (deben ser iguales en todo el sitio):** dominio `quizoton.online` · correo `info@quizoton.online` · WhatsApp `+57 313 452 8352` · nombre **`QuizOton`, sin tilde** (decisión del 22-sep-2026: la marca amarilla del logo es un adorno, no una tilde). En los datos para buscadores (JSON-LD), «QuizOton» queda solo como nombre alternativo, para quien lo busque con tilde. Los archivos y direcciones van sin tilde. Al estudiante siempre se le dice **«dispositivo»** (celular, tablet o computador), no «celular».
 
 ## Páginas
 
@@ -98,4 +98,5 @@ Reemplaza `https://quizoton.online` en: los `.html`, `robots.txt` y `sitemap.xml
 - `vercel.json` debe quedar en la raíz de lo que se despliega (junto a `index.html`).
 - `robots.txt` bloquea `/beta/` y `/.archivo/`; el enlace de descarga sigue funcionando para quien lo tiene.
 - **Si cambia la guía, regenera el PDF:** abre `/guia/` en Chrome o Edge → Imprimir → «Guardar como PDF», tamaño Carta, **activa «Gráficos de fondo»** y guárdalo como `descargas/guia-docente-quizoton.pdf` (mismo nombre). La hoja de impresión de `css/guia.css` ya oculta menús, botones y pie.
+- **Instalador actual (23-sep-2026):** Inno Setup, 40 MB, se instala por usuario en `%LOCALAPPDATA%\QuizOton` sin permisos de administrador, crea accesos en escritorio y menú Inicio y conserva la carpeta `datos` al reinstalar. Si el equipo de empaquetado cambia ese comportamiento, revisa «Instala QuizOton» en la guía.
 - **Si llega un instalador nuevo** (lo compila otro equipo): reemplaza `beta/Instalar_QuizOton.exe` (mismo nombre), calcula su huella en PowerShell con `Get-FileHash .\beta\Instalar_QuizOton.exe`, y actualízala en `js/config.js` (`hashInstalador`), en `guia/index.html` y regenerando el PDF. Revisa también `pesoInstalador` y `versionBeta`. Una huella desactualizada hace que el archivo parezca alterado.
