@@ -51,6 +51,7 @@ Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias).
 | Mensajes prellenados de WhatsApp y correo | `js/config.js` → `mensajes` (`general`, `colegio`, `licencia`, `ayudaInstalacion`, `feedback`), `asuntoFeedback` y `cuerpoFeedback`. Cada enlace elige su mensaje con `data-whatsapp="…"`. |
 | Días del demo | `js/config.js` → `pruebaDias` (la portada, la guía y los términos lo leen de ahí). |
 | Datos del titular y horarios legales | `legal/privacidad.html` y `legal/terminos.html`. |
+<<<<<<< HEAD
 | Colores de la landing | Bloque `<style>` de `index.html` (variables al inicio). Los 4 modos usan los mismos colores que la guía: En vivo menta, Dominio amarillo, Duelo lila, Sin prisa celeste. |
 | Animaciones | CSS en el bloque `<style>` de `index.html` y `js/animaciones.js`. Todo se apaga si el sistema del visitante pide «reducir movimiento». |
 | Mascota (Otto) | `img/mascota/` (copias optimizadas de `07_Media/mascota_colibri`; no editar aquí el original). Aparece **4 veces, cada una con un papel**: saludo (hero), guiño (se presenta: «¡Hola, soy Otto!»), soporte (sección «creciendo contigo») y mochila (pie, solo en pantallas anchas). Las tarjetas del demo y de la guía llevan un icono grande en lugar de mascota. La guía y los legales **no llevan mascota**. Tamaño común `.mcard>.m` = `clamp(88px,14vw,150px)`; solo la del hero es más grande. Las poses `idea`, `computador` y `lectura` quedan disponibles sin uso. |
@@ -58,6 +59,12 @@ Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias).
 | Pie de página | `css/pie.css` (clase `.pie-sitio`) y el mismo bloque `<footer class="pie-sitio">` en las 4 páginas. Si cambias un enlace del pie, cámbialo en las 4. El logo va sobre una tarjeta clara porque tiene placa negra (sobre el fondo oscuro se vería como una mancha). El resplandor verde solo aparece detrás de Otto, en la portada y en pantallas anchas. |
 | Imagen al compartir (WhatsApp, redes) | `img/og-quizoton.png`, 1200×630 px, menos de 300 KB (límite de WhatsApp). Su texto repite el titular del hero: si cambia el titular, hay que rehacer la imagen. |
 | Ancho del sitio | `main`, `.pie-in` y `.pie-copy` usan `max-width:1140px`. El hero (`.banda`) y la cinta (`.cinta`) van de borde a borde con `width:100vw;margin-left:calc(50% - 50vw)`, porque viven dentro de `<main>` (necesario para la región de accesibilidad). Además `main>.banda` y `main>.cinta` tienen margen superior negativo para anular el relleno y el espacio entre bloques de `<main>`: sin eso aparece una franja blanca arriba y otra entre el hero y la cinta. **Si se agrega otra franja de ancho completo dentro de `<main>`, necesita el mismo tratamiento.** |
+=======
+| Colores de la landing | Bloque `<style>` de `index.html` (variables al inicio). |
+| Animaciones | CSS en el bloque `<style>` de `index.html` (títulos que aparecen, aurora, cinta, botones) y `js/animaciones.js`. Todo se apaga si el sistema del visitante pide «reducir movimiento». |
+| Mascota | `img/mascota/` (copias optimizadas y estáticas de `07_Media/mascota_colibri`; no editar aquí el original). Poses en uso: saludo (portada y pie), idea (aviso), computador (demo), mochila (beta), soporte (feedback) y guiño (pie). La guía docente **no lleva mascota**. Todas comparten el mismo tamaño (`.mcard>.m`, `clamp(88px,14vw,150px)`); **solo la del hero** tiene un tamaño propio, más grande. En el pie, la mascota se oculta en móvil (`max-width:860px`) y solo se ve en escritorio. |
+| Logo | Un único archivo, `img/marca/logo.svg` (con el eslogan «Aprende jugando»), usado en el encabezado de `index.html`, la guía y las dos páginas legales. **No usar** `logotipo-color.webp` ni `logo v1.0.svg` — quedaron descartados. El pie oscuro usa aparte `logotipo-blanco.webp` (versión clara para fondo oscuro). Si `logo.svg` se reemplaza, debe conservar el atributo `xmlns="http://www.w3.org/2000/svg"` en la etiqueta `<svg>` raíz, o no se renderiza como `<img>`. |
+>>>>>>> parent of 631223d (update 22-09 1.3)
 
 ## Proceso de activación (lo que explica la web) — verificado contra `01_APP`
 
