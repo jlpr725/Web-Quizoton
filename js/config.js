@@ -30,8 +30,8 @@ window.QUIZOTON = {
   /* ── Descarga del demo ─────────────────────────────────────────────────── */
   // Ruta del instalador. Puede ser relativa ('/beta/Instalar_QuizOton.exe') o una URL absoluta
   // de CDN (ej. GitHub Releases o Cloudflare R2) para no consumir ancho de banda de Vercel.
-  descargaInstalador: '/beta/Instalar_QuizOton.exe',
-  nombreInstalador: 'Instalar_QuizOton.exe',
+  descargaInstalador: '/beta/Instalar_QuizOton.zip',
+  nombreInstalador: 'Instalar_QuizOton.zip',
   versionBeta: 'Beta 1.0',
   pesoInstalador: '40 MB',
   // Huella SHA-256 del instalador publicado. SE DEBE ACTUALIZAR cada vez que se

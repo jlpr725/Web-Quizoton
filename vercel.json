@@ -31,7 +31,7 @@
       "source": "/beta/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
-        { "key": "Content-Disposition", "value": "attachment; filename=Instalar_QuizOton.exe" }
+        { "key": "Content-Disposition", "value": "attachment; filename=Instalar_QuizOton.zip" }
       ]
     }
   ]
