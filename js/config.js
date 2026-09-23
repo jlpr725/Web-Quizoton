@@ -28,10 +28,10 @@ window.QUIZOTON = {
   dominio: 'quizoton.online',
 
   /* ── Descarga del demo ─────────────────────────────────────────────────── */
-  // Ruta del instalador. Puede ser relativa ('/beta/Instalar_QuizOton.exe') o una URL absoluta
-  // de CDN (ej. GitHub Releases o Cloudflare R2) para no consumir ancho de banda de Vercel.
-  descargaInstalador: '/beta/Instalar_QuizOton.zip',
-  nombreInstalador: 'Instalar_QuizOton.zip',
+  // Enlace del instalador. Se descarga desde GitHub Releases (no desde Vercel) para no consumir
+  // ancho de banda del sitio. Si sale una versión nueva, cambia la URL y la huella de abajo.
+  descargaInstalador: 'https://github.com/jlpr725/Web-Quizoton/releases/download/v1.0.0/Instalar_QuizOton.exe',
+  nombreInstalador: 'Instalar_QuizOton.exe',
   versionBeta: 'Beta 1.0',
   pesoInstalador: '40 MB',
   // Huella SHA-256 del instalador publicado. SE DEBE ACTUALIZAR cada vez que se

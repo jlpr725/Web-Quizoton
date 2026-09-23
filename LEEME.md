@@ -24,7 +24,7 @@ Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias).
 ├── guia/index.html
 ├── legal/                 privacidad.html · terminos.html
 ├── descargas/             guia-docente-quizoton.pdf
-├── beta/                  Instalar_QuizOton.exe   (lo genera y entrega el equipo de la app; solo se enlaza)
+├── beta/                  Ya no se usa ni se despliega (.vercelignore): el instalador se descarga desde GitHub Releases
 ├── css/estilos.css        Estilos de legales (y base de la guía)
 ├── css/guia.css           Estilos de la guía y de su impresión a PDF
 ├── css/pie.css            Pie de página común a las 4 páginas (clase .pie-sitio)
@@ -44,7 +44,7 @@ Landing informativa en construcción (HTML, CSS y JavaScript, sin dependencias).
 
 | Qué quieres cambiar | Dónde |
 | :--- | :--- |
-| Instalador: ruta, versión, peso y **huella** | `js/config.js` → `descargaInstalador`, `versionBeta`, `pesoInstalador`, `hashInstalador`. La huella también está escrita dentro de `guia/index.html` (por si el JavaScript no carga) y dentro del PDF: al cambiar el `.exe` hay que actualizar los tres. |
+| Instalador: enlace, versión, peso y **huella** | `js/config.js` → `descargaInstalador` (URL de GitHub Releases), `versionBeta`, `pesoInstalador`, `hashInstalador`. El enlace también está escrito en `index.html` (botón `data-descarga` y `downloadUrl` del JSON-LD). La huella también está escrita dentro de `guia/index.html` (por si el JavaScript no carga) y dentro del PDF: al cambiar el `.exe` hay que actualizar los tres. |
 | Botón «Quiero probar QuizOton» | Atributo `data-probar` (hero y llamado final). En el HTML apunta a `#demo`; `js/app.js` lo convierte en descarga directa **solo en computadores con Windows**. En celulares, tabletas o Mac lleva a la sección del demo, donde aparece el aviso `data-solo-no-windows`. Los botones con `data-descarga` descargan siempre. |
 | **Video de YouTube** | `js/config.js` → `videoYoutubeId`: pega solo el ID del video (11 caracteres, lo que va después de `v=`). Vacío = se muestra «Video próximamente». No hay que tocar el HTML. |
 | Correo, WhatsApp y horario | `js/config.js` → `correo`, `whatsapp`, `horario`. El HTML trae los valores escritos por si el JavaScript no carga: si cambian, buscar y reemplazar en `index.html`, `guia/index.html` y `legal/`. |
@@ -96,7 +96,8 @@ Reemplaza `https://quizoton.online` en: los `.html`, `robots.txt` y `sitemap.xml
 - No hay scripts en línea: todo el JavaScript va en `js/`. Los estilos en línea sí están permitidos.
 - Al cambiar el contenido de una página, actualiza su fecha en `sitemap.xml` (`lastmod`), la fecha de «Última actualización» de los legales y `dateModified` en el JSON-LD de la guía.
 - `vercel.json` debe quedar en la raíz de lo que se despliega (junto a `index.html`).
-- `robots.txt` bloquea `/beta/` y `/.archivo/`; el enlace de descarga sigue funcionando para quien lo tiene.
+- `robots.txt` bloquea `/beta/` y `/.archivo/`. El instalador ya no está en el sitio: se descarga desde GitHub Releases.
 - **Si cambia la guía, regenera el PDF:** abre `/guia/` en Chrome o Edge → Imprimir → «Guardar como PDF», tamaño Carta, **activa «Gráficos de fondo»** y guárdalo como `descargas/guia-docente-quizoton.pdf` (mismo nombre). La hoja de impresión de `css/guia.css` ya oculta menús, botones y pie.
 - **Instalador actual (23-sep-2026):** Inno Setup, 40 MB, se instala por usuario en `%LOCALAPPDATA%\QuizOton` sin permisos de administrador, crea accesos en escritorio y menú Inicio y conserva la carpeta `datos` al reinstalar. Si el equipo de empaquetado cambia ese comportamiento, revisa «Instala QuizOton» en la guía.
-- **Si llega un instalador nuevo** (lo compila otro equipo): reemplaza `beta/Instalar_QuizOton.exe` (mismo nombre), calcula su huella en PowerShell con `Get-FileHash .\beta\Instalar_QuizOton.exe`, y actualízala en `js/config.js` (`hashInstalador`), en `guia/index.html` y regenerando el PDF. Revisa también `pesoInstalador` y `versionBeta`. Una huella desactualizada hace que el archivo parezca alterado.
+- **Descarga del instalador:** el `.exe` se publica como archivo de una *release* de GitHub (repositorio `jlpr725/Web-Quizoton`), no dentro de Vercel, para no consumir el ancho de banda del sitio. Enlace actual (v1.0.0): `https://github.com/jlpr725/Web-Quizoton/releases/download/v1.0.0/Instalar_QuizOton.exe`.
+- **Si llega un instalador nuevo** (lo compila otro equipo): créale una release nueva en GitHub (por ejemplo `v1.0.1`) y sube `Instalar_QuizOton.exe` con ese mismo nombre. Calcula su huella en PowerShell con `Get-FileHash .Instalar_QuizOton.exe`. Luego actualiza el enlace en `js/config.js` (`descargaInstalador`) y en `index.html` (botón `data-descarga` y `downloadUrl`), y la huella en `js/config.js` (`hashInstalador`), en `guia/index.html` y regenerando el PDF. Revisa también `pesoInstalador` y `versionBeta`. Una huella desactualizada hace que el archivo parezca alterado.
