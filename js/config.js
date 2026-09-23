@@ -1,27 +1,30 @@
 /**
  * ============================================================================
- *  QUIZOTÓN · CONFIGURACIÓN CENTRAL DEL SITIO
+ *  QUIZOTON · CONFIGURACIÓN CENTRAL DEL SITIO
  * ============================================================================
  *  Este es el ÚNICO archivo que necesitas editar para cambiar:
- *    - Enlace de descarga del demo (.exe)
+ *    - Enlace de descarga del demo (.exe) y su huella SHA-256
  *    - Número de WhatsApp y correo de contacto
  *    - Días de la prueba y versión
  *    - Video de YouTube de la página principal
  *
  *  Los valores se escriben automáticamente en la página principal, en la guía
  *  docente y en las páginas legales (elementos con data-config, data-whatsapp,
- *  data-correo y data-descarga).
+ *  data-correo, data-descarga y data-probar).
  *
  *  IMPORTANTE: el dominio para SEO (canonical, Open Graph, sitemap) no se
  *  puede leer desde JavaScript por los buscadores. Si algún día cambia el
  *  dominio, busca y reemplaza el texto  https://quizoton.online  en todos los
  *  archivos .html, en robots.txt y en sitemap.xml.
+ *
+ *  El nombre oficial es «QuizOton», sin tilde (la marca amarilla del logo es
+ *  un adorno, no una tilde).
  * ============================================================================
  */
 window.QUIZOTON = {
 
   /* ── Marca ─────────────────────────────────────────────────────────────── */
-  nombre: 'QuizOtón',
+  nombre: 'QuizOton',
   dominio: 'quizoton.online',
 
   /* ── Descarga del demo ─────────────────────────────────────────────────── */
@@ -31,8 +34,9 @@ window.QUIZOTON = {
   nombreInstalador: 'Instalar_QuizOton.exe',
   versionBeta: 'Beta 1.0',
   pesoInstalador: '71 MB',
-  // Huella SHA-256 del instalador publicado (se actualiza cada vez que se reemplace el .exe).
-  hashInstalador: 'C5428F7D7AF7EA66794605B4E08FAAE0D2670F39466BC3723A02AF7B38D1437C',
+  // Huella SHA-256 del instalador publicado. SE DEBE ACTUALIZAR cada vez que se
+  // reemplace el .exe (y también el valor escrito en guia/index.html).
+  hashInstalador: '5901AA4B3D88C75CE8E50251867FCA54CD5D10BA415CDCB49FDA668C11FB5FCF',
 
   /* ── Contacto ──────────────────────────────────────────────────────────── */
   // WhatsApp en formato internacional, sin "+", espacios ni guiones.
@@ -51,14 +55,14 @@ window.QUIZOTON = {
 
   /* ── Mensajes de WhatsApp ──────────────────────────────────────────────── */
   mensajes: {
-    general: 'Hola, quiero conocer más sobre QuizOtón.',
-    colegio: 'Hola, quiero conocer QuizOtón para mi colegio.',
-    demo: 'Hola, descargué el demo de QuizOtón. Mi identificador de equipo es: QZ-',
-    ayudaInstalacion: 'Hola, descargué QuizOtón y necesito ayuda para instalarlo.',
-    feedback: 'Hola, quiero contarles mi experiencia con QuizOtón.\n\nQué pasó o qué opino:\n\nCuándo ocurrió:\n\nEquipo y versión de Windows:\n\nCelulares usados:\n'
+    general: 'Hola, quiero conocer más sobre QuizOton.',
+    colegio: 'Hola, quiero conocer QuizOton para mi colegio.',
+    licencia: 'Hola, quiero adquirir una licencia de QuizOton. Mi identificador de equipo es: QZ-',
+    ayudaInstalacion: 'Hola, descargué QuizOton y necesito ayuda para instalarlo.',
+    feedback: 'Hola, quiero contarles mi experiencia con QuizOton.\n\nQué pasó o qué opino:\n\nCuándo ocurrió:\n\nEquipo y versión de Windows:\n\nDispositivos que usaron los estudiantes:\n'
   },
 
   /* ── Correo con el asunto ya escrito (feedback) ────────────────────────── */
-  asuntoFeedback: 'Feedback de QuizOtón',
-  cuerpoFeedback: 'Hola, quiero contarles mi experiencia con QuizOtón.\n\nQué pasó o qué opino:\n\nCuándo ocurrió:\n\nEquipo y versión de Windows:\n\nCelulares usados:\n\n(Puedo adjuntar una captura de pantalla. No incluyo nombres ni datos de estudiantes.)\n'
+  asuntoFeedback: 'Feedback de QuizOton',
+  cuerpoFeedback: 'Hola, quiero contarles mi experiencia con QuizOton.\n\nQué pasó o qué opino:\n\nCuándo ocurrió:\n\nEquipo y versión de Windows:\n\nDispositivos que usaron los estudiantes:\n\n(Puedo adjuntar una captura de pantalla. No incluyo nombres ni datos de estudiantes.)\n'
 };
