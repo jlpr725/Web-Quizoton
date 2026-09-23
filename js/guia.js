@@ -33,7 +33,7 @@
   }
 
   // Índice activo según la sección visible
-  var enlaces = Array.prototype.slice.call(document.querySelectorAll('.indice ol a'));
+  var enlaces = Array.prototype.slice.call(document.querySelectorAll('.indice a'));
   if ('IntersectionObserver' in window && enlaces.length) {
     var mapa = {};
     enlaces.forEach(function (a) { mapa[a.getAttribute('href').slice(1)] = a; });
