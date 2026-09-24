@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Página no encontrada | QuizOton</title>
+<meta name="description" content="Esta página no existe o cambió de lugar. Vuelve al inicio de QuizOton.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0A1412">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/marca/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/marca/apple-touch-icon.png">
+<link rel="preload" href="/fuentes/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fuentes/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Fuentes locales (mismas de la web) */
+@font-face { font-family: 'Inter'; src: url('/fuentes/inter-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fuentes/inter-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fuentes/inter-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('/fuentes/space-grotesk-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'JetBrains Mono'; src: url('/fuentes/jetbrains-mono-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+
+:root {
+  --fondo: #0A1412;
+  --pantalla: #0C1B16;
+  --texto: #EAF6F1;
+  --texto-2: #9DBFB3;
+  --texto-3: #87ABA0;
+  --linea: rgba(234, 246, 241, .14);
+  --menta: #44DCAC;
+  --menta-hover: #5FE8BC;
+  --menta-oscuro: #06211A;
+  --amarillo: #FFD91A;
+  --f-titulo: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --f-texto: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --f-dato: 'JetBrains Mono', Consolas, 'Courier New', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  min-height: 100vh; min-height: 100dvh;
+  font-family: var(--f-texto); font-size: 1.0625rem; line-height: 1.6;
+  color: var(--texto);
+  background: var(--fondo);
+  background-image:
+    radial-gradient(52rem 34rem at 18% 8%, rgba(68, 220, 172, .16), transparent 62%),
+    radial-gradient(40rem 28rem at 94% 92%, rgba(255, 226, 6, .08), transparent 60%);
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+  display: flex; flex-direction: column;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--menta); outline-offset: 3px; border-radius: 6px; }
+
+/* Cabecera mínima */
+.cabecera { width: 100%; max-width: 1180px; margin-inline: auto; padding: 22px clamp(20px, 4vw, 40px); }
+.cabecera a { display: inline-block; }
+.cabecera img { width: 150px; height: auto; }
+
+/* Escena */
+.escena {
+  position: relative; flex: 1;
+  width: 100%; max-width: 1180px; margin-inline: auto;
+  padding: clamp(24px, 5vw, 64px) clamp(20px, 4vw, 40px) clamp(56px, 8vw, 96px);
+  display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: clamp(40px, 6vw, 80px); align-items: center;
+}
+.fondo-404 {
+  position: absolute; right: -2%; top: 50%; transform: translateY(-50%);
+  font-family: var(--f-titulo); font-weight: 700; font-size: clamp(12rem, 30vw, 26rem);
+  line-height: 1; letter-spacing: -0.06em;
+  color: transparent; -webkit-text-stroke: 2px rgba(68, 220, 172, .10);
+  pointer-events: none; user-select: none; z-index: 0;
+}
+.escena { overflow-x: clip; }
+.texto, .proyector { position: relative; z-index: 1; }
+
+.etiqueta {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 7px 14px; border: 1px solid var(--linea); border-radius: 999px;
+  font-family: var(--f-dato); font-size: .8rem; font-weight: 700; letter-spacing: .12em;
+  color: var(--menta); margin-bottom: 22px;
+}
+.etiqueta span { width: 8px; height: 8px; border-radius: 50%; background: var(--amarillo); animation: latido 1.6s ease-in-out infinite; }
+
+h1 {
+  font-family: var(--f-titulo); font-weight: 700;
+  font-size: clamp(2.5rem, 5.6vw, 4.25rem); line-height: 1.05; letter-spacing: -0.035em;
+  text-wrap: balance; margin-bottom: 20px;
+}
+h1 em { font-style: normal; color: var(--menta); }
+.bajada { font-size: clamp(1.1rem, 1.6vw, 1.25rem); color: var(--texto-2); max-width: 32rem; margin-bottom: 32px; text-wrap: pretty; }
+
+.acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 16px 28px; min-height: 58px;
+  font-family: var(--f-texto); font-weight: 700; font-size: 1.08rem; line-height: 1.2;
+  text-decoration: none; border-radius: 999px;
+  background: var(--menta); color: var(--menta-oscuro); border: 1px solid var(--menta);
+  transition: transform .12s ease, background-color .12s ease;
+}
+.boton:hover { background: var(--menta-hover); border-color: var(--menta-hover); transform: translateY(-2px); }
+.boton:active { transform: translateY(0); }
+.boton svg { width: 22px; height: 22px; flex-shrink: 0; }
+.enlace {
+  font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px;
+  text-underline-offset: 4px; text-decoration-color: var(--menta); color: var(--texto);
+}
+.enlace:hover { color: var(--menta); }
+
+/* Pantalla de proyección con la pregunta sorpresa */
+.pantalla {
+  position: relative;
+  background: var(--pantalla); border: 1px solid rgba(234, 246, 241, .16);
+  border-radius: 24px; box-shadow: 0 26px 60px rgba(0, 0, 0, .45);
+  padding: clamp(20px, 3vw, 30px);
+}
+.pantalla__barra {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  font-family: var(--f-dato); font-size: .8rem; font-weight: 700; letter-spacing: .08em; color: var(--texto-3);
+  margin-bottom: 18px;
+}
+.reloj {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-radius: 999px; background: var(--amarillo); color: #241C00;
+}
+.reloj svg { width: 16px; height: 16px; animation: girar 4s linear infinite; }
+.pregunta {
+  font-family: var(--f-titulo); font-weight: 700;
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem); line-height: 1.15; letter-spacing: -0.02em;
+  margin-bottom: 20px; max-width: 22ch;
+}
+
+.opciones { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; border: 0; padding: 0; }
+.opciones legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.opciones input { position: absolute; opacity: 0; pointer-events: none; }
+.opcion {
+  display: flex; align-items: center; gap: 12px;
+  min-height: 64px; padding: 12px 14px;
+  border: 1px solid var(--linea); border-radius: 14px;
+  background: rgba(234, 246, 241, .03);
+  font-weight: 600; font-size: 1rem; line-height: 1.3; cursor: pointer;
+  transition: border-color .15s ease, background-color .15s ease, transform .15s ease;
+}
+.opcion:hover { border-color: rgba(68, 220, 172, .6); transform: translateY(-2px); }
+.letra {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--f-dato); font-weight: 700; font-size: .95rem; color: #fff;
+}
+.letra--a { background: #1FB98A; }
+.letra--b { background: #2E90FA; }
+.letra--c { background: #F79009; }
+.letra--d { background: #7A5AF8; }
+.opciones input:focus-visible + .opcion { outline: 3px solid var(--menta); outline-offset: 3px; }
+.opciones input:checked + .opcion { border-color: var(--amarillo); background: rgba(255, 217, 26, .08); }
+#op-d:checked + .opcion { border-color: var(--menta); background: rgba(68, 220, 172, .12); }
+
+.respuestas { margin-top: 16px; min-height: 58px; }
+.respuesta {
+  display: none; align-items: center; gap: 12px;
+  padding: 14px 16px; border-radius: 14px;
+  font-size: .98rem; line-height: 1.45;
+  animation: aparecer .35s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+.respuesta strong { font-family: var(--f-titulo); }
+.respuesta--pista { display: flex; color: var(--texto-3); border: 1px dashed var(--linea); animation: none; }
+.respuesta--casi { background: rgba(255, 217, 26, .10); border: 1px solid rgba(255, 217, 26, .35); }
+.respuesta--bien { background: rgba(68, 220, 172, .12); border: 1px solid rgba(68, 220, 172, .45); }
+.respuesta a { color: var(--menta); font-weight: 700; }
+
+.pantalla:has(input:checked) .respuesta--pista { display: none; }
+.pantalla:has(#op-a:checked) .r-a,
+.pantalla:has(#op-b:checked) .r-b,
+.pantalla:has(#op-c:checked) .r-c,
+.pantalla:has(#op-d:checked) .r-d { display: flex; }
+
+/* Decoración vectorial */
+.deco { position: absolute; pointer-events: none; z-index: 0; }
+.deco--puntos { left: -10px; bottom: 10px; width: 150px; opacity: .45; }
+.deco--anillo { left: 42%; top: 6%; width: 120px; animation: girar 40s linear infinite; }
+.deco--destello { animation: titilar 2.6s ease-in-out infinite; }
+.deco--d1 { left: 46%; bottom: 18%; width: 26px; }
+.deco--d2 { right: 4%; top: 12%; width: 20px; animation-delay: .9s; }
+.deco--onda { left: 2%; top: 4%; width: 120px; animation: flotar 7s ease-in-out infinite; }
+
+.pie {
+  width: 100%; max-width: 1180px; margin-inline: auto;
+  padding: 22px clamp(20px, 4vw, 40px) 30px;
+  border-top: 1px solid var(--linea);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;
+  font-size: .9rem; color: var(--texto-3);
+}
+.pie a { color: var(--texto-2); text-decoration: none; }
+.pie a:hover { color: var(--menta); }
+
+@keyframes flotar { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(2deg); } }
+@keyframes girar { to { transform: rotate(360deg); } }
+@keyframes titilar { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.6); } }
+@keyframes latido { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+@keyframes aparecer { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 860px) {
+  .escena { grid-template-columns: 1fr; }
+  .fondo-404 { top: 18%; right: -6%; }
+  .deco--anillo, .deco--d1, .deco--onda { display: none; }
+}
+@media (max-width: 480px) {
+  .opciones { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <a href="/" aria-label="QuizOton, ir al inicio">
+    <img src="/img/marca/logo.svg" alt="QuizOton" width="150" height="84">
+  </a>
+</header>
+
+<main class="escena">
+  <div class="fondo-404" aria-hidden="true">404</div>
+
+  <svg class="deco deco--onda" viewBox="0 0 120 24" aria-hidden="true"><path d="M2 12 q 8 -12 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0 t 16 0" fill="none" stroke="#44DCAC" stroke-width="4" stroke-linecap="round"/></svg>
+  <svg class="deco deco--anillo" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="none" stroke="rgba(255,217,26,.45)" stroke-width="3" stroke-dasharray="6 12"/></svg>
+  <svg class="deco deco--destello deco--d1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 Q12 12 24 12 Q12 12 12 24 Q12 12 0 12 Q12 12 12 0 Z" fill="#FFD91A"/></svg>
+  <svg class="deco deco--destello deco--d2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 Q12 12 24 12 Q12 12 12 24 Q12 12 0 12 Q12 12 12 0 Z" fill="#44DCAC"/></svg>
+  <svg class="deco deco--puntos" viewBox="0 0 150 90" aria-hidden="true">
+    <g fill="#44DCAC">
+      <circle cx="5" cy="5" r="3"/><circle cx="29" cy="5" r="3"/><circle cx="53" cy="5" r="3"/><circle cx="77" cy="5" r="3"/><circle cx="101" cy="5" r="3"/><circle cx="125" cy="5" r="3"/>
+      <circle cx="5" cy="29" r="3"/><circle cx="29" cy="29" r="3"/><circle cx="53" cy="29" r="3"/><circle cx="77" cy="29" r="3"/><circle cx="101" cy="29" r="3"/><circle cx="125" cy="29" r="3"/>
+      <circle cx="5" cy="53" r="3"/><circle cx="29" cy="53" r="3"/><circle cx="53" cy="53" r="3"/><circle cx="77" cy="53" r="3"/><circle cx="101" cy="53" r="3"/><circle cx="125" cy="53" r="3"/>
+      <circle cx="5" cy="77" r="3"/><circle cx="29" cy="77" r="3"/><circle cx="53" cy="77" r="3"/><circle cx="77" cy="77" r="3"/><circle cx="101" cy="77" r="3"/><circle cx="125" cy="77" r="3"/>
+    </g>
+  </svg>
+
+  <div class="texto">
+    <p class="etiqueta"><span></span>ERROR 404 · PREGUNTA SORPRESA</p>
+    <h1>Esta página se fue <em>al recreo</em>.</h1>
+    <p class="bajada">La dirección no existe o cambió de lugar. Mientras tanto, responde la pregunta o vuelve al inicio: allí está todo lo de QuizOton.</p>
+    <div class="acciones">
+      <a class="boton" href="/">
+        <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M222.14,105.85l-80-80a20,20,0,0,0-28.28,0l-80,80A19.86,19.86,0,0,0,28,120v96a12,12,0,0,0,12,12h64a12,12,0,0,0,12-12V164h24v52a12,12,0,0,0,12,12h64a12,12,0,0,0,12-12V120A19.86,19.86,0,0,0,222.14,105.85ZM204,204H164V152a12,12,0,0,0-12-12H104a12,12,0,0,0-12,12v52H52V121.65l76-76,76,76Z"/></svg>
+        Volver al inicio
+      </a>
+      <a class="enlace" href="/guia/">Ver la guía docente</a>
+    </div>
+  </div>
+
+  <div class="proyector">
+    <div class="pantalla">
+      <div class="pantalla__barra">
+        <span>PREGUNTA 1 DE 1</span>
+        <span class="reloj">
+          <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,44a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,44Zm0,168a72,72,0,1,1,72-72A72.08,72.08,0,0,1,128,212ZM164.49,99.51a12,12,0,0,1,0,17l-28,28a12,12,0,0,1-17-17l28-28A12,12,0,0,1,164.49,99.51ZM92,16A12,12,0,0,1,104,4h48a12,12,0,0,1,0,24H104A12,12,0,0,1,92,16Z"/></svg>
+          404 s
+        </span>
+      </div>
+      <p class="pregunta" id="pregunta-404">¿Dónde está la página que buscabas?</p>
+
+      <fieldset class="opciones" aria-labelledby="pregunta-404">
+        <legend>Elige una respuesta</legend>
+        <input type="radio" name="respuesta" id="op-a">
+        <label class="opcion" for="op-a"><span class="letra letra--a">A</span>Salió al recreo y no volvió</label>
+        <input type="radio" name="respuesta" id="op-b">
+        <label class="opcion" for="op-b"><span class="letra letra--b">B</span>Se quedó sin internet</label>
+        <input type="radio" name="respuesta" id="op-c">
+        <label class="opcion" for="op-c"><span class="letra letra--c">C</span>Nunca existió</label>
+        <input type="radio" name="respuesta" id="op-d">
+        <label class="opcion" for="op-d"><span class="letra letra--d">D</span>Está esperándote en el inicio</label>
+      </fieldset>
+
+      <div class="respuestas" aria-live="polite">
+        <p class="respuesta respuesta--pista">Toca una opción. No hay nota: aquí nadie pierde puntos.</p>
+        <p class="respuesta respuesta--casi r-a"><span><strong>Puede ser.</strong> El recreo se alarga a veces. Pero todo lo que buscas está en el <a href="/">inicio</a>.</span></p>
+        <p class="respuesta respuesta--casi r-b"><span><strong>¡Imposible!</strong> QuizOton funciona sin internet. Mejor vuelve al <a href="/">inicio</a>.</span></p>
+        <p class="respuesta respuesta--casi r-c"><span><strong>Muy probable.</strong> Revisa la dirección o vuelve al <a href="/">inicio</a>.</span></p>
+        <p class="respuesta respuesta--bien r-d"><span><strong>¡Correcto!</strong> Todo empieza en el <a href="/">inicio</a>.</span></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="pie">
+  <span>&copy; 2026 QuizOton. Todos los derechos reservados.</span>
+</footer>
+
+</body>
+</html>
