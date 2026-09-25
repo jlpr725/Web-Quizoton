@@ -48,10 +48,10 @@ window.QUIZOTON = {
   pruebaDias: 30,
 
   /* ── Video de YouTube ──────────────────────────────────────────────────── */
-  // Pega aquí solo el ID del video (lo que va después de "v=" en la dirección
-  // de YouTube, por ejemplo "dQw4w9WgXcQ"). Mientras esté vacío, la página
-  // muestra el aviso "Video próximamente". No hace falta tocar el HTML.
-  videoYoutubeId: '',
+  // Pega aquí solo el ID del video (lo que va después de "youtu.be/" o de "v="
+  // en la dirección de YouTube). Si queda vacío, no se muestra el recuadro del
+  // video. Si cambias de video, cambia también el enlace del botón en index.html.
+  videoYoutubeId: 'JdXDAb4uH9k',
 
   /* ── Mensajes de WhatsApp ──────────────────────────────────────────────── */
   mensajes: {

@@ -68,13 +68,15 @@
   // Hasta que el usuario pulsa el botón, no se contacta a YouTube.
   var caja = document.querySelector('[data-video]');
   if (caja) {
+    // Sin JavaScript, el botón es un enlace que abre el video en YouTube.
     var id = String(C.videoYoutubeId || '').trim();
-    var vacio = caja.querySelector('[data-video-vacio]');
     var boton = caja.querySelector('[data-video-boton]');
-    if (/^[A-Za-z0-9_-]{11}$/.test(id) && boton) {
-      if (vacio) vacio.hidden = true;
-      boton.hidden = false;
-      boton.addEventListener('click', function () {
+    if (!/^[A-Za-z0-9_-]{11}$/.test(id)) {
+      caja.hidden = true; // sin video configurado no se muestra el recuadro
+    } else if (boton) {
+      boton.href = 'https://www.youtube.com/watch?v=' + id;
+      boton.addEventListener('click', function (e) {
+        e.preventDefault();
         var f = document.createElement('iframe');
         f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
         f.title = 'Video de presentación de QuizOton';
