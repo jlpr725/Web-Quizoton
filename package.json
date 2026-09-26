@@ -1,0 +1,26 @@
+{
+  "name": "web-quizoton",
+  "version": "1.0.0",
+  "description": "QuizOton: quiz para el aula sin internet",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlpr725/Web-Quizoton.git"
+  },
+  "keywords": [
+    "quiz",
+    "education",
+    "offline"
+  ],
+  "author": "QuizOton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlpr725/Web-Quizoton/issues"
+  },
+  "homepage": "https://github.com/jlpr725/Web-Quizoton#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
