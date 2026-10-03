@@ -287,6 +287,72 @@ h1{
 .hero-mascota::before{content:"";position:absolute;width:88%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(68,220,172,.28),transparent 68%);top:6%}
 .hero-mascota img{position:relative;width:min(100%,290px);height:auto;filter:drop-shadow(0 16px 30px rgba(0,0,0,.4))}
 
+/* ── Carrusel del inicio ─────────────────────────────────────────────── */
+/* Sin JavaScript solo se ve la primera diapositiva (las otras llevan hidden). */
+.carrusel{position:relative;width:100%;max-width:1600px;margin:0 auto}
+.diapo[hidden],.carrusel-controles[hidden]{display:none}
+/* Con JavaScript las diapositivas se apilan en la misma celda: la altura no salta al cambiar. */
+.carrusel--activo .diapos{display:grid}
+.carrusel--activo .diapo{grid-area:1/1;transition:opacity .55s ease,transform .55s ease,visibility .55s}
+.carrusel--activo .diapo:not(.activa){opacity:0;visibility:hidden;transform:translateX(28px);pointer-events:none}
+.titulo-diapo{font-family:var(--display);font-weight:700;letter-spacing:-.035em;line-height:1.05;font-size:clamp(30px,5.2vw,52px);margin:0;max-width:20ch}
+.badge-wa{border-color:rgba(37,211,102,.5);background:rgba(37,211,102,.09);color:#7BE6A6}
+.badge-regalo{border-color:rgba(255,226,6,.5);background:rgba(255,226,6,.08);color:#FFE206}
+.btn-wa{background:#25D366;color:#052615}
+.btn-wa:hover{background:#3BE07A;transform:translateY(-2px);box-shadow:0 10px 26px -6px rgba(37,211,102,.55)}
+.hero-visual{display:grid;justify-items:center;position:relative}
+.hero-visual::before{content:"";position:absolute;width:90%;aspect-ratio:1;border-radius:50%;top:4%}
+.canal-visual::before{background:radial-gradient(circle,rgba(37,211,102,.24),transparent 68%)}
+.canal-visual{justify-items:end;padding-left:clamp(70px,8vw,120px)}
+.otto-canal{position:absolute;left:0;bottom:-18px;z-index:2;width:clamp(120px,11vw,165px);height:auto;filter:drop-shadow(0 16px 26px rgba(0,0,0,.45))}
+.diapo-regalo .nota{max-width:62ch}
+.regalo-visual::before{background:radial-gradient(circle,rgba(255,226,6,.18),transparent 68%)}
+/* Teléfono con el canal */
+.telefono{
+  position:relative;width:min(100%,280px);padding:16px 14px 18px;border-radius:30px;
+  background:#0E1F1B;border:1px solid rgba(234,246,241,.16);box-shadow:0 24px 50px rgba(0,0,0,.45);
+  display:grid;gap:10px;transform:rotate(2deg);
+}
+.tel-cab{display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:1px solid rgba(234,246,241,.1)}
+.tel-cab img{width:40px;height:40px;border-radius:50%}
+.tel-cab span,.tel-msj>span:last-child{display:grid;line-height:1.25}
+.tel-cab b,.tel-msj b{font-family:var(--display);font-size:14px}
+.tel-cab small,.tel-msj small{font-size:12px;color:#B4CFC5}
+.tel-msj{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;background:rgba(234,246,241,.05)}
+.tel-play{flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#052615}
+.tel-seguir{justify-self:center;margin-top:4px;padding:7px 22px;border-radius:999px;background:#25D366;color:#052615;font-family:var(--display);font-weight:700;font-size:13px}
+/* Tarjeta del regalo */
+.regalo-tarjeta{
+  position:relative;width:min(100%,320px);padding:22px 22px 24px;border-radius:24px;display:grid;gap:10px;
+  background:linear-gradient(160deg,#13302A,#0E1F1B);border:1px solid rgba(255,226,6,.35);box-shadow:0 24px 50px rgba(0,0,0,.45);
+}
+.regalo-etiqueta{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#B4CFC5;font-weight:600}
+.regalo-num{margin:0;display:flex;align-items:baseline;gap:8px;line-height:1}
+.regalo-num>b{font-family:var(--display);font-size:clamp(46px,6vw,64px);color:#FFE206;letter-spacing:-.03em}
+.regalo-num>span{font-size:16px;color:#B4CFC5}
+.regalo-barra{height:8px;border-radius:999px;background:rgba(234,246,241,.12);overflow:hidden;margin-bottom:8px}
+.regalo-barra i{display:block;height:100%;width:100%;border-radius:inherit;background:linear-gradient(90deg,#44DCAC,#FFE206);transition:width .6s ease}
+.regalo-reloj{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.regalo-reloj span{display:grid;justify-items:center;padding:10px 4px;border-radius:14px;background:rgba(234,246,241,.06);border:1px solid rgba(234,246,241,.1)}
+.regalo-reloj b{font-family:var(--display);font-size:clamp(22px,2.6vw,28px);font-variant-numeric:tabular-nums;line-height:1.1}
+.regalo-reloj small{font-size:11.5px;color:#B4CFC5}
+/* Controles */
+.carrusel-controles{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:clamp(22px,3vw,34px)}
+.cc-btn{
+  width:40px;height:40px;border-radius:50%;display:grid;place-items:center;cursor:pointer;
+  background:rgba(234,246,241,.06);border:1px solid rgba(234,246,241,.28);color:#EAF6F1;transition:border-color .2s,color .2s;
+}
+.cc-btn:hover{border-color:var(--mint);color:var(--mint)}
+.cc-btn:focus-visible,.cc-punto:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+.cc-btn .ico-play,.carrusel--pausado .cc-btn .ico-pausa{display:none}
+.carrusel--pausado .cc-btn .ico-play{display:block}
+.cc-puntos{display:flex;align-items:center;gap:4px}
+.cc-punto{
+  position:relative;width:28px;height:28px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center;
+}
+.cc-punto::before{content:"";width:10px;height:10px;border-radius:999px;background:rgba(234,246,241,.38);transition:width .3s,background .3s}
+.cc-punto[aria-current="true"]::before{width:26px;background:var(--mint)}
+
 /* ── Cinta que se desplaza ───────────────────────────────────────────── */
 .cinta{
   background:var(--ink);border-top:1px solid rgba(234,246,241,.08);padding:14px 0;overflow:hidden;
@@ -490,6 +556,11 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
   .hero{grid-template-columns:1fr}
   .hero-mascota{order:-1}
   .hero-mascota img{width:min(46vw,190px)}
+  .canal-visual{order:-1;justify-items:center;padding-left:0}
+  .canal-visual .telefono{display:none}
+  .otto-canal{position:relative;left:auto;bottom:auto;width:min(40vw,170px)}
+  .regalo-tarjeta{width:100%;max-width:420px;padding:18px}
+  .regalo-visual{justify-items:start}
   .trio{grid-template-columns:1fr}
   .paso3{grid-template-columns:auto 1fr;column-gap:16px;align-items:start}
   .paso3 .ico3{grid-row:span 2}
@@ -523,6 +594,7 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
   .cinta-pista{width:auto;flex-wrap:wrap;justify-content:center}
   .cinta-pista ul[aria-hidden]{display:none}
   .cinta ul{flex-wrap:wrap;justify-content:center}
+  .carrusel--activo .diapo:not(.activa){transform:none}
 }
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -540,7 +612,9 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
 <main id="contenido" tabindex="-1">
 <div class="banda">
   <div class="fondo" aria-hidden="true"><div class="puntos"></div><div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div></div>
-  <div class="hero">
+  <section class="carrusel" aria-roledescription="carrusel" aria-label="QuizOton y novedades">
+  <div class="diapos" aria-live="off">
+  <div class="hero diapo activa" role="group" aria-roledescription="diapositiva" data-nombre="Presentación de QuizOton">
     <div class="hero-texto">
       <h1><span class="bt" style="--i:0">Haz</span> <span class="bt" style="--i:1">que</span> <span class="bt" style="--i:2">tu</span> <span class="bt" style="--i:3">clase</span> <span class="bt" style="--i:4">participe,</span> <span class="bt" style="--i:5">incluso</span> <span class="nw"><span class="bt grad" style="--i:6">sin</span> <span class="bt grad" style="--i:7">internet</span></span></h1>
       <p class="lede">QuizOton convierte tu computador en el servidor de tu propio salón. Tus estudiantes responden desde su dispositivo, tú diriges todo desde el tuyo. Sin internet, sin cuentas, sin gastar datos.</p>
@@ -554,6 +628,62 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
       <img src="img/mascota/colibri-saludo.svg" width="312" height="340" alt="Otto, la mascota de QuizOton, saludando" fetchpriority="high">
     </div>
   </div>
+
+  <div class="hero diapo" role="group" aria-roledescription="diapositiva" data-nombre="Canal de WhatsApp" hidden>
+    <div class="hero-texto">
+      <span class="badge badge-wa"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>Canal de WhatsApp</span>
+      <h2 class="titulo-diapo">Aprende a usar QuizOton con <span class="grad">videos cortos</span></h2>
+      <p class="lede">En nuestro canal de WhatsApp publicamos videos que explican, paso a paso y sin tecnicismos, cómo sacarle provecho a QuizOton en tu salón. Síguelo y recibe cada novedad en tu celular.</p>
+      <div class="cta">
+        <a class="btn btn-wa" data-canal href="https://whatsapp.com/channel/0029VbDg4FACMY0NE2Xiyq1O" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Unirme al canal</a>
+      </div>
+      <p class="nota">Gratis · Solo publicamos nosotros · Tu número no queda visible para nadie</p>
+    </div>
+    <div class="hero-visual canal-visual" aria-hidden="true">
+      <div class="telefono">
+        <div class="tel-cab"><img src="img/marca/apple-touch-icon.png" alt="" width="40" height="40" loading="lazy"><span><b>QuizOton</b><small>Canal · Videos para docentes</small></span></div>
+        <div class="tel-msj"><span class="tel-play"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span><b>Video nuevo</b><small>Paso a paso</small></span></div>
+        <div class="tel-msj"><span class="tel-play"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span><b>Ideas para tu clase</b><small>En pocos minutos</small></span></div>
+        <div class="tel-msj"><span class="tel-play"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span><b>Novedades</b><small>Lo último de QuizOton</small></span></div>
+        <div class="tel-seguir">Seguir</div>
+      </div>
+      <img class="otto-canal" src="img/mascota/colibri-lectura.svg" width="233" height="342" alt="" loading="lazy">
+    </div>
+  </div>
+
+  <div class="hero diapo diapo-regalo" role="group" aria-roledescription="diapositiva" data-nombre="Bancos de preguntas de regalo" data-regalo hidden>
+    <div class="hero-texto">
+      <span class="badge badge-regalo"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>Solo por 24 horas</span>
+      <h2 class="titulo-diapo">Te regalamos un banco de preguntas <span class="grad">hecho a tu medida</span></h2>
+      <p class="lede">Escríbenos por WhatsApp el tema que quieres trabajar y te armamos el banco. O envíanos las preguntas que ya tienes y las convertimos en un banco listo para QuizOton, <b>con imágenes o videos</b> si los necesitas.</p>
+      <div class="cta">
+        <a class="btn btn-main" data-whatsapp="regalo" href="https://wa.me/573134528352" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>Quiero mi banco de regalo</a>
+      </div>
+      <p class="nota"><b>Uno por docente.</b> <span data-regalo-total>10</span> bancos en total, en orden de llegada, hasta el <span data-regalo-fin>cierre de la promoción</span> o hasta entregar los <span data-regalo-total>10</span>. No incluyas fotos ni datos de estudiantes.</p>
+    </div>
+    <div class="hero-visual regalo-visual">
+      <div class="regalo-tarjeta">
+        <span class="regalo-etiqueta">Bancos disponibles</span>
+        <p class="regalo-num"><b data-regalo-quedan>10</b> <span>de <span data-regalo-total>10</span></span></p>
+        <div class="regalo-barra" aria-hidden="true"><i data-regalo-barra></i></div>
+        <span class="regalo-etiqueta">La promoción termina en</span>
+        <div class="regalo-reloj" role="timer" aria-live="off">
+          <span><b data-regalo-h>24</b><small>horas</small></span>
+          <span><b data-regalo-m>00</b><small>min</small></span>
+          <span><b data-regalo-s>00</b><small>seg</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="carrusel-controles" hidden>
+    <button class="cc-btn" type="button" data-carrusel-anterior aria-label="Diapositiva anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <div class="cc-puntos" data-carrusel-puntos></div>
+    <button class="cc-btn" type="button" data-carrusel-siguiente aria-label="Diapositiva siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
+    <button class="cc-btn" type="button" data-carrusel-pausa aria-label="Pausar el carrusel"><svg class="ico-pausa" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="ico-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+  </div>
+  </section>
 </div>
 
 <section class="cinta" aria-label="Lo que hace especial a QuizOton">
@@ -708,6 +838,7 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
 
 <script src="js/config.js"></script>
 <script src="js/app.js"></script>
+<script src="js/carrusel.js"></script>
 <script src="js/animaciones.js"></script>
 </body>
 </html>

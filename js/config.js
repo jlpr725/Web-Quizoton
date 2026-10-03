@@ -7,6 +7,7 @@
  *    - Número de WhatsApp y correo de contacto
  *    - Días de la prueba y versión
  *    - Video de YouTube de la página principal
+ *    - Canal de WhatsApp y regalo de bancos (carrusel del inicio)
  *
  *  Los valores se escriben automáticamente en la página principal, en la guía
  *  docente y en las páginas legales (elementos con data-config, data-whatsapp,
@@ -53,12 +54,30 @@ window.QUIZOTON = {
   // video. Si cambias de video, cambia también el enlace del botón en index.html.
   videoYoutubeId: 'JdXDAb4uH9k',
 
+  /* ── Canal de WhatsApp (diapositiva 2 del inicio) ──────────────────────── */
+  canalWhatsapp: 'https://whatsapp.com/channel/0029VbDg4FACMY0NE2Xiyq1O',
+
+  /* ── Regalo de bancos de preguntas (diapositiva 3 del inicio) ──────────── */
+  // inicio: fecha y hora en que empieza, con la zona horaria de Colombia
+  //   (-05:00). Ejemplo: '2026-10-02T15:00:00-05:00'. Vacío = no se muestra.
+  // horas:  cuánto dura. Al terminar, la diapositiva desaparece sola.
+  // total:  bancos que se regalan en total.
+  // quedan: bancos que quedan POR ENTREGAR. Cámbialo a mano cada vez que
+  //   alguien reclame uno (y sube este archivo). En 0 la diapositiva desaparece.
+  regalo: {
+    inicio: '2026-10-02T20:00:00-05:00',
+    horas: 24,
+    total: 10,
+    quedan: 10
+  },
+
   /* ── Mensajes de WhatsApp ──────────────────────────────────────────────── */
   mensajes: {
     general: 'Hola, quiero conocer más sobre QuizOton.',
     colegio: 'Hola, quiero conocer QuizOton para mi colegio.',
     licencia: 'Hola, quiero adquirir una licencia de QuizOton. Mi identificador de equipo es: QZ-',
     ayudaInstalacion: 'Hola, descargué QuizOton y necesito ayuda para instalarlo.',
+    regalo: 'Hola, quiero mi banco de preguntas de regalo. El tema que quiero trabajar es: ',
     feedback: 'Hola, quiero contarles mi experiencia con QuizOton.\n\nQué pasó o qué opino:\n\nCuándo ocurrió:\n\nEquipo y versión de Windows:\n\nDispositivos que usaron los estudiantes:\n'
   },
 
