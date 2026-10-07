@@ -2,10 +2,11 @@
  * QuizOton · Carrusel del inicio
  *   1. Presentación (la única visible sin JavaScript; lleva el h1).
  *   2. Canal de WhatsApp (config.js → canalWhatsapp).
- *   3. Regalo de bancos (config.js → regalo). Solo aparece entre «inicio» e
- *      «inicio + horas» y mientras «quedan» sea mayor que 0; después se retira sola.
- * Avanza solo cada 8 s, se pausa al pasar el mouse, al enfocar con teclado y con
- * el botón de pausa. Si la persona pidió «reducir movimiento», empieza pausado.
+ *   3. Regalo de bancos (config.js → regalo). Solo aparece entre «inicio» y
+ *      «fin» (o «inicio + horas» si no hay «fin») y mientras «quedan» sea mayor
+ *      que 0; después se retira sola.
+ * Avanza solo cada 8 s y se pausa al pasar el mouse o al enfocar con teclado.
+ * Si la persona pidió «reducir movimiento», no avanza solo (usa flechas y puntos).
  */
 (function () {
   'use strict';
@@ -17,7 +18,6 @@
   var pista = raiz.querySelector('.diapos');
   var controles = raiz.querySelector('.carrusel-controles');
   var cajaPuntos = raiz.querySelector('[data-carrusel-puntos]');
-  var botonPausa = raiz.querySelector('[data-carrusel-pausa]');
   var diapoRegalo = raiz.querySelector('[data-regalo]');
   var reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var INTERVALO = 8000;
@@ -32,13 +32,13 @@
   /* ── Regalo: ¿está vigente? ───────────────────────────────────────────── */
   var R = C.regalo || {};
   var inicio = Date.parse(R.inicio || '');
-  var fin = inicio + (Number(R.horas) || 24) * 3600 * 1000;
+  var fin = R.fin ? Date.parse(R.fin) : inicio + (Number(R.horas) || 24) * 3600 * 1000;
   var total = Number(R.total) || 10;
   var quedan = Math.max(0, Math.min(total, Number(R.quedan) || 0));
 
   function regaloVigente() {
     var ahora = Date.now();
-    return !isNaN(inicio) && ahora >= inicio && ahora < fin && quedan > 0;
+    return !isNaN(inicio) && !isNaN(fin) && ahora >= inicio && ahora < fin && quedan > 0;
   }
 
   function dos(n) { return (n < 10 ? '0' : '') + n; }
@@ -58,6 +58,7 @@
       diapoRegalo.querySelectorAll('[data-regalo-total]').forEach(function (e) { e.textContent = total; });
       diapoRegalo.querySelector('[data-regalo-quedan]').textContent = quedan;
       diapoRegalo.querySelector('[data-regalo-barra]').style.width = (quedan / total * 100) + '%';
+      if (R.etiqueta) diapoRegalo.querySelector('[data-regalo-etiqueta]').textContent = R.etiqueta;
       try {
         var cierre = new Intl.DateTimeFormat('es-CO', {
           timeZone: 'America/Bogota', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit'
@@ -76,7 +77,6 @@
   var diapos = [];
   var actual = 0;
   var temporizador = null;
-  var pausadoPorUsuario = reducir;
   var pausadoTemporal = false;
 
   function armar() {
@@ -108,8 +108,7 @@
 
   function programar() {
     clearTimeout(temporizador);
-    var detenido = pausadoPorUsuario || pausadoTemporal || document.hidden;
-    raiz.classList.toggle('carrusel--pausado', pausadoPorUsuario);
+    var detenido = reducir || pausadoTemporal || document.hidden;
     pista.setAttribute('aria-live', detenido ? 'polite' : 'off');
     if (!detenido && diapos.length > 1) temporizador = setTimeout(function () { ir(actual + 1); programar(); }, INTERVALO);
   }
@@ -123,12 +122,6 @@
 
   raiz.querySelector('[data-carrusel-anterior]').addEventListener('click', function () { ir(actual - 1, true); });
   raiz.querySelector('[data-carrusel-siguiente]').addEventListener('click', function () { ir(actual + 1, true); });
-  botonPausa.addEventListener('click', function () {
-    pausadoPorUsuario = !pausadoPorUsuario;
-    botonPausa.setAttribute('aria-label', pausadoPorUsuario ? 'Reanudar el carrusel' : 'Pausar el carrusel');
-    programar();
-  });
-  botonPausa.setAttribute('aria-label', pausadoPorUsuario ? 'Reanudar el carrusel' : 'Pausar el carrusel');
 
   // Pausa mientras el mouse está encima o el foco del teclado está dentro.
   raiz.addEventListener('mouseenter', function () { pausadoTemporal = true; programar(); });

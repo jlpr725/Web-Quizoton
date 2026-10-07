@@ -60,13 +60,18 @@ window.QUIZOTON = {
   /* ── Regalo de bancos de preguntas (diapositiva 3 del inicio) ──────────── */
   // inicio: fecha y hora en que empieza, con la zona horaria de Colombia
   //   (-05:00). Ejemplo: '2026-10-02T15:00:00-05:00'. Vacío = no se muestra.
-  // horas:  cuánto dura. Al terminar, la diapositiva desaparece sola.
+  // fin:    fecha y hora en que termina (mismo formato). Al llegar, la
+  //   diapositiva desaparece sola. Si se deja vacío, se usa «horas».
+  // horas:  cuánto dura, contado desde «inicio» (solo si no hay «fin»).
+  // etiqueta: texto de la insignia amarilla (ej.: 'Solo por 24 horas').
   // total:  bancos que se regalan en total.
   // quedan: bancos que quedan POR ENTREGAR. Cámbialo a mano cada vez que
   //   alguien reclame uno (y sube este archivo). En 0 la diapositiva desaparece.
   regalo: {
-    inicio: '2026-10-02T20:00:00-05:00',
+    inicio: '2026-10-06T23:00:00-05:00',
+    fin: '2026-10-09T23:59:00-05:00',
     horas: 24,
+    etiqueta: 'Solo hasta este viernes',
     total: 10,
     quedan: 10
   },

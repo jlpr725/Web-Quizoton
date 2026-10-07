@@ -344,8 +344,6 @@ h1{
 }
 .cc-btn:hover{border-color:var(--mint);color:var(--mint)}
 .cc-btn:focus-visible,.cc-punto:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
-.cc-btn .ico-play,.carrusel--pausado .cc-btn .ico-pausa{display:none}
-.carrusel--pausado .cc-btn .ico-play{display:block}
 .cc-puntos{display:flex;align-items:center;gap:4px}
 .cc-punto{
   position:relative;width:28px;height:28px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center;
@@ -653,7 +651,7 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
 
   <div class="hero diapo diapo-regalo" role="group" aria-roledescription="diapositiva" data-nombre="Bancos de preguntas de regalo" data-regalo hidden>
     <div class="hero-texto">
-      <span class="badge badge-regalo"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>Solo por 24 horas</span>
+      <span class="badge badge-regalo"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><span data-regalo-etiqueta>Por tiempo limitado</span></span>
       <h2 class="titulo-diapo">Te regalamos un banco de preguntas <span class="grad">hecho a tu medida</span></h2>
       <p class="lede">Escríbenos por WhatsApp el tema que quieres trabajar y te armamos el banco. O envíanos las preguntas que ya tienes y las convertimos en un banco listo para QuizOton, <b>con imágenes o videos</b> si los necesitas.</p>
       <div class="cta">
@@ -681,7 +679,6 @@ details p{margin:0;padding:0 18px 16px;font-size:clamp(13.5px,1.45vw,15px);color
     <button class="cc-btn" type="button" data-carrusel-anterior aria-label="Diapositiva anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></button>
     <div class="cc-puntos" data-carrusel-puntos></div>
     <button class="cc-btn" type="button" data-carrusel-siguiente aria-label="Diapositiva siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></button>
-    <button class="cc-btn" type="button" data-carrusel-pausa aria-label="Pausar el carrusel"><svg class="ico-pausa" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="ico-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
   </div>
   </section>
 </div>
